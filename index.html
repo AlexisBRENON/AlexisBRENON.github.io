@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexis BRENON - Bienvenue</title>
-    <link rel="stylesheet" href="css/normalize.css" media="screen"/>
-    <link rel="stylesheet" href="css/foundation.css" media="screen"/>
-    <link rel="stylesheet" href="css/app.css" media="screen"/>
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css" media="screen"/>
+    <link rel="stylesheet" href="./css/foundation.css" media="screen"/>
+    <link rel="stylesheet" href="./css/foundation-icons.css"/>
+    <link rel="stylesheet" href="./css/app.css" media="screen"/>
+    <script src="./js/vendor/modernizr.js"></script>
   </head>
 
   <body>
@@ -91,25 +92,44 @@
 
     </div>
 
+    <!-- Footer -->
+
     <footer class="row">
       <div class="large-12 columns">
         <hr/>
         <div class="row">
-          <div class="large-6 columns">
-            <p>© Copyright no one at all. Go to town.</p>
+          <div class="large-7 columns">
+            <div class="large-6 columns">
+              <ul class="inline-list left">
+                <li><a href="https://github.com/AlexisBRENON">
+                  <i class="fi-social-github"></i> github.com/AlexisBRENON
+                </a></li>
+                <li><a href="https://twitter.com/AlexisBRENON">
+                  <i class="fi-social-twitter"></i> twitter.com/AlexisBRENON
+                </a></li>
+              </ul>
+            </div>
+            <div class="large-6 columns">
+              <ul class="inline-list left">
+                <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
+                  <i class="fi-social-linkedin"></i> linkedin.com/AlexisBRENON
+                </a></li>
+                <li><a href="https://www.facebook.com/alexis.brenonbastien">
+                  <i class="fi-social-facebook"></i> facebook.com/AlexisBRENON
+                </a></li>
+              </ul>
+            </div>
           </div>
-          <div class="large-6 columns">
-            <!--
-            <ul class="inline-list right">
-              <li><a href="#">Link 4</a></li>
-            </ul>
-            -->
+          <div class="large-4 columns">
+            <p>© Copyright no one at all. Go to town.</p>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Footer : END -->
     <!-- Google analytics scripts -->
+
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -120,14 +140,17 @@
         pageTracker._trackPageview();
       } catch(err) {}
     </script>
-    <!-- Google analytics scripts : END -->
 
+    <!-- Google analytics scripts : END -->
     <!-- Foundation scripts -->
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+
+    <script src="./js/vendor/jquery.js"></script>
+    <script src="./js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
+
     <!-- Foundation scripts : END -->
+
   </body>
 </html>
