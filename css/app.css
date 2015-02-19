@@ -1,23 +1,30 @@
+/* Monokai color theme
+dark grey : 272822
+light grey : 49483e
+white : f8f8f2
+red : f92672
+yellow : e6db74
+green : a6e22e
+blue : 66d9ef
+purple : ae81ff
+*/
+
 body {
-  background: #272822 url("../img/bkg-patterns/3.png") 0 0;
+  background: #49483e url("../img/bkg-patterns/3.png") 0 0;
   color: #f8f8f2;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #a6e22e;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
 }
 
 a {
   color: #66d9ef;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
 /*****************************************************************************/
 /* Foundation customization
-/*
+/* */
 
 /* Panel */
 .panel {
@@ -40,12 +47,14 @@ a {
   color: #FFFFFF; }*/
 .top-bar-section li:not(.has-form) a:not(.button) {
   background: #49483e;
+  transition: box-shadow 0.4s ease;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-  background: #e6db74;
+  box-shadow: inset 150px 0 0 0 #e6db74;
   color: #272822;
 }
+
 /*
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   padding: 0 0.9375rem;
@@ -65,4 +74,17 @@ a {
 /* Custom classes */
 .panel-phd-title {
   text-align: center
+}
+
+#content-column {
+  /* Same values from Foundation .row class */
+  width: 100%;
+  max-width: 62.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* Change only background and shadow */
+  background: #272822;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.7);
 }
