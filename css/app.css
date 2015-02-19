@@ -35,10 +35,10 @@ a {
 /* Top Bar */
 
 .top-bar {
-  background: #49483e;
+  background: #272822;
 }
 .top-bar-section ul li {
-  background: #49483e;
+  background: #272822;
 }
 /*
 .top-bar-section li.hover > a:not(.button) {
@@ -46,12 +46,12 @@ a {
   background: #333333;
   color: #FFFFFF; }*/
 .top-bar-section li:not(.has-form) a:not(.button) {
-  background: #49483e;
-  transition: box-shadow 0.4s ease;
+  background: #272822;
+  transition: all 0.4s ease;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-  box-shadow: inset 150px 0 0 0 #e6db74;
+  box-shadow: inset 150px 0 0 0 #f8f8f2;
   color: #272822;
 }
 
@@ -76,15 +76,31 @@ a {
   text-align: center
 }
 
-#content-column {
+.container {
   /* Same values from Foundation .row class */
   width: 100%;
   max-width: 62.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  /* Change only background and shadow */
+
+  border-radius: 2px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background: #272822;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.75rem;
+}
+
+.postal-address {
+  vertical-align: top;
+  display: inline-block;
 }
