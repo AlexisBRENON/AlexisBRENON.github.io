@@ -71,3 +71,9 @@ footer p {
   vertical-align: top;
   display: inline-block;
 }
+
+.portrait {
+  margin-left: 2rem;
+  width: 6.5rem;
+  border-radius: 7rem;
+}
