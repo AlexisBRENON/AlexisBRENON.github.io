@@ -67,6 +67,11 @@
   border-radius: $portrait-size;
 }
 
+.postal-address {
+  vertical-align: top;
+  display: inline-block;
+}
+
 footer p {
   font-size: $small-font-size;
 }
