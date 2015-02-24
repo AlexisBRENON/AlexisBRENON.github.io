@@ -1,0 +1,72 @@
+---
+---
+
+@import "settings";
+//@import "foundation";
+
+// Or selectively include components
+@import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+   "foundation/components/top-bar",
+   "foundation/components/type",
+//   "foundation/components/offcanvas",
+   "foundation/components/visibility";
+
+
+.top-bar-section li a {
+  transition: all 0.4s ease;
+}
+.top-bar-section li a:hover {
+  box-shadow: inset 150px 0 0 0 $body-font-color;
+}
+
+.container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: $monokai-dark;
+  box-shadow: 0px 2px 5px 0px fade-out($black, 0.3);
+  border-radius: $global-radius;
+}
+
+.portrait {
+  margin-left: 2rem;
+  $portrait-size: 6.5rem;
+  width: $portrait-size;
+  border-radius: $portrait-size;
+}
+
+footer p {
+  font-size: $small-font-size;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>{{ site.title }}{{ page.title }}</title>
+
+    <link rel="stylesheet" href="assets/css/app.css"/>
+    <link rel="author" href="humans.txt"/>
+    <script src="assets/js/modernizr.foundation.js"></script>
+  </head>
+
+	<body>
+    {% include nav.html %}
+    {% include github_fork.html %}
+
+    <div class="row container">
+    	{{ content }}
+    </div>
+
+    {% include footer.html %}
+
+    <script src="assets/js/google-analytics.js"></script>
+
+    <!-- Included JS Files (Compressed) -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/foundation.min.js"></script>
+
+    <!-- Initialize JS Plugins -->
+    <script src="assets/js/app.js"></script>
+
+  </body>
+</html>

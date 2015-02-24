@@ -1,0 +1,16 @@
+/* TEAM */
+  Standalone developer: Alexis BRENON
+  Contact: brenon.alexis+website [at] gmail.com
+  Twitter: @AlexisBRENON
+  From: Grenoble, FRANCE
+  
+/* THANKS */
+
+  Humanity savers: The H-team
+  Twitter: @humanstxt
+  
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, Foundation
+  Software: Git, Jekyll, Atom
+  
