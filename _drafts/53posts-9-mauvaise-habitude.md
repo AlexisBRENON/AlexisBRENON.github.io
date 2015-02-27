@@ -6,21 +6,31 @@ tags: quotidien changement
 ---
 
 <p class="post-tldr">
+  <blockquote>
+    - Tu veux quoi comme sauce avec tes frites ?
+    - N'importe, je m'en fous !
+  </blockquote>
+  Boom, la bombe est lâchée !
+</p>
 
-  - Tu veux quoi comme sauce avec tes frites ?
-  - N'importe, je m'en fous !
+<p>
+<div class="text-center">
+  <a href="http://gph.is/1bgXiIG">
+    <img class="th radius" src="http://i.giphy.com/tGKpJ9aXN69Xi.gif" alt="explosion" width="355" height="200"/>
+  </a>
+</div></p>
 
-Boom, la bombe est lâchée ! Il y a de **mauvaises habitudes** qu'on sait mauvaises et
-d'autre qu'on **ignore**, et c'est pourtant parfois celles qui **agacent** le plus notre **entourage**.
-Pour le post de la semaine, retour sur comment j'ai réussi à perdre une mauvaise habitude.
-
+<p>
+  Il y a de **mauvaises habitudes** qu'on sait mauvaises et
+  d'autre qu'on **ignore**, et c'est pourtant parfois celles qui **agacent** le plus notre **entourage**.
+  Pour le post de la semaine, retour sur comment j'ai réussi à perdre une mauvaise habitude.
 </p>
 
 <!-- more -->
 
 <p class="post">
 
-## Frites-ketchup ou frites-mayo
+<h3>Frites-ketchup ou frites-mayo</h3>
 
 Je suis comme qui dirait une bonne crème, une bonne pâte, etc. Je m'énerve assez rarement et arrive
 à m'entendre avec quasiment n'importe qui. Cette qualité (puisque c'est comme ça que je la perçoit),
@@ -29,7 +39,7 @@ je la doit paraît-il à ma timidité et mon introversion, comme expliqué dans 
 de démontrer mon exemple d'introduction ; au fond, qu'est-ce que ça peut bien faire la sauce qu'on
 mange avec ses frites (si ce n'est que les frites-mayo sont une abération culinaire) ?
 
-## 
+<h3>test</h3>
 
 Cette capacité de modération est plutôt appréciée dans le milieu professionnel, notemment pour les
 travaux de groupes, puisqu'il évite les clashs entre différents leaders. Mais en privé c'est une
@@ -39,7 +49,7 @@ soit l'enjeu : le haut à mettre pour la soirée, la prochaine voiture à achete
 voyage de noce. Pour bon nombre de ces questions, notre avis est complètement dispensable, mais la
 question est quand même posée et nous nous devons d'y répondre !
 
-## Un mauvais avis vaut mieux qu'un non avis
+<h3>Un mauvais avis vaut mieux qu'un non avis</h3>
 
 C'est ici qu'apparait le contre-productif `Fait comme tu veux !` qui ne va rien nous apporter si ce
 n'est l'ire de notre interlocutrice aux yeux de qui nous passerons pour quelqu'un qui se fout royalement
@@ -51,16 +61,18 @@ qu'elle n'arrive pas à choisir d'elle-même, et un banal `J'en sais rien` ne va
 toute sa garde-robe, je ne doute pas qu'il y ai au moins quelques tenues que nous préférons par
 rapports à d'autres (la petite robe à fleurs est certainement plus agréable à l'oeil que le jogging
 du dimanche, non ?), alors il faut le lui dire. Trois cas de figure alors :
-* Madame nous écoute, cette robe lui va fort bien et tout le monde est content
-* Madame ne nous écoute pas, choisi quelque chose qui n'a rien à voir mais qui lui sied à ravir. Pas
+<ul>
+<li>Madame nous écoute, cette robe lui va fort bien et tout le monde est content</li>
+<li>Madame ne nous écoute pas, choisi quelque chose qui n'a rien à voir mais qui lui sied à ravir. Pas
   de souci, on ne s'offusque pas, nous aurons tout loisir de ne pas écouter ses conseils la
-  prochaine fois qu'on lui demandera quelle cravate mettre avec notre chemise
-* Madame nous écoute, mais visiblement nous n'avions pas toutes les informationss. Le gilet violet avec le
+  prochaine fois qu'on lui demandera quelle cravate mettre avec notre chemise</li>
+<li>Madame nous écoute, mais visiblement nous n'avions pas toutes les informationss. Le gilet violet avec le
   top jaune et le jean vert la fait plus ressembler à Arlequin qu'à Jennyfer Lawrence lors de la
   cérémonie des Césars. Encore une fois pas de problème, on le lui fait remarquer (avec tact !) et je
-  suis prêt à parier qu'elle ira se changer, et cette fois sans nous demander notre avis !
+  suis prêt à parier qu'elle ira se changer, et cette fois sans nous demander notre avis !</li>
+</ul>
 
-## Tourner sept fois sa langue avant de parler
+<h3>Tourner sept fois sa langue avant de parler</h3>
 
 Un dernier conseil avant de terminer. Certains choix sont plus irrémadiables que d'autres. Si elle
 nous demande si nous voulons un enfant et que l'on répond 'oui' sur un coup de tête, il sera plus difficile
