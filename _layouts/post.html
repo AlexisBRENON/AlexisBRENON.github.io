@@ -1,8 +1,28 @@
 {% include head.html %}
 
-  <div class="large-8 columns">
+  <div class="large-9 columns">
     <h1>{{ page.title }}<br/><small>{{ page.date | date: "%F" }}</small></h1>
     {{ content }}
+    {% include comments.html %}
+  </div>
+  <div class="large-3 columns show-for-medium-up">
+      <div>
+          <h3>Derniers posts</h3>
+          <p>
+          </p>
+      </div>
+
+      <div>
+          <h3>Posts en lien</h3>
+          <p>
+          </p>
+      </div>
+
+      <div>
+          <h3>Twitter</h3>
+          <p>
+          </p>
+      </div>
   </div>
 
 {% include footer.html %}
