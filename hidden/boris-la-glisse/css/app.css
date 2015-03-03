@@ -1,0 +1,21 @@
+body {
+  background: #1a1a1a url("../images/bg_pattern.png") 0 0;
+}
+
+.container-fluid {
+  background-color: #fff
+}
+
+.track-border {
+  padding-top: 70px;
+  border-left-width: 2rem;
+  border-right-width: 4rem;
+  border-image-source: url("../images/border.png");
+  border-image-slice: 1 250;
+  border-image-width: 3rem;
+  border-image-repeat: round;
+}
+
+footer {
+  color: #fff
+}
