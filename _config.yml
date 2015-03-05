@@ -6,7 +6,3 @@ twitter: AlexisBRENON
 github: AlexisBRENON
 
 exclude: [bower_components]
-sass:
-  load_paths:
-    - _sass
-    - bower_components/foundation/scss

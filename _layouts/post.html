@@ -5,19 +5,9 @@
     {{ content }}
     {% include comments.html %}
   </div>
-  <div class="large-4 columns show-for-medium-up">
-      <div>
-          <h3>Derniers posts</h3>
-          <p>
-          </p>
-      </div>
-
-      <div>
-          <h3>Posts en lien</h3>
-          <p>
-          </p>
-      </div>
-
+  <div class="large-3 columns show-for-medium-up">
+      {% include last_posts.html %}
+      {% include related_posts.html %}
       {% include twitter_feed.html %}
   </div>
 
