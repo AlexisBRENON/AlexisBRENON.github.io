@@ -19,14 +19,14 @@
 //   "foundation/components/flex-video",
 //   "foundation/components/forms",
 //   "foundation/components/grid",
-//   "foundation/components/inline-lists",
+  "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",
 //   "foundation/components/labels",
 //   "foundation/components/magellan",
 //   "foundation/components/orbit",
 //   "foundation/components/pagination",
-   "foundation/components/panels",
+  "foundation/components/panels",
 //   "foundation/components/pricing-tables",
 //   "foundation/components/progress-bars",
 //   "foundation/components/reveal",
@@ -36,12 +36,12 @@
 //   "foundation/components/switches",
 //   "foundation/components/tables",
 //   "foundation/components/tabs",
-   "foundation/components/thumbs",
+  "foundation/components/thumbs",
 //   "foundation/components/tooltips",
-   "foundation/components/top-bar",
-   "foundation/components/type",
+  "foundation/components/top-bar",
+  "foundation/components/type",
 //   "foundation/components/offcanvas",
-   "foundation/components/visibility";
+  "foundation/components/visibility";
 
 
 .top-bar-section li a {
@@ -77,8 +77,24 @@ footer p {
   font-size: $small-font-size;
 }
 
+.post-title {
+  text-transform: capitalize;
+}
+.post-title small {
+  text-transform: initial;
+}
+
 .post-quote {
     margin-bottom: 0;
     margin-left: 1rem;
     width: 35%;
+}
+
+/* This gets Facebook to fall into place */
+.share-buttons iframe {
+	vertical-align: middle;
+}
+/* This gets Twitter to seems more aligned */
+.share-buttons .twitter {
+	margin-top: 1px;
 }
