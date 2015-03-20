@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+---
+
+<main class="large-12 columns">
+    <h3>Blog</h3>
+    <p>
+      Informatique, musique, thèse, etc. Retrouvez ici toutes mes pensées et reflexions sur ce qui rythme ma vie !
+    </p>
+    <hr/>
+    <ul class="medium-block-grid-2 posts-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">
+          <h4>{{ post.title }}</h4>
+          <img class="radius th post-icon left" src="{{ post.icon }}"/> {{ post.excerpt | remove: '<div class="panel post-tldr columns text-justify">' | remove: '</div>' }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+</main>
