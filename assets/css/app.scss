@@ -9,7 +9,7 @@
 @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+  "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -75,6 +75,16 @@
 
 footer p {
   font-size: $small-font-size;
+}
+
+/* Display excerpt in normal color, not in link color ! */
+.posts-list a {
+  color: inherit;
+}
+
+.post-icon {
+  height: 5rem;
+  margin-right: 1rem;
 }
 
 .post-title {
