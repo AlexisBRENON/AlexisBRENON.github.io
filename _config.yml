@@ -5,4 +5,4 @@ linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit
 twitter: AlexisBRENON
 github: AlexisBRENON
 
-exclude: [bower_components]
+exclude: [bower_components, bower.json, config.rb, Gemfile, Gemfile.lock, readme.md]
