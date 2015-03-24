@@ -5,4 +5,14 @@ linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit
 twitter: AlexisBRENON
 github: AlexisBRENON
 
-exclude: [bower_components]
+exclude: [bower_components, bower.json, config.rb, Gemfile, Gemfile.lock, readme.md]
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: [posts, drafts]
+    values:
+      layout: "post"
+      excerpt_separator: "<!-- More -->"
+      author: "Alexis BRENON"
