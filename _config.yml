@@ -11,7 +11,15 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: [posts, drafts]
+      type: posts
+    values:
+      layout: "post"
+      excerpt_separator: "<!-- More -->"
+      author: "Alexis BRENON"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: drafts
     values:
       layout: "post"
       excerpt_separator: "<!-- More -->"
