@@ -24,3 +24,6 @@ defaults:
       layout: "post"
       excerpt_separator: "<!-- More -->"
       author: "Alexis BRENON"
+
+gems:
+  - jemoji
