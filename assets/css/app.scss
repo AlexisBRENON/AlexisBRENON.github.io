@@ -87,6 +87,12 @@ footer p {
   margin-right: 1rem;
 }
 
+.post-image {
+  max-height: 20rem;
+  background: $thumb-border-color;
+}
+
+
 .post-title {
   text-transform: capitalize;
 }
