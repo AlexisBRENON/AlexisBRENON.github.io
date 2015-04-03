@@ -1,23 +1,23 @@
 <div>
     <h3>Posts liés</h3>
+    {% assign category = page.categories[1] %}
+    {% assign number_related_post = site.categories[category] | size %}
+    {% if number_related_post < 2 %}
     <p>
-      {% assign category = page.categories[1] %}
-      {% assign number_related_post = site.categories[category] | size %}
-      {% if number_related_post < 2 %}
-        Aucun pour l'instant. :disappointed:<br/>
-        Un peu de patience.
-      {% else %}
-        <ul>
-          {% for post in site.categories[category] limit:5 %}
-          {% if post.id != page.id %}
-          <li>
-            <a href="{{ site.url }}{{ post.url }}">
-            {{ post.title }}
-            </a>
-          </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      {% endif %}
+      Aucun pour l'instant...<br/>
+      Un peu de patience.
     </p>
+    {% else %}
+      <ul>
+        {% for post in site.categories[category] limit:5 %}
+        {% if post.id != page.id %}
+        <li>
+          <a href="{{ site.url }}{{ post.url }}">
+          {{ post.title }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
 </div>
