@@ -2,7 +2,8 @@
     <h3>Posts liés</h3>
     <p>
     <ul>
-        {% for post in site.related_posts limit:5 %}
+        {% assign category = page.categories[1] %}
+        {% for post in site.categories[category] limit:5 %}
         <li>
             <a href="{{ site.url }}{{ post.url }}">
             {{ post.title }}
