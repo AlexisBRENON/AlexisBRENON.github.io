@@ -4,44 +4,7 @@
     <h2 class="post-title">{{ page.title }}
       <small> - Publié le {%include french_date.html date=page.date %}</small>
     </h2>
-    <ul class="inline-list share-buttons">
-      <li class="facebook">
-        <span>
-          <div class="fb-share-button"
-            data-href="{{ site.url }}{{ page.url }}"
-            data-layout="button">
-          </div>
-        </span>
-      </li>
-      <li class="twitter">
-        <span>
-          <a class="twitter-share-button"
-              href="https://twitter.com/share"
-              data-url="{{ site.url }}{{ page.url }}"
-              data-text="{{ page.title }}"
-              data-via="AlexisBRENON"
-              data-hashtags="{% for tag in post.tags %}tag,{% endfor %}"
-              data-count="none"
-              data-lang="fr">
-              Tweet
-          </a>
-          <script>
-          window.twttr=(
-            function(d,s,id){
-              var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};
-              if(d.getElementById(id))return;
-              js=d.createElement(s);
-              js.id=id;
-              js.src="https://platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js,fjs);
-              t._e=[];
-              t.ready=function(f){t._e.push(f);};
-              return t;
-            }(document,"script","twitter-wjs"));
-          </script>
-        </span>
-      </li>
-    </ul>
+    {% include share_buttons.html %}
     {{ content }}
   </div>
   <div class="medium-3 columns show-for-medium-up">
