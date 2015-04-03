@@ -88,6 +88,8 @@ footer p {
 }
 
 .post-image {
+  @include thumb;
+  @include radius;
   max-height: 20rem;
   background: $thumb-border-color;
 }
