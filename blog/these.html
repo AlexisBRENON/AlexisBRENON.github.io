@@ -12,10 +12,7 @@ title: Blog - Thèse
     <ul class="medium-block-grid-2 posts-list">
       {% for post in site.categories.these %}
       <li>
-        <a href="{{ post.url }}">
-          <h4>{{ post.title }}</h4>
-          <img class="radius th post-icon left" src="{{ post.icon }}"/> {{ post.excerpt | remove: '<div class="panel post-tldr columns text-justify">' | remove: '</div>' }}
-        </a>
+          {% include post_excerpt.html %}
       </li>
       {% endfor %}
     </ul>
