@@ -1,8 +1,8 @@
 /* My own SCSS definitions */
 
-/* *************************
- * Body main parts layouts
- * ************************/
+/* ************************* */
+/* Body main parts layouts   */
+/* ************************* */
 
 .container {
   margin-top: 1rem;
@@ -18,9 +18,9 @@ footer p {
   font-size: $small-font-size;
 }
 
-/* *************************
- * Top bar buttons effects
- * ************************/
+/* ************************* */
+/* Top bar buttons effects   */
+/* ************************* */
 
 .top-bar-section li a {
   transition: all 0.4s ease;
@@ -29,9 +29,9 @@ footer p {
   box-shadow: inset 150px 0 0 0 $body-font-color;
 }
 
-/* *************************
- * Home page custom layout
- * ************************/
+/* ************************* */
+/* Home page custom layout   */
+/* ************************* */
 
 .portrait {
   margin-left: 2rem;
@@ -45,12 +45,12 @@ footer p {
   display: inline-block;
 }
 
-/* *************************
- * Posts custom layout
- * ************************/
+/* ************************* */
+/* Posts custom layout       */
+/* ************************* */
 
-    /* ***********************
-     * Posts listing */
+    /* ************************* */
+    /* Posts listing             */
 
 /* Display excerpt in normal color, not in link color ! */
 .posts-list a {
@@ -76,8 +76,8 @@ ul.posts-list > li p {
     margin-bottom: 0;
 }
 
-    /* ***********************
-    * Post page */
+    /* ************************* */
+    /* Post page                 */
 
 /* Title and date of the post */
 .post-title {
@@ -143,8 +143,9 @@ code {
 }
     
 
-    /* ***********************
-    * Social network buttons */
+    /* ************************* */
+    /* Social network buttons    */
+
 /* This gets Facebook to fall into place */
 .share-buttons iframe {
 	vertical-align: middle;
