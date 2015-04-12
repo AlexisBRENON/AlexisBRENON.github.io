@@ -56,10 +56,24 @@ footer p {
 .posts-list a {
   color: inherit;
 }
+
 /* Show a small image on the right of the excerpt */
 .post-icon {
   height: 5rem;
   margin-right: 1rem;
+}
+
+/* Highlight the current hovered post excerpt */
+ul.posts-list > li {
+  transition: all 0.5s ease;
+}
+ul.posts-list > li:hover {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    background: $monokai-light;
+}
+ul.posts-list > li p {
+    margin-bottom: 0;
 }
 
     /* ***********************
