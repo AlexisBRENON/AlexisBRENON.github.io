@@ -118,6 +118,17 @@ footer p {
   overflow: auto;
 }
 
+code {
+    display: inline-block;
+    width: 100%;
+    background-color: $monokai-light;
+    color: $body-font-color;
+    font-family: Inconsolata, DejaVu Sans Mono, monospace;
+    white-space: pre;
+    overflow: auto;
+}
+    
+
     /* ***********************
     * Social network buttons */
 /* This gets Facebook to fall into place */
