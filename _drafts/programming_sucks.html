@@ -1,15 +1,17 @@
 ---
 title: "Programmer ça craint"
 category: [blog, technique]
-icon: http://www.stilldrinking.org/blog_images/code-horror.gif 
+icon: http://www.stilldrinking.org/blog_images/code-horror.gif
 ---
 
 <div class="panel post-tldr columns text-justify">
     <p>
-    Cet article est la traduction d'un autre article en anglais qui m'a particulièrement plu et dont
-    je souhaite vous faire profiter. Bien sûr, il s'agit d'une traduction libre et ma maitrise de la
-    langue de Shakespeare étant ce qu'elle est, je vous demande d'être indulgent. Je me suis efforcé
-    autant que faire ce peut de retranscrire les nuances de tons de l'article. Bonne lecture&nbsp;!
+    Cet article est la traduction d'<strong><a href="http://www.stilldrinking.org/programming-sucks">un article
+      de Peter Welch</a></strong>, en anglais, qui m'a particulièrement plu et dont
+    je souhaite vous faire profiter. Bien sûr, il s'agit d'<strong>une traduction</strong> libre et ma maitrise de la
+    langue de Shakespeare étant ce qu'elle est, je vous demande d'être indulgent et de me signaler
+    les erreurs ou maladresses que vous noterez. Je me suis efforcé
+    autant que faire se peut de retranscrire les nuances de tons de l'article. Bonne lecture&nbsp;!
     </p>
 </div>
 
@@ -17,15 +19,16 @@ icon: http://www.stilldrinking.org/blog_images/code-horror.gif
 
 <div class="post columns text-justify">
     <div class="text-center">
-        <a href="https://www.docker.com/" rel="nofollow">
+        <a href="http://www.stilldrinking.org/" rel="nofollow">
             <img src="http://www.stilldrinking.org/blog_images/code-horror.gif" title="Erreur
             catastrophique" class="post-image">
         </a>
         <blockquote class="text-left">
+            <p>
             <strong>Erreur catastrophique</strong><br/>
             L'utilisateur a tenté d'utiliser le logiciel de la façon dont
-            c'était prévu.<br/><br/>
-        <ol>Options:
+            c'était prévu.</p>
+        <ol>Options&nbsp;:
             <li>Effacer l'ordinateur</li>
             <li>Pleurer</li>
         </ol>
@@ -33,10 +36,10 @@ icon: http://www.stilldrinking.org/blog_images/code-horror.gif
     </div>
     <div>
         <p>
-        Tous les amis que j'ai et dont le travaille amène à soulever quoi que ce soit de plus
-        lourd qu'un PC portable plus de deux fois par semaine trouve toujours le moyen de glisser
-        dans la conversation: <q>
-            Mec<span class="ref">
+        Tous mes amis qui doivent soulever quoi que ce soit de plus lourd qu'un PC portable, plus de
+        deux fois par semaine, pour leur boulot, trouvent toujours le moyen de glisser
+        dans une conversation&nbsp;:
+        <q>Mec<span class="ref">
                 <span class="refnum">[1]</span>
                 <span class="refbody">Ça commence toujours par "Mec"</span>
             </span>, t'as un boulot facile. Je fais des semaines de
@@ -44,305 +47,326 @@ icon: http://www.stilldrinking.org/blog_images/code-horror.gif
         </p>
         <p>
         Ils ont raison sur un point. Le Mordor ça craint et c'est certainement plus pénible
-        physiquement de creuser un tunnel que de tapoter un clavier, à moins que vous ne soyez une
-        fourmi. Mais, quelque soit l'argument, on est au moins d'accord que le stress et la folie
-        sont de mauvaises choses ? Génial&nbsp;! Bienvenue dans le développement.
+        physiquement de creuser un tunnel que de tapoter sur un clavier, à moins que tu ne sois une
+        fourmi. Mais, quelque soit l'argument, sommes nous au moins d'accord sur un point&nbsp;: le stress et la folie
+        sont de mauvaises choses&nbsp;? Génial&nbsp;! Bienvenue dans le développement.
         </p>
     </div>
     <div>
-        <h3>Toutes les équipes de développement sont faites par et avec des fous</h3>
+        <h3>Les équipes de développeurs sont faites avec des fous, par des fous</h3>
         <p>
-        Imaginez rejoindre une équipe d'ingénieur. Vous êtes excité et débordant d'idées, sortant
-        probablement tout juste de l'école, dans un monde où <em>tout le monde il est beau, tout le 
-            il est gentil</em>. Tu commences par
-        rencontrer Marie, chef de projet pour un pont dans une grande métropole. Marie te présente
-        Fred, arpès que tu aies passer les quinze contrôles de sécurité installés par David parce
-        que David c'est fait voler son pull dans son bureau une fois et <q>Jamais plus !</q> Fred ne
-        travaille qu'avec du bois, donc tu lui demandes pourquoi il est impliqué puisque le pont est
-        sensé supporter le traffic d'une heure de pointe pleine de voitures pleines de gens mortels
+        Imagine toi rejoindre une équipe d'ingénieurs. Tu es tout excité et débordant d'idées, sortant
+        probablement tout juste de l'école, dans un monde où <em>'tout le monde il est beau, tout le
+            il est gentil'</em>. Tu commences par
+        rencontrer Marie, chef de projet pour la construction d'un pont dans une grande métropole.</p>
+        <p>Marie te présente
+        Fred, après que tu aies passer les quinze contrôles de sécurité installés par David parce
+        que David c'est fait voler son pull dans son bureau une fois et <q>Jamais plus&nbsp;!</q>. Fred ne
+        travaille qu'avec du bois, et tu demandes donc pourquoi il est impliqué. En effet, le pont est
+        sensé supporter le trafic d'une heure de pointe&nbsp;; pleine de voitures&nbsp;; pleines de
+        gens mortels&nbsp;; 
         qui veulent traverser un gouffre de 70 mètres au-dessus de rapides. <q>Ne t'inquiètes
-            pas</q>, dit Marie, Fred va s'occuper des trottoirs. Quels trottoirs !? Et bien, Fred a
-        fait de très bons trottoirs et on va en ajouter pour rendre le pont plus joli. Bien sûr, il
-        faudra construire le pont sans rambarde, parce qu'il y a une règle très stricte stipulant
-        "pas de rambarde" instaurée par Philippe, qui n'est pas ingénieur. Personne ne sait
-        vraiment ce que fait Philippe, mais il crée une synegie et gère les relations avec la
-        direction, qu'aucun des ingénieurs ne veut faire, alors ils laissent Philippe faire ce qu'il
-        veut. Sarah, de son côté, a trouvé plusieurs nouvelles technique de pavage compliquées, et les
-        a toutes intégrées au design du pont, donc tu devra les prendre
-        en compte au fur et à mesure que le pont avance, sachant que chacune implique une
-        construction et des règles de sécurité différentes. Thomas et Harry travaillent ensemble depuis des années, mais
-        on un débat pour savoir s'il faut utiliser le système métrique ou impérial, et c'est
-        au <em>premier qui dessinnera qui choisira</em>. Ça à été un
-        casse-tête pour les personnes qui ont dû visser le tout, ils ont abandonné, puis forcé,
-        martelé et finalement soudé toutes les pièces à portée de main pendant toute la journée.
-        Enfin, le pont a été dessiné comme un pont suspendu mais en vrai, personne ne sait
-        comment construire un pont suspendu, alors ils ont construit la moitié du pont et ont ajouté
-        une colonne de support pour être sûr que ça tienne, mais ils ont laissé les cables parce
-        qu'ils supportent encore le pont. Personne ne sait comment, mais tout le monde est à peu
-        près sûr qu'ils sont importants. Une fois les présentations faites, tu es invité à amener de
-        nouvelles idées, mais tu n'en a aucune parce que tu es un ingénieur en propulsion
-        aéro-spatiale et que tu n'y connais rien aux ponts.
+            pas</q>, dit Marie, Fred va s'occuper des trottoirs. Quels trottoirs&nbsp;!? Et bien, Fred a
+        fait de très bons trottoirs et on va en ajouter pour rendre le pont plus
+            joli.
+        </p>
+        <p>Bien sûr, il
+        faudra construire le pont sans rambarde, parce qu'il y a une règle très stricte instaurée
+        par Philippe, stipulant "pas de rambarde". Philippe n'est pas ingénieur. Personne ne sait
+        vraiment ce qu'il fait, mais il crée une synergie et gère les relations avec la
+        direction, ce qu'aucun des ingénieurs ne veut faire, alors tout le monde le laisse faire ce qu'il
+        veut.
+        Sarah, de son côté, a trouvé de nouvelles techniques de pavage avant-gardistes, et les
+        a toutes intégrées aux plans du pont. Chaque technique implique une construction
+        sous-jacente et des règles de sécurité différentes et il faut donc en tenir compte tout au
+        long de la construction.
+        </p>
+        <p>Thomas et Harry travaillent ensemble depuis des années, mais
+        se disputent toujours pour savoir s'il faut utiliser le système métrique ou impérial. Du
+        coup, c'est le premier qui dessine qui choisi et il n'y a pas deux plans avec les mêmes
+        unités. C'était un vrai
+        casse-tête pour les personnes qui devait assembler le tout. Ils ont vissé,
+        abandonné, forcé,
+        martelé et finalement soudé toutes les pièces à portée de main.
         </p>
         <p>
-        Voudrais-tu conduire sur ce pont ? Non ! Si d'une manière ou d'une autre, cette construction
-        aboutissait, tous les acteurs du projet seraient exécutés. Pourtant, c'est ce qui est arrivé
-        avec chacun des logiciels que vous avez utilisé : logiciel banquaire, site web et un
-        logiciel utilisé partout pour protéger tes données sur internet mais qui ne l'a pas fait.
+        Pour finir, le pont est conçu comme un pont suspendu mais personne ne sait vraiment
+        comment ça se construit... Alors on a construit la moitié du pont et on a ajouté
+        une pile de support pour être sûr que ça tienne, mais on a laissé les câbles parce
+        qu'ils ont toujours l'air de maintenir le tout. On ne sait pas comment, mais tout le monde est à peu
+            près sûr qu'ils sont importants.
+        Une fois les présentations faites, on te demande de donner de
+        nouvelles idées, mais tu n'en a aucune parce que tu es un ingénieur en propulsion
+        aérospatiale et que tu n'y connais rien aux ponts.
+        </p>
+        <blockquote>
+            <p>tout le monde est à peu près sûr qu'ils sont importants</p>
+        </blockquote>
+        <p>
+        Tu voudrais rouler sur ce pont&nbsp;? Non&nbsp;! Si d'une manière ou d'une autre, le projet
+        aboutissait, tous les acteurs seraient exécutés. Pourtant, c'est comme ça qu'a été développé
+        chacun des logiciels que tu as pu utiliser&nbsp;: logiciel bancaire, site web et un
+        logiciel utilisé partout pour protéger tes données sur Internet mais qui n'a pas fait son
+        boulot...
         </p>
     </div>
     <div>
         <h3>Tous les codes sont mauvais</h3>
         <p>
-        Chaque programmeur, de temps en temps, quand il n'y a personne à la maison, éteint la
+        Chaque programmeur, de temps en temps, quand il est tout seul, éteint la
         lumière, prend un verre de whisky, met de la musique et ouvre un fichier sur son
         ordinateur. C'est un fichier différent pour chaque développeur. Parfois il l'a écrit
-        lui-même, parfois il l'a trouvé et à su qu'il devait l'enregistrer. Il lit entre les lignes
-        et est ému par sa beauté. Et puis les larmes deviennent amères lorsqu'il se souvient du
-        reste des fichiers et de leur médiocrité dans le monde réel.
+        lui-même, parfois il l'a trouvé et a su qu'il devait l'enregistrer. Il le lit
+        et est ému par sa beauté. Et puis les larmes deviennent amères lorsqu'il se souvient des
+        autres fichiers, dans le reste du monde, et de leur médiocrité.
         </p>
         <p>
-        Ce fichier est un Beau Code. Il a des noms de variables et de fonctions explicites et
-        cohérents. Il est concis. Il ne fait rien d'inutilement stupide. Il n'a jamais eu à être
-        intégré dans la jungle du code ou vendu par une équipe de vente. Il fait exactement une
+        Ce fichier c'est du Beau Code. Il a des noms de variables et de fonctions explicites et
+        cohérents. Il est concis. Il ne fait rien de stupide inutilement. Il n'a jamais eu à être
+        publié ou à répondre aux attentes d'une équipe de commerciaux. Il ne fait qu'une
         seule et unique chose, et il le fait bien. Il a été écrit par une seule personne et jamais
-        modifié par personne d'autre. Il se lit comme de la poésie écrite par quelqu'un de plus de
-        trente ans.
+        modifié par personne d'autre. Il se lit comme de la poésie.
         </p>
         <p>
         Tous les développeurs commencent par écrire des perles comme celle-ci. Et puis, ils
-        apprennent le vendredi qu'ils ont 600 perles à écrire pour mardi, alors ils trichent par-ci
-        par-là, copient d'autres perles et essayent de les agglomérer, ou ils doivent demander de
-        l'aide à un collègue qui salit tout, et puis toutes ces perles sont aggrégées pour donner
-        une chose indescriptible que l'on décrit comme un Picasso parce que personne ne veut voir la
-        pisse de chat qui suintent des failles des ces perles salies. La semaine d'après, tout le
+        apprennent le vendredi qu'ils ont 600 perles à écrire pour mardi. Alors ils trichent par-ci
+        par-là, copient d'autres perles et essayent de les agglomérer. Des fois, ils doivent demander de
+        l'aide à un collègue qui pourrit tout. Et puis on agrège toutes ces perles pour donner
+        une chose indescriptible que l'on présente comme un Picasso parce que personne ne veut voir la
+        pisse de chat qui suintent de tous les cotés. La semaine suivante, tout le
         monde va tenter de boucher ces failles pour éviter que le Picasso ne s'effondre.
         </p>
+        <blockquote class="post-quote right text-left">
+            <p>les standards sont aussi rares que les licornes</p>
+        </blockquote>
         <p>
-        Il y a une théorie qui dit que l'on peut corriger ça en suivant les standards, sauf qu'il y
-        a plus de standard qu'il n'y a de choses que les ordinateurs peuvent faire, et tous ces
-        standards sont indifférement améliorés ou contournés selon les préférences des personnes qui
-        les codent et il n'y a pas deux codes dans la monde réel qui font une douzaine de choses
-        identiques d'une douzaine de façons différentes. Les premières semaines d'un boulot
-        consistent juste à comprendre comment un programme fonctionne même si tu es familier avec
-        chaque language, framework et standard utilisé, parce que les standards sont des licornes.
+        Il y a une théorie qui dit que l'on peut corriger ça en suivant des standards, sauf qu'il y
+        a plus de standards qu'il n'y a de choses que les ordinateurs peuvent faire. En plus, tous ces
+        standards sont indifféremment améliorés ou contournés selon les préférences des personnes qui
+        les utilisent. Il existe dans le monde au moins une douzaine de façons différentes de faire la
+        même chose et il n'y a pas deux codes qui le font de la même manière.
+        Les premières semaines d'un boulot
+        consistent uniquement à comprendre comment un programme fonctionne même si tu es familier avec
+        chaque langage, framework et standard utilisé, parce que les standards sont aussi rares que
+        les licornes.
         </p>
     </div>
     <div>
-        <h3>Il y aura toujours de l'obscurité</h3>
+        <h3>Il y aura toujours des zones d'ombres</h3>
         <p>
-        J'ai passé quelques années à grandir avec des toilettes dans ma chambre. Les toilettes
-        avaient une architecture bizarre. Aux premiers abords elles semblaient normales, et puis tu
-        y allais pour faire tout ce qu'on peut faire aux toillettes, et découvrais que le mur sur la
-        droite s'ouvrait sur une alcôve avec une petite étagère à portée de main. Puis tu levais les
-        yeux et le mur du fond de l'alcôve s'ouvrait encore sur un petit espace exigue complètement
-        vide dans lequel aucune lumière ne pouvait jamais aller et que tu identifiais immédiatement
-        comme la cachette d'un monstre affamé que tu maintenais à distance avec une veilleuse et des
-        peluches toutes les nuits.
+        Quand j'étais petit, j'avais des toilettes dans ma chambre qui
+        étaient bizarrement agencées. Au premier abord elles semblaient normales, et puis lorsque tu
+        y allais pour faire tout ce qu'on peut faire aux toilettes, tu découvrais que le mur sur la
+        droite s'ouvrait sur une alcôve avec une petite étagère. En levant les
+        yeux tu voyais que le mur au fond de l'alcôve s'ouvrait encore sur un petit espace exigüe complètement
+        vide où il n'y avait jamais aucune lumière. Tu savais tout de suite que cet endroit était 
+        la cachette d'un monstre affamé que tu maintenais à distance toutes les nuits avec une veilleuse et des
+        peluches.
         </p>
         <p>
         Voilà ce que c'est que d'apprendre à développer. Tu connais des outils utiles, et puis tu
-        regarde autour et il y a plein d'autres nouveaux outils et ces outils te montrent toute
-        l'horreur qui a toujours été sous ton lit.
+        regarde autour et il y en a plein d'autres qui te révèlent toute
+        l'horreur qui a toujours été cachée sous ton lit.
         </p>
         <p>
-        Disons que tu sois un développeur web moyen. Tu connais une douzaine de langage de
-        programmation, une tonne de libraires, de standards, de protocoles, etc. Tu dois toujours en
-        apprendre un nouveau chaque semaine, vérifier si toutes les choses que tu connais on été
-        mises à jour et être sûr qu'elles fonctionnent encore ensemble et que personne n'a corrigé
-        l'un des bugs que tu exploites pour faire quelque chose que tu trouvais super malin un
-        week-end où tu étais bourré. Tu est à niveau, c'est cool, et puis tout s'effondre.
+        Disons que tu sois un développeur web moyen. Tu connais une douzaine de langages de
+        programmation, une tonne de libraires, de standards, de protocoles, etc. Mais chaque
+        semaine, tu dois en apprendre un nouveau, vérifier si toutes les choses que tu connais n'ont pas
+        été mises à jour, être sûr qu'elles fonctionnent encore ensemble et que personne n'a corrigé
+        l'un des bugs que tu exploites pour faire un truc que tu trouvais super malin un
+        week-end où tu étais bourré. Tout marche bien, c'est cool, et là, c'est la drame.
         </p>
         <p>
-        Tu te dis <q>C'est quoi ce bordel&nbsp;!?</q>, et tu cherche d'où ça peut venir. Tu découvre
-        qu'un jour, un idiot à décidé que comme un autre idiot avait décidé que 1/0 était égal à
-        l'infini, il pouvait l'utiliser comme un raccourci pour <em>Infinity</em> quand il
-        simplifiait son code. Puis un non-idiot a juste déclaré que c'était idiot, ce que le premier
-        idiot aurait dû dire, mais comme il ne l'a pas fait, le non-idiot à décidé de faire le con
-        et de rentre cette erreur fatale dans son nouveau compilateur. Puis il a décidé qu'il ne le
-        dirait à personne que c'était une erreur, parce qu'il est con, et maintenant toutes tes
-        perles sentent la pisse et tu ne vois pas pourquoi.
+        <q>C'est quoi ce bordel&nbsp;!?</q>, tu cherches d'où ça peut venir. Tu découvres
+        qu'un jour, un idiot a utilisé 1/0 comme raccourci pour <em>Infinity</em> dans son
+        code parce qu'un autre idiot avait décidé que 1/0 était égal à l'infini. Puis un mec, un peu
+        moins idiot, a déclaré que c'était idiot, ce qui aurait dû être fait dès le départ. Du coup,
+        il a décidé de faire le con, de rendre cette erreur fatale dans son nouveau compilateur et
+        de ne prévenir personne&nbsp;; parce qu'il est con. Maintenant toutes tes
+        perles sentent la pisse et tu ne sais même pas pourquoi.
         </p>
+        <blockquote class="right post-quote text-right">
+            <p>il [le développeur] sait que les ordinateurs
+        sont des enfants schizophréniques avec des maladies auto immunes et [...] il ne les frappent
+        pas lorsqu'ils se sentent mal.
+            </p>
+        </blockquote>
         <p>
-        Tu es expert dans toutes ces technologies, et heureusement, parce que cette expertise va te
+        Tu es un expert dans toutes ces technologies, et heureusement, car cette expertise va te
         permettre de trouver ce qui ne va pas en seulement six heures, au lieu de perdre ton boulot.
-        Ça te fait un petit truc en plus dans les millions de petits trucs que tu dois mémoriser
-        parce qu'il y un paquet de programmes dont tu dépends qui ont été écrit par des cons et des
-        idiots.
+        Mais ça te fait un petit truc en plus dans les millions de petits trucs que tu dois
+        connaître parce qu'il y un paquet de programmes qui ont été écrits par des cons et des idiots.
         </p>
         <p>
-        Et c'est juste dans ta spécialité, qui ne représente qu'une toute petite fraction de
+        Et ça, c'est juste dans ta spécialité, qui ne représente qu'une toute petite fraction de
         l'informatique dont tu ne connaitra jamais tout. Pas une seule personne vivante ne sait
-        comment chaque élément de ton MacBook, vieux de cinq ans, ne marche. Pourquoi te
-        demandes-t-on de l'éteindre et de le redémarrer? Parce qu'on n'a pas la moindre idée de ce
-        qui ne va pas, et c'est tellement facile de mettre un ordinateur dans le coma et de laisser
-        toute son équipe de docteurs de faire un diagnostique pour nous. La seule raison pour
-        laquelle les ordinateurs des développeurs marchent mieux que ceux des non-développeurs,
-        c'est que les développeurs savent que les ordinateurs sont des petits enfants
-        schizophréniques avec des maladies auto-immunes et nous ne les frappons pas lorsqu'ils se
-        sentent mals.
+        comment marche chacun des éléments de ton MacBook. Pourquoi est-ce qu'on
+        te dit de l'éteindre et de le redémarrer&nbsp;? Parce qu'on n'a pas la moindre idée de ce
+        qui ne va pas, et que c'est beaucoup plus facile de mettre un ordinateur dans le coma et de laisser
+        toute son équipe de docteurs faire le diagnostique. Si l'ordinateur d'un
+        développeur marche mieux que celui d'un quidam, c'est parce qu'il sait que les ordinateurs
+        sont des enfants schizophréniques avec des maladies auto immunes et qu'il ne les frappent
+        pas lorsqu'ils se sentent mal.
         </p>
     </div>
     <div>
-        <h3>Beaucoup de travail est fait sur Internet et Internet est son propre bordel</h3>
+        <h3>La plus gros du travail est fait sur Internet et c'est un sacré bordel</h3>
         <p>
-        Tu te souviens de ce que je viens de dire à propos des fous et du mauvais code ? Internet
+        Tu te souviens de ce que je disais à propos des fous et du mauvais code&nbsp;? Internet
         c'est la même chose mais en un milliard de fois pire. Les sites marchands avec leur caddie
-        et peut-être trois pauvres pages dynamiques sont maintenues par toute une équipe 24 heures
-        sur 24, parce que la vérité c'est qu'il y a toujours quelque chose qui ne marche pas,
-        quelque part, pour quelqu'un. Là maintenant, quelqu'un qui bosse chez Facebook a des
+        et peut-être trois pauvres pages dynamiques sont maintenus par toute une équipe 24 heures
+        sur 24, parce qu'il y a toujours quelque chose qui ne marche pas pour quelqu'un quelque part.
+        Là maintenant, quelqu'un qui bosse chez Facebook a des
         centaines de messages d'erreurs qu'il essaye de corriger frénétiquement avant que le tout ne
         plante... Il y a une équipe dans les bureaux de Google qui n'a pas dormi depuis trois jours.
-        Quelque par il y a une ingénieure base de données entourée de cannettes de Red Bull dont le
-        mari pense qu'elle est décédée. Et si ces gens s'arrêtent, le monde s'effondre. La plupart
-        des gens ne savent même pas ce que font les administrateurs systèmes, mais croit moi, s'ils
-        prennaient tous leur pause repas en même temps, ils n'auraient même pas le temps d'arriver
-        au resto avant que tu ne sois à court de cartouches pour protéger tes réserves de bandes de
-        zombies errants.
+        Quelque part il y a une ingénieur base de données entourée de cannettes de Red Bull dont le
+        mari pense qu'elle est morte. Et si ces gens s'arrêtaient, le monde s'effondrerait. La plupart
+        des gens ne savent même pas ce que font les administrateurs systèmes, mais crois moi, s'ils
+        prenaient tous leur pause repas en même temps, ils n'auraient même pas le temps d'arriver
+        au resto que tu serais déjà à court de munitions pour protéger tes réserves de bandes de
+        zombis errants.
         </p>
         <p>
         Tu ne peux pas redémarrer Internet. Des milliards de dollars dépendent d'une toile
         tremblante pleine d'arrangements tacites et de codes <q>assez bons pour l'instant</q> avec
-        des commentaires du genre <q>À FAIRE : CORRIGER ÇA, C'EST UN HACK SUPER DANGEREUX MAIS JE NE
-            SAIS PAS CE QUI NE VA PAS</q> écrits il y a dix ans. Je n'ai même pas évoqué les légions
-        de personnes qui s'attaquent à différentes parties d'Internet pour espionner, tirer profit
-        ou parce qu'ils s'ennuient. Tu as déjà entendu parlé de 4Chan? 4Chan pourrait détruire ta
-        vie privée et professionnelle parcequ'un après-midi ils ont décidé qu'ils ne t'aimaient pas,
-        et on ne fait même pas attention à 4Chan parce qu'une photo de nu en plus ne change rien
-        dans un hiver nucléaire.
+        des commentaires du genre <q>À FAIRE&nbsp;: CORRIGER ÇA, C'EST SUPER URGENT</q> écrits il y
+        a dix ans. Je n'ai même pas évoqué les légions
+        de personnes qui s'attaquent à Internet pour espionner, tirer profit
+        ou parce qu'ils s'ennuient. Tu as déjà entendu parlé de 4Chan&nbsp;? Les membres de 4Chan
+        pourraient détruire ta vie privée et professionnelle en un après-midi s'ils décidaient
+        qu'ils ne t'aimaient pas. Mais on n'y fait même pas attention parce qu'une photo nue de plus
+        ne change rien dans un hiver nucléaire.
         </p>
+        <blockquote>
+            <p>s'ils [les administrateurs systèmes]
+        prenaient tous leur pause repas en même temps, ils n'auraient même pas le temps d'arriver
+        au resto que tu serais déjà à court de munitions pour protéger tes réserves de bandes de
+        zombis errants.
+            </p>
+        </blockquote>
         <p>
-        Sur Internet, il est autorisé de dire, <q>Tu sais, ça marche de temps en temps si tu
-            utilises la bonne technologie,</q> et PAF! ça fait partie d'Internet. N'importe qui avec
-        quelques centaines de dollars et un ordinateur peut créer une petite partie d'Internet pour
-        y mettre n'importe quel petit bout de code et attacher ce petit bout à un tas d'autres bouts
-        et le tout empire encore un peu plus. Même les bons codeurs ne prennent pas la peine
+        Sur Internet, on peut dire, <q>Tu sais, ça marche de temps en temps si tu
+            utilises la bonne technologie</q>, et PAF&nbsp;! Ça fait partie d'Internet. N'importe qui avec
+        quelques centaines de dollars et un ordinateur peut créer un petit morceau d'Internet. Il
+        peut y mettre un petit bout de code et attacher ce morceau à un tas d'autres morceaux et faire empirer
+        encore un peu le tout. Même les bons codeurs ne prennent pas la peine
         d'apprendre la totalité des spécifications écrites par des organisations créées pour
-        implémenter des licornes, et donc tout le monde passe la moitié de son temps à gérer le fait
-        que rien ne correspond à rien ou n'a aucun sens ou que ça pourrait planter à tout moment et
-        on essaye juste de cacher tout ça en espérant que personne ne le remarque.
+        implémenter des licornes. Au final, tout le monde passe la moitié de son temps à gérer le fait
+        que rien ne correspond à rien, que rien n'a aucun sens ou que ça pourrait planter à tout moment et
+        on essaye juste de cacher tout ça en espérant que personne n'y fasse attention.
         </p>
         <p>
-        Voici la règle secrète d'Internet : cinq minutes après avoir ouvert un navigateur pour la
+        Voici les règles secrètes d'Internet&nbsp;: cinq minutes après avoir ouvert un navigateur pour la
         première fois, un enfant en Russie a ton numéro de sécurité sociale. T'es tu inscrit à quoi
-        que ce soit ? Maintenant un ordinateur à la NSA sait où tu te trouve à tout moment pour le
-        reste de ta vie. Tu as envoyé un email ? Ton adresse vient juste de s'afficher sur un
-        panneau au Nigéria.
+        que ce soit&nbsp;? Un ordinateur de la NSA peut te localiser à tout moment pour le
+        reste de ta vie. Tu as envoyé un email&nbsp;? Ton adresse vient juste de s'afficher sur un
+        écran au Nigeria.
         </p>
         <p>
         Tout ceci n'est pas vrai parce qu'on s'en fiche et qu'on ne fait rien pour l'empêcher,
         c'est vrai parce que tout est bugué, parce qu'il n'y a pas de bons codes et que tout le
         monde essaye juste de garder le tout en état de fonctionnement. Si tu es un ingénieur web,
-        ton boulot consiste à espérer que la dernière chose que tu aies écrite soit assez bonne pour
-        survivre quelques heures, le temps de manger et de faire une sieste.
+        ton boulot consiste juste à espérer que la dernière chose que tu aies écrite soit assez
+        robuste pour survivre quelques heures, le temps de manger et de faire une sieste.
         </p>
     </div>
     <div>
         <h3>Nous ne naissons pas fous, nous le devenons</h3>
-        <code>
-            ERREUR: Tentative d'analyse HTML avec des expression régulières; le système à retourné Cthulhu.
-        </code>
         <p>
-        C'est marrant, hein ? Non ? Qu'en est-il de ce dialogue :
+        <code>ERREUR&nbsp;: Tentative d'analyse HTML avec des expressions régulières;
+         le système à retourné Cthulhu.</code></p>
+        <p>
+        C'est marrant, hein&nbsp;? Non&nbsp;? Qu'est-ce que tu penses de cette conversation&nbsp;:
         </p>
         <blockquote>
-            - Est-ce que ça s'appelle arrayReverse?<br/>
+            - Ça s'appelle arrayReverse&nbsp;?<br/>
             - s/camel/_/ <br/>
-            - Merci !
+            - Merci&nbsp;!
         </blockquote>
         <p>
-        La réponse a été utile? Avec le camel? Ça te sembles être une réponse appropriée? Non? Bien.
+        La réponse a-t-elle été utile&nbsp;? Avec le <em>camel</em>&nbsp;? Ça te sembles être une réponse
+        appropriée&nbsp;? Non&nbsp;? Bien.
         Tu n'as pas passé assez de temps dans ta vie à lire du code pour commencer à parler en code.
-        L'esprit humain n'est pas particulièrement bon pour faire de la logique et maintenant il
-        existe une carrière qui ne consiste à ne faire rien d'autre que de la logique très, très
+        L'esprit humain n'est pas particulièrement doué pour faire de la logique basique et
+        maintenant, il
+        existe une carrière entière qui consiste à ne faire que de la logique très, très
         compliquée. De longues suites de conditions et d'exigences abstraites doivent être étudiées
-        pour découvrir des choses comme une virgule manquante. Faire ce genre de chose toute la
-        journée te laisse dans un état d'aphasie dans lequel tu regardes le visage des gens pendant
-        qu'ils parlent et tu ne sais pas lorsqu'ils ont finit parcequ'il n'y a pas de point-virgule.
-        Tu t'auto-immerge dans un monde totalement absurde où tout ce qui importe est une petite
-        série de nombres qui se transforme en un labyrithe géant de symboles dans lequel une autre
-        série de nombre se transforme en une image de chaton à la sortie.
+        pour découvrir des choses comme une virgule manquante. À faire ce genre de choses toute la
+        journée, tu finis dans un état d'aphasie totale où tu regardes le visage de tes interlocuteurs
+        pendant qu'ils parlent sans savoir s'ils ont finit parce qu'il n'y a pas de point-virgule.
+        Tu t'immerges toi-même dans un monde totalement absurde où tout ce qui importe c'est une petite
+        série de nombres qui se transforme en un labyrinthe géant de symboles dans lequel une autre
+        série de nombre se transforme en une image de chaton.
         </p>
         <p>
         L'impact néfaste sur le cerveau est démontré par les langages de programmation que les gens
-        utilisent. Voivi un programme :
-        </p>
-        <code>
-            #include &lt;iostream&gt;
+        utilisent. Voici un programme&nbsp;:<br/>
+        <code>#include &lt;iostream&gt;
 
-            int main( int argc, char** argv ) {
-                std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
-                return 0;
-            }
-        </code>
-        <p>Ce programme fait exactement la même chose que celui-ci :</p>
-        <code>
-            `r```````````.H.e.l.l.o. .w.o.r.l.di
-        </code>
-        <p>Et que celui-ci:</p>
-        <code>
-            &gt;+++++++++[&lt;++++++++&gt;-]&lt;.&gt;+++++++[&lt;++++&gt;-]&lt;+.+++++++..+++.[-]
-                      &gt;++++++++[&lt;++++&gt;-] &lt;.&gt;+++++++++++[&lt;++++++++&gt;-]&lt;-.--------.+++
-                      .------.--------.[-]&gt;++++++++[&lt;++++&gt;- ]&lt;+.[-]++++++++++.
-        </code>
-        <p>Et que celui-là:</p>
-        <code>
-            Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook.
-            Ook! Ook. Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
-            Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook. Ook! Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook.
-            Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
-            Ook? Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook! Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
-            Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook!
-            Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook. Ook! Ook? Ook! Ook! Ook? Ook!
-            Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
-            Ook. Ook. Ook. Ook. Ook! Ook.
-        </code>
+int main( int argc, char** argv ) {
+    std::cout &lt;&lt; "Hello World!" &lt;&lt; std::endl;
+    return 0;
+}</code></p>
+        <p>Ce programme fait exactement la même chose que celui-ci&nbsp;:<br/>
+        <code>`r```````````.H.e.l.l.o. .w.o.r.l.di</code></p>
+        <p>Et que celui-ci&nbsp;:<br/>
+        <code>&gt;+++++++++[&lt;++++++++&gt;-]&lt;.&gt;+++++++[&lt;++++&gt;-]&lt;+.+++++++..+++.[-]
+&gt;++++++++[&lt;++++&gt;-] &lt;.&gt;+++++++++++[&lt;++++++++&gt;-]&lt;-.--------.+++
+.------.--------.[-]&gt;++++++++[&lt;++++&gt;- ]&lt;+.[-]++++++++++.</code></p>
+        <p>Ou que celui-là&nbsp;:<br/>
+        <code>Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook.
+Ook! Ook. Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
+Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook. Ook! Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook.
+Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
+Ook? Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook! Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
+Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook!
+Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook. Ook! Ook? Ook! Ook! Ook? Ook!
+Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+Ook. Ook. Ook. Ook. Ook! Ook.</code></p>
         <p>
-        Et une fois, quelqu'un à créé un langage permettant à quelqu'un d'autre décrire ça:</p>
-        <code>
-#:: ::-| ::-| .-. :||-:: 0-| .-| ::||-| .:|-. :||
+        Une fois, quelqu'un à même créé un langage permettant d'écrire ça&nbsp;:<br/>
+        <code>#:: ::-| ::-| .-. :||-:: 0-| .-| ::||-| .:|-. :||
 open(Q,$0);while(){if(/^#(.*)$/){for(split('-',$1)){$q=0;for(split){s/|
 /:.:/xg;s/:/../g;$Q=$_?length:$_;$q+=$q?$Q:$Q*20;}print chr($q);}}}print"n";
-#.: ::||-| .||-| :|||-| ::||-| ||-:: :|||-| .:|
-        </code>
+#.: ::||-| .||-| :|||-| ::||-| ||-:: :|||-|</code></p>
         <p>
-        D'après l'auteur, ce programme est <q>deux lignes de code qui analysent deux lignes de
+        D'après l'auteur, ce programme c'est&nbsp;: <q>deux lignes de code qui analysent deux lignes de
             commentaires incluent dans le code pour lire les nombres Maya représentant les
-            différents caractères ASCII qui écrivent en ASCII art le titre du magazine pivoté de 90
+            différents caractères ASCII qui écrivent en ASCII-art le titre du magazine incliné à 90
             degrés.</q>
         </p>
         <p>
         Ce programme a gagné un concours, parce qu'évidemment, il fait bel et bien ce qu'il annonce.
-        Tu veux vivre dans un monde comme ça? Non. C'est un monde ou tu peux fumer un paquet par
+        Tu veux vivre dans un monde comme ça&nbsp;? Non. C'est un monde où tu peux fumer un paquet par
         jour et où personne ne le remarque. <q>Bien sûr qu'il fume un paquet par jour, qui ne le
-            fait pas?</q> Finalement, chaque développeur se réveille, et avant qu'il ne soit
-        pleinement conscient qu'il voit tout son monde et chacune de ses relations comme un morceau
-        de code, et ils racontent des histoires à propos de ça, comme si la somnolence déclenchant
-        des voyages sous acide était quelque chose de normal qui arrive à tout le monde. C'est un
-        monde ou les gens évite le sexe pour écrire un langage de programmation pour orang-outans.
-        Tous les programmeurs forcent leur cerveau à faire des choses que le cerveau n'a jamais été
+            fait pas&nbsp;?</q> Où tous les matins, chaque développeur, avant qu'il ne soit
+        complètement réveillé, voit le monde et chacune de ses relations comme un morceau
+        de code et trouve ça tout à fait normal, comme si les voyages sous acide au réveil était
+        quelque chose qui arrive à tout le monde. C'est un
+        monde ou les gens évitent le sexe pour écrire un langage de programmation pour orangs-outangs.
+        Un monde où tous les développeurs forcent leur cerveau à faire des choses que le cerveau n'a jamais été
         sensé faire, du mieux qu'ils peuvent, dix à quinze heures par jours, cinq à sept jours par
-        semaine, et chacun d'eux devient petit à petit fou.
+        semaine, devenant tous les jours un peu plus fou que la veille.
         </p>
-        <code>
-            &lt;/rant&gt;
-        </code>
         <p>
-        Alors oui, on ne me demande pas d'être capabke de soulver des objets de plus de 25 kilos.
-        J'ai échangé ça contre l'opportunité de couper les poils pubiens de Satan pendant qu'il
-        mange mon cerveau à crane ouvert pour qu'Internet continue de marcher pour quelques jours de
+        <pre>&lt;/véhémence&gt;</pre>
+        </p>
+        <p>
+        Alors oui, on ne me demande pas d'être capable de soulever des objets de plus de 25 kilos.
+        J'ai échangé ça contre l'opportunité de couper les poils pubiens de Satan, pendant qu'il
+        mange l'intérieur de mon crane, pour qu'Internet continue de fonctionner quelques jours de
         plus.
         </p>
     </div>
 </div>
-
