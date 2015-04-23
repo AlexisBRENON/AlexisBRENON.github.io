@@ -86,6 +86,7 @@ ul.posts-list > li p {
 .post-title small {
   text-transform: initial;
 }
+
 /* Images in posts */
 .post-image {
   @include thumb;
@@ -93,13 +94,8 @@ ul.posts-list > li p {
   max-height: 20rem;
   background: $thumb-border-color;
 }
-/* pull-quote */
-.post-quote {
-    margin-bottom: 0;
-    margin-left: 1rem;
-    width: 35%;
-}
 
+/* pull-quote */
 .pullquote {
     font-size: 125%;
     font-weight: bold;
