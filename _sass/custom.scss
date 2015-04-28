@@ -165,14 +165,15 @@ q.pullquote {
   overflow: auto;
 }
 
-code {
-    display: inline-block;
-    width: 100%;
-    background-color: $monokai-light;
-    color: $body-font-color;
-    font-family: Inconsolata, DejaVu Sans Mono, monospace;
-    white-space: pre;
-    overflow: auto;
+pre.code {
+    width:100%;
+    background-color: $code-background-color;
+    border-style: solid;
+    border-color: $code-color;
+    border-width: 1px;
+    font-family: $font-family-monospace;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
 }
     
     /* ************************* */
