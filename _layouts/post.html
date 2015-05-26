@@ -1,4 +1,12 @@
-{% include head.html %}
+{% include html_opening.html %}
+<head>
+    {% include head_meta.html %}
+    {% include head_post_twitter_card.html %}
+    {% include head_link.html %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+</head>
+
+{% include body_opening.html %}
 
   <div class="medium-9 columns">
     <h2 class="post-title">{{ page.title }}

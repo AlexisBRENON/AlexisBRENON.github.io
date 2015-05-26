@@ -1,4 +1,11 @@
-{% include head.html %}
+{% include html_opening.html %}
+<head>
+    {% include head_meta.html %}
+    {% include head_link.html %}
+    <title>{{ site.title }} - {{ page.title }}</title>
+</head>
+
+{% include body_opening.html %}
 
 {{ content }}
 
