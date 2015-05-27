@@ -1,13 +1,9 @@
-{% include html_opening.html %}
-<head>
-    {% include head_meta.html %}
-    {% include head_link.html %}
-    <title>{{ site.title }} - {{ page.title }}</title>
-</head>
+{% include 00-opening.html %}
+{% include 05-head.html %}
 
-{% include body_opening.html %}
+{% include 10-body/opening.html %}
 
 {{ content }}
 
-{% include footer.html %}
-{% include closing.html %}
+{% include 10-body/closing.html %}
+{% include 99-closing.html %}

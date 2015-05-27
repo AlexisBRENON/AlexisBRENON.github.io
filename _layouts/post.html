@@ -1,28 +1,23 @@
-{% include html_opening.html %}
-<head>
-    {% include head_meta.html %}
-    {% include head_post_twitter_card.html %}
-    {% include head_link.html %}
-    <title>{{ page.title }} - {{ site.title }}</title>
-</head>
+{% include 00-opening.html %}
+{% include 05-head/post.html %}
 
-{% include body_opening.html %}
+{% include 10-body/opening.html %}
 
   <div class="medium-9 columns">
     <h2 class="post-title">{{ page.title }}
-      <small> - Publié le {%include french_date.html date=page.date %}</small>
+      <small> - Publié le {%include utils/french_date.html date=page.date %}</small>
     </h2>
-    {% include share_buttons.html %}
+    {% include 10-body/post/00-share_buttons.html %}
     {{ content }}
   </div>
   <div class="medium-3 columns show-for-medium-up">
-      {% include last_posts.html %}
-      {% include related_posts.html %}
-      {% include twitter_feed.html %}
+      {% include 10-body/post/10-last_posts.html %}
+      {% include 10-body/post/20-related_posts.html %}
+      {% include 10-body/post/30-twitter_feed.html %}
   </div>
   <div class="small-12 column">
-    {% include comments.html %}
+    {% include 10-body/post/40-comments.html %}
   </div>
 
-{% include footer.html %}
-{% include closing.html %}
+{% include 10-body/closing.html %}
+{% include 99-closing.html %}
