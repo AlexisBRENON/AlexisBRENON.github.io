@@ -18,10 +18,37 @@
   <priority>0.75</priority>
 </url>
 <url>
+  <loc>http://alexisbrenon.github.io/blog/these.html</loc>
+  <lastmod>2015-04-03T13:59:31+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.75</priority>
+</url>
+<url>
   <loc>http://alexisbrenon.github.io/humans.txt</loc>
   <lastmod>2015-03-27T13:59:31+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.1</priority>
+</url>
+
+<url>
+  <loc>http://alexisbrenon.github.io/blog/media/livre/2015/05/31/asimov.html</loc>
+  <lastmod>2015-05-31T13:59:31+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://alexisbrenon.github.io/blog/technique/2015/05/03/pullquote_in_css.html</loc>
+  <lastmod>2015-05-03T13:59:31+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://alexisbrenon.github.io/blog/technique/2015/04/21/Programming_sucks.html</loc>
+  <lastmod>2015-04-21T13:59:31+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://alexisbrenon.github.io/blog/these/2015/04/03/these-ma_scolarite.html</loc>
+  <lastmod>2015-04-03T13:59:31+00:00</lastmod>
+  <changefreq>yearly</changefreq>
 </url>
 <url>
   <loc>http://alexisbrenon.github.io/blog/53-posts/personnel/2015/03/27/53_posts-13-amis.html</loc>
@@ -39,8 +66,8 @@
   <changefreq>yearly</changefreq>
 </url>
 <url>
-  <loc>http://alexisbrenon.github.io/blog/musique/2015/03/12/graffiti6.html</loc>
-  <lastmod>2015-03-27T13:59:31+00:00</lastmod>
+  <loc>http://alexisbrenon.github.io/blog/media/musique/2015/03/12/graffiti6.html</loc>
+  <lastmod>2015-05-31T13:59:31+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 <url>
