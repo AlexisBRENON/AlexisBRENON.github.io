@@ -138,19 +138,21 @@ q.pullquote {
 .ref {
   position: relative;
   vertical-align: baseline;
+  // Do not display any spaces or text between spans
+  font-size: 0;
 }
 .refnum {
   position: relative;
   left: 2px;
   bottom: 1ex;
   color: $primary-color;
-  font-size: .7em;
+  font-size: .7rem;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
 }
 .refbody {
-  font-size: .7em;
+  font-size: .7rem;
   line-height: 1.1;
   display: block;
   min-width: 20em;
