@@ -27,7 +27,7 @@ jQuery(function() {
         ref.innerHTML = ""
         ref.appendChild(ref_num);
         ref.appendChild(ref_body);
-        ref.previousSibling.data = ref.previousSibling.data.trim()
+        ref.previousSibling.data = ref.previousSibling.data.replace(/\s*$/, "")
     }
 
     /* Hide all the refnotes body on load */
