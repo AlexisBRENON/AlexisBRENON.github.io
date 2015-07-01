@@ -1,0 +1,108 @@
+// Stylesheet for the one-page styled index
+
+body.one-page {
+    position: relative;
+
+    // Remove margin under navbar in order header is gapless
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    // Header has a background with black overlay
+    header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        $overlay-alpha: 0.75;
+        background-image: radial-gradient(ellipse at center,
+        rgba($gray-base, $overlay-alpha) 0%,
+        rgba($gray-darker, $overlay-alpha) 100%
+        ), url("/assets/images/index/background.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        color: $body-bg;
+
+        // The portrait image is resized
+        .img-portrait {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            width: 40rem;
+        }
+    }
+
+    // Add some padding inside sections
+    section {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    // Each line a the posts list have a gap under it
+    .posts-list {
+        margin-bottom: $line-height-computed;
+
+        .post-link {
+            display: block;
+            box-shadow: 0;
+            transition: all 0.5s ease;
+            color: $body-bg;
+            text-decoration: none;
+            border-radius: $border-radius-base;
+
+            .post-cover {
+                position: relative;
+                border-radius: $border-radius-base;
+
+                // Post image is resize to fit in the div
+                .post-image {
+                    width: 100%;
+                    height: 100%;
+                    @include border-top-radius($border-radius-base);
+                }
+
+                // This overly will cover the whole image
+                .post-image-overlay {
+                    @include border-top-radius($border-radius-base);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    $overlay-alpha: 0.9;
+                    background-image: radial-gradient(ellipse at center,
+                    rgba($gray-base, $overlay-alpha) 0%,
+                    rgba($gray-darker, $overlay-alpha) 100%);
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+
+                    p {
+                        margin: $line-height-computed;
+                        text-align: justify;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            .post-title {
+                color: $body-bg;
+                background: radial-gradient(ellipse at center, lighten($brand-primary, 5%) 0%, darken($brand-primary, 5%) 100%);
+                background-color: $brand-primary;
+                padding: 1rem;
+                @include border-bottom-radius($border-radius-base);
+            }
+        }
+
+        .post-link:hover {
+            text-decoration: none;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+
+            .post-image-overlay {
+                opacity: 100;
+            }
+        }
+    }
+}

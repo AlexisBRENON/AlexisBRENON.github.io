@@ -1,0 +1,11 @@
+// Redefine some already define variables to apply new variables
+body {
+    background-color: $body-bg;
+}
+
+h1 {
+    font-family: $title-font-family;
+    font-weight: 700;
+    font-style: italic;
+}
+
