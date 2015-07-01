@@ -1,1 +1,7 @@
+{% assign body_class = include.body_class %}
+
+{% if body_class %}
+<body class="{{ body_class }}">
+{% else %}
 <body>
+{% endif %}

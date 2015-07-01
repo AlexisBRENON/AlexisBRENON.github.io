@@ -40,12 +40,19 @@ header {
 }
 
 footer {
+    padding: $line-height-small + em;
+    padding-bottom: 0;
     box-shadow: 0 -1px 5px rgba(0,0,0,.3);
+    font-size: $font-size-small;
 }
 
 .inverted {
     background: radial-gradient(ellipse at center, lighten($brand-primary, 10%) 0%, darken($brand-primary, 10%) 100%); /* W3C */
     color: $body-bg;
+
+    .well {
+        color: $text-color;
+    }
 
     a {
         color: $text-color;

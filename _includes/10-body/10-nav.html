@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button"
@@ -15,10 +15,14 @@
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="nav navbar-nav">
-                <li><a href="#biography">Biographie</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-                <li><a href="#these">Thèse</a></li>
-                <li><a href="#blog">Blog</a></li>
+                {% if page.url == '/index.html' %}
+                <li><a class="page-scroll" href="#biography">Biographie</a></li>
+                <li><a class="page-scroll" href="#blog">Blog</a></li>
+                {% else %}
+                <li><a href="/index.html/#biography">Biographie</a></li>
+                <li><a href="/index.html/#blog">Blog</a></li>
+                {% endif %}
+                <li><a href="/contacts.html">Contacts</a></li>
             </ul>
         </div>
     </div>
