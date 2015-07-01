@@ -70,17 +70,13 @@
 }
 
 .posts-list {
-    // Each line a the posts list have a gap under it
-    padding-top: 15px;
-    padding-bottom: 15px;
-
     .post-link {
         display: block;
-        box-shadow: 0;
         transition: all 0.5s ease;
         color: $body-bg;
         text-decoration: none;
         border-radius: $border-radius-base;
+        margin-bottom: $padding-large-vertical;
 
         .post-cover {
             position: relative;
