@@ -23,12 +23,31 @@ body.one-page {
         background-attachment: fixed;
         background-size: cover;
         color: $body-bg;
+        min-height: 100vh;
 
         // The portrait image is resized
         .img-portrait {
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-            width: 40rem;
+            $margin: 5*$padding-base-vertical;
+            margin-top: $margin;
+            margin-bottom: $margin;
+            width: 30rem;
+        }
+
+        a {
+            border-radius: 50%;
+            // Dirty trick to fix the unaligned chevron character
+            padding-top: $padding-large-horizontal+4;
+            padding-left: $padding-large-horizontal+4;
+            padding-bottom: $padding-large-horizontal;
+            padding-right: $padding-large-horizontal;
+            font-size: $font-size-h2;
+            color: $component-active-color;
+            transition: background-color 0.5s ease;
+
+            &:hover {
+                background-color: rgba($gray-lighter, 0.25);
+                text-decoration: none;
+            }
         }
     }
 

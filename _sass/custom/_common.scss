@@ -7,6 +7,109 @@
     }
 }
 
+.back-to-top {
+    display: block;
+    position: fixed;
+    bottom: 8*$padding-base-vertical;
+    right: 2*$padding-base-horizontal;
+    visibility: hidden;
+    opacity: 0;
+
+    border-radius: 50%;
+    font-size: $font-size-h2;
+    background-color: $component-active-bg;
+    color: $component-active-color;
+
+    width: 64px;
+    height: 64px;
+    padding-left: 18px;
+    padding-top: 13px;
+    z-index: 1000;
+
+    transition: opacity 0.5s ease 0s, visibility 0s linear 0.6s;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $component-active-bg;
+        color: $component-active-color;
+    }
+
+    &.affix {
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 0.5s ease 0.1s;
+        opacity: 1;
+    }
+}
+
+.posts-list {
+    // Each line a the posts list have a gap under it
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .post-link {
+        display: block;
+        box-shadow: 0;
+        transition: all 0.5s ease;
+        color: $body-bg;
+        text-decoration: none;
+        border-radius: $border-radius-base;
+
+        .post-cover {
+            position: relative;
+            border-radius: $border-radius-base;
+
+            // Post image is resize to fit in the div
+            .post-image {
+                width: 100%;
+                height: 100%;
+                @include border-top-radius($border-radius-base);
+            }
+
+            // This overly will cover the whole image
+            .post-image-overlay {
+                @include border-top-radius($border-radius-base);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                $overlay-alpha: 0.9;
+                background-image: radial-gradient(ellipse at center,
+                rgba($gray-base, $overlay-alpha) 0%,
+                rgba($gray-darker, $overlay-alpha) 100%);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+
+                p {
+                    margin: $padding-base-vertical;
+                    text-align: justify;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .post-title {
+            color: $body-bg;
+            background: radial-gradient(ellipse at center, lighten($brand-primary, 5%) 0%, darken($brand-primary, 5%) 100%);
+            background-color: $brand-primary;
+            padding: 1rem;
+            @include border-bottom-radius($border-radius-base);
+        }
+    }
+
+    .post-link:hover {
+        text-decoration: none;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+
+        .post-image-overlay {
+            opacity: 100;
+        }
+    }
+}
+
 footer {
     box-shadow: 0 -1px 5px rgba(0,0,0,.3);
 }
