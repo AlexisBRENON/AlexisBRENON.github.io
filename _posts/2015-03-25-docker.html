@@ -1,124 +1,97 @@
 ---
 title: "Docker ou Comment essayer proprement&nbsp;?"
-tags: docker jekyll foundation
 categories: [blog, technique]
 icon: /assets/images/posts/docker/init.png
 ---
 
-<div class="panel post-tldr columns text-justify">
-    <p>
+<div class="well">
     A force d'essayer de nouvelles technologies, mon PC finit par être rempli de bibliothèques et
     de binaires dont je ne me sers plus ! Aujourd'hui, je vous présente rapidement Docker, une
     solution contre ce capharnaüm numérique !
-    </p>
 </div>
 
 <!-- more -->
 
-<div class="post columns text-justify">
-    <div class="text-center">
-        <p>
-        <a href="https://www.docker.com/" rel="nofollow">
-            <img class="post-image radius th" src="/assets/images/posts/docker/large_v-trans.png" alt="Logo Docker"/><br/>
-        </a>
-        <small>Crédit : Docker, Inc</small>
-        </p>
-    </div>
-    <div>
-        <h3>Ça s'en va et ça reviens</h3>
-        <p>
-        J'aime tester de nouvelles technologies sur chacun de mes projets. L'apprentissage de la
-        programmation par la voie scolaire se concentre principalement sur des langages comme C ou Java et
-        passe sous silence l'offre pléthorique de frameworks disponibles pour faciliter la vie du
-        développeur. Ceci explique en partie pourquoi je n'ai découvert <a
-            href="http://getbootstrap.com/" rel="nofollow">Twitter Bootstrap</a> qu'en deuxième
-        année de master alors que mon premier site date
-        du collège. Aujourd'hui, j'ai donc décidé de noter tous les langages, frameworks, ou autres dont
-        j'entends parler et de les essayer quand l'occasion s'en présente. Mais qui dit nouveaux outils dit
-        nouveaux binaires, nouveaux fichiers, etc. qui viennent polluer mon système...
-        </p>
-    </div>
-    <div>
-        <h3>Keep It Simple, Stupid</h3>
-        <p>
-        Prenons un exemple. Pour ce site, j'ai décidé d'utiliser <a
-                                            href="http://foundation.zurb.com/"
-                                            rel="nofollow">Foundation</a> à
-                                        la place de Bootstrap que je connaissais déjà et <a href="http://jekyllrb.com/"
-                                                                                              rel="nofollow">Jekyll</a>
-                                        - fourni par la
-        plateforme GitHub Pages - au lieu de tout coder en bon vieux XHTML. Avec ces outils vient une
-        quantité impressionnante de dépendances ! J'ai voulu installer Foundation via Sass, ce qui nécessite
-        l'installation de NodeJS, Bower, Grunt, Compass et j'en passe. Mais toutes ces dépendances, il y a
-        de fortes chances que je ne m'en resservent jamais. Au quotidien, j'utilise ArchLinux dont la
-        philosophie est KISS (Keep It Simple, Stupid !), et derrière cela, il y a une distribution
-        configurable à l'extrême où je suis théoriquement sensé connaitre l'ensemble des paquets présents
-        sur mon système. Autant dire que l'installation de dépendances à outrance n'est clairement pas ce
-        que je recherche !
-        </p>
-    </div>
-    <div class="text-center">
-        <p>
-        <a href="https://fr.wikipedia.org/wiki/Principe_KISS" rel="nofollow">
-            <img class="post-image radius th" src="/assets/images/posts/docker/kiss.jpg" alt="Illustration KISS"/>
-        </a>
-        </p>
-    </div>
-    <div>
-        <h3>Diviser pour régner</h3>
-        <p>
-        Durant une session de programmation Python, j'ai découvert
-        <a href="https://Virtualenv.pypa.io" rel="nofollow">Virtualenv</a>
-        qui te permet de créer un environnement Python isolé. Un fois Virtualenv lancé, tous les
-        paquets
-        installés via le gestionnaire de paquets Python sont installés dans un dossier
-        <em>local</em> au projet.
-        Ainsi, lorsque j'en ai fini avec le projet, je supprime son dossier, et toutes les dépendances
-        disparaissent du système. C'est une façon propre d'essayer de nouveaux modules python.
-        <a href="https://www.ruby-lang.org/fr/" rel="nofollow">Ruby</a> propose à peu près la même chose sous le nom
-        <a href="https://rvm.io" rel="nofollow">RVM</a> que je n'ai jamais utilisé. Ce type d'utilitaires est appelé un environnement
-        virtuel. Mais qu'en est-il pour les autres outils comme Node ou ceux qui n'existent pas encore ?
-        </p>
-    </div>
-    <div>
-        <h3>Qui dit environnement <strong>virtuel</strong> dit machine <strong>virtuelle</strong></h3>
-        <p>
-        La première idée que j'ai eu, ça a été de regarder du côté des machines virtuelles. Pour chaque
-        projet, je pourrais créer une VM dans laquelle j'installerais toutes les dépendances. Une fois le
-        projet "terminé", je supprime l'image et tout est propre ! Le problème c'est que les machines
-        virtuelles, c'est lourd ! Il faut réinstaller un système complet, le configurer correctement, etc. à
-        chaque projet. Une solution consiste à le faire une fois et à repartir toujours de la même image.
-        Mais il y a deux choses qui ne peuvent pas se résoudre comme ça ; la surcharge du système dû à une
-        VM et le temps de démarrage d'une VM.
-        </p>
-    </div>
-    <div>
-        <h3>Docker à la rescousse !</h3>
-        <p>
-        <a href="https://www.docker.com/" rel="nofollow">Docker</a> est un outil initialement développé pour simplifier le déploiement
-        de n'importe quelle application sur n'importe quelle plate-forme. Docker utilise la notion d'image,
-        qui contient l'application et toutes ses dépendances. En lançant une image - on dit qu'on exécute
-        un conteneur (container) - toutes les dépendances nécessaires sont disponibles dans la bonne
-        version et avec la bonne configuration sans entrer en collision avec les dépendances des autres
-        conteneurs. Les conteneurs sont comme des VM mais utilisent une nouvelle fonctionnalité du noyau,
-        les <a href="https://fr.wikipedia.org/wiki/LXC" rel="nofollow">LXC</a>, pour limiter leur emprunte
-        sur le système. De plus, Docker est prévu pour qu'il soit facile
-        de partager des fichiers ou d'avoir accès aux ports des applications d'un conteneur.
-        </p>
-    </div>
-    <div class="text-center">
-        <p>
-        <a href="http://gph.is/13xBOKp" rel="nofollow">
-            <img class="post-image radius th" src="http://i.giphy.com/uA147Pq6OvgCA.gif" alt="Indiana Jones à la rescousse"/>
-        </a><br/>
-        <small>Crédit : Giphy</small>
-        </p>
-    </div>
-    <div>
-        <h3>Docker en action</h3>
-        <p>
-        Malheureusement, ce post commence à devenir un peu long, et j'ai besoin d'un peu de temps
-        pour illustrer Docker dans un joli cas bien propre, et ce sera donc pour un prochain post !
-        </p>
-    </div>
-</div>
+{% include 10-body/post/05-small-image.html source-url='https://www.docker.com/' image-url='/assets/images/posts/docker/large_v-trans.png' image-alt='Logo Docker' credit='Docker, Inc' %}
+
+<h3>Ça s'en va et ça reviens</h3>
+<p>
+J'aime tester de nouvelles technologies sur chacun de mes projets. L'apprentissage de la
+programmation par la voie scolaire se concentre principalement sur des langages comme C ou Java et
+passe sous silence l'offre pléthorique de frameworks disponibles pour faciliter la vie du
+développeur. Ceci explique en partie pourquoi je n'ai découvert <a
+     href="http://getbootstrap.com/" rel="nofollow">Twitter Bootstrap</a> qu'en deuxième
+ année de master alors que mon premier site date
+ du collège. Aujourd'hui, j'ai donc décidé de noter tous les langages, frameworks, ou autres dont
+ j'entends parler et de les essayer quand l'occasion s'en présente. Mais qui dit nouveaux outils dit
+ nouveaux binaires, nouveaux fichiers, etc. qui viennent polluer mon système...
+</p>
+
+<h3>Keep It Simple, Stupid</h3>
+<p>
+Prenons un exemple. Pour ce site, j'ai décidé d'utiliser
+<a href="http://foundation.zurb.com/"
+    rel="nofollow">
+    Foundation
+</a> à la place de Bootstrap que je connaissais déjà et
+<a href="http://jekyllrb.com/"
+    rel="nofollow">
+    Jekyll
+</a> - fourni par la plateforme GitHub Pages - au lieu de tout coder en bon vieux XHTML. Avec ces outils vient une
+quantité impressionnante de dépendances ! J'ai voulu installer Foundation via Sass, ce qui nécessite
+l'installation de NodeJS, Bower, Grunt, Compass et j'en passe. Mais toutes ces dépendances, il y a
+de fortes chances que je ne m'en resservent jamais. Au quotidien, j'utilise ArchLinux dont la
+philosophie est KISS (Keep It Simple, Stupid !), et derrière cela, il y a une distribution
+configurable à l'extrême où je suis théoriquement sensé connaitre l'ensemble des paquets présents
+sur mon système. Autant dire que l'installation de dépendances à outrance n'est clairement pas ce
+que je recherche !
+</p>
+
+{% include 10-body/post/05-small-image.html source-url='https://fr.wikipedia.org/wiki/Principe_KISS' image-url='/assets/images/posts/docker/kiss.jpg' image-alt='Illustration KISS' credit='...' %}
+
+<h3>Diviser pour régner</h3>
+<p>
+Durant une session de programmation Python, j'ai découvert
+<a href="https://Virtualenv.pypa.io" rel="nofollow">Virtualenv</a>
+qui te permet de créer un environnement Python isolé. Un fois Virtualenv lancé, tous les
+paquets
+installés via le gestionnaire de paquets Python sont installés dans un dossier
+<em>local</em> au projet.
+Ainsi, lorsque j'en ai fini avec le projet, je supprime son dossier, et toutes les dépendances
+disparaissent du système. C'est une façon propre d'essayer de nouveaux modules python.
+<a href="https://www.ruby-lang.org/fr/" rel="nofollow">Ruby</a> propose à peu près la même chose sous le nom
+<a href="https://rvm.io" rel="nofollow">RVM</a> que je n'ai jamais utilisé. Ce type d'utilitaires est appelé un environnement
+virtuel. Mais qu'en est-il pour les autres outils comme Node ou ceux qui n'existent pas encore ?
+</p>
+
+<h3>Qui dit environnement <strong>virtuel</strong> dit machine <strong>virtuelle</strong></h3>
+<p>
+La première idée que j'ai eu, ça a été de regarder du côté des machines virtuelles. Pour chaque
+projet, je pourrais créer une VM dans laquelle j'installerais toutes les dépendances. Une fois le
+projet "terminé", je supprime l'image et tout est propre ! Le problème c'est que les machines
+virtuelles, c'est lourd ! Il faut réinstaller un système complet, le configurer correctement, etc. à
+chaque projet. Une solution consiste à le faire une fois et à repartir toujours de la même image.
+Mais il y a deux choses qui ne peuvent pas se résoudre comme ça ; la surcharge du système dû à une
+VM et le temps de démarrage d'une VM.
+</p>
+
+<h3>Docker à la rescousse !</h3>
+<p>
+<a href="https://www.docker.com/" rel="nofollow">Docker</a> est un outil initialement développé pour simplifier le déploiement
+de n'importe quelle application sur n'importe quelle plate-forme. Docker utilise la notion d'image,
+qui contient l'application et toutes ses dépendances. En lançant une image - on dit qu'on exécute
+un conteneur (container) - toutes les dépendances nécessaires sont disponibles dans la bonne
+version et avec la bonne configuration sans entrer en collision avec les dépendances des autres
+conteneurs. Les conteneurs sont comme des VM mais utilisent une nouvelle fonctionnalité du noyau,
+les <a href="https://fr.wikipedia.org/wiki/LXC" rel="nofollow">LXC</a>, pour limiter leur emprunte
+sur le système. De plus, Docker est prévu pour qu'il soit facile
+de partager des fichiers ou d'avoir accès aux ports des applications d'un conteneur.
+</p>
+
+{% include 10-body/post/05-small-image.html source-url='http://gph.is/13xBOKp' image-url='http://i.giphy.com/uA147Pq6OvgCA.gif' image-alt='Indiana Jones à la rescousse' credit='Giphy' %}
+
+<h3>Docker en action</h3>
+<p>
+Malheureusement, ce post commence à devenir un peu long, et j'ai besoin d'un peu de temps
+pour illustrer Docker dans un joli cas bien propre, et ce sera donc pour un prochain post !
+</p>

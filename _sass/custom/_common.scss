@@ -134,7 +134,9 @@
     }
 }
 
-footer {
+body > footer {
+    padding: $line-height-small + em;
+    padding-bottom: 0;
     box-shadow: 0 -1px 5px rgba(0,0,0,.3);
 }
 
