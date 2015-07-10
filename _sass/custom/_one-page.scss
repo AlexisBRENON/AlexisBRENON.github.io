@@ -55,72 +55,18 @@ body.one-page {
     section {
         padding-top: 2em;
         padding-bottom: 2em;
-    }
 
-    // Each line a the posts list have a gap under it
-    .posts-list {
-        margin-bottom: $line-height-computed;
+        .section-icon {
+            position: absolute;
+            font-size: $font-size-h1 * 5;
+            color: rgba($text-color, 0.075) ;
+            z-index: -1;
 
-        .post-link {
-            display: block;
-            box-shadow: 0;
-            transition: all 0.5s ease;
-            color: $body-bg;
-            text-decoration: none;
-            border-radius: $border-radius-base;
-
-            .post-cover {
-                position: relative;
-                border-radius: $border-radius-base;
-
-                // Post image is resize to fit in the div
-                .post-image {
-                    width: 100%;
-                    height: 100%;
-                    @include border-top-radius($border-radius-base);
-                }
-
-                // This overly will cover the whole image
-                .post-image-overlay {
-                    @include border-top-radius($border-radius-base);
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    $overlay-alpha: 0.9;
-                    background-image: radial-gradient(ellipse at center,
-                    rgba($gray-base, $overlay-alpha) 0%,
-                    rgba($gray-darker, $overlay-alpha) 100%);
-                    opacity: 0;
-                    transition: opacity 0.5s ease;
-
-                    p {
-                        margin: $line-height-computed;
-                        text-align: justify;
-                        overflow: hidden;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                    }
-                }
+            &.pull-right {
+                right: 10%;
             }
-
-            .post-title {
-                color: $body-bg;
-                background: radial-gradient(ellipse at center, lighten($brand-primary, 5%) 0%, darken($brand-primary, 5%) 100%);
-                background-color: $brand-primary;
-                padding: 1rem;
-                @include border-bottom-radius($border-radius-base);
-            }
-        }
-
-        .post-link:hover {
-            text-decoration: none;
-            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
-
-            .post-image-overlay {
-                opacity: 100;
+            &.pull-left{
+                left: 10%;
             }
         }
     }
