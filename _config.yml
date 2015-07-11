@@ -27,3 +27,4 @@ defaults:
 
 gems:
   - jemoji
+  - jekyll-sitemap
