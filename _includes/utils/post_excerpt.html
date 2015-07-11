@@ -1,5 +1,1 @@
-<a style="display: inline-block;" href="{{ post.url }}">
-    <h4>{{ post.title }}</h4>
-    <img class="radius th post-icon left" src="{{ post.icon }}"/>
-    <p>{{ post.excerpt | strip_newlines | replace: '<br/>', '\n' | strip_html | replace: '\n', '<br/>' }}</p>
-</a>
+{{ post.excerpt | strip_newlines | replace: '<br/>', '\n' | strip_html | replace: '\n', '<br/>' }}

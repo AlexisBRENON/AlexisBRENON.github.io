@@ -95,7 +95,9 @@ title: Bienvenue!
                         <div class="post-cover">
                             <img src="{{ post.icon }}" class="post-image"/>
                             <div class="post-image-overlay">
-                                <p>{{ post.excerpt | strip_newlines | replace: '<br/>', '\n' | strip_html | replace: '\n', '<br/>' }}</p>
+                                <p>
+                                {% include utils/post_excerpt.html %}
+                                </p>
                             </div>
                         </div>
                         <div class="post-title">
