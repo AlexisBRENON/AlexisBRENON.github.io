@@ -3,7 +3,6 @@
 body.one-page {
     position: relative;
 
-
     // Header has a background with black overlay
     header {
         padding-top: 2rem;
@@ -46,6 +45,16 @@ body.one-page {
             }
         }
     }
+
+    .season-separator {
+        h2 {
+            font-family: 'Overlock', $headings-font-family;
+            font-weight: 700;
+            font-style: italic;
+            color: rgba($gray-base, 0.25);
+        }
+    }
+
 
     // Add some padding inside sections
     section {

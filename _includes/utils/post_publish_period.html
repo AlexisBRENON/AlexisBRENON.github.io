@@ -1,0 +1,17 @@
+{% assign m = post.date | date: "%-m" %}
+
+{% case m %}
+  {% when '1' %}Hiver
+  {% when '2' %}Hiver
+  {% when '3' %}Printemps
+  {% when '4' %}Printemps
+  {% when '5' %}Printemps
+  {% when '6' %}Été
+  {% when '7' %}Été
+  {% when '8' %}Été
+  {% when '9' %}Automne
+  {% when '10' %}Automne
+  {% when '11' %}Automne
+  {% when '12' %}Hiver
+{% endcase %}
+{{ post.date | date: "%Y" }}

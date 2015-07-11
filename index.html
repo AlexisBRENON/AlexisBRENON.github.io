@@ -87,9 +87,25 @@ title: Bienvenue!
             <h1 class="text-center">Un peu de temps à perdre&nbsp;?<br/>
                 <small>Lisez quelques articles...</small></h1>
             <div class="row posts-list">
-            {% for post in site.posts %}
-            {% assign loopindex3 = forloop.index0 | modulo: 3 %}
-            {% assign loopindex2 = forloop.index0 | modulo: 2 %}
+            {% assign current_publish_period = "" %}
+            {% assign post_counter = 0 %}
+            {% for post in site.posts | limit:12 %}
+                {% capture post_publish_period %}
+                    {% include utils/post_publish_period.html %}
+                {% endcapture %}
+                {% unless current_publish_period contains post_publish_period %}
+                    {% capture current_publish_period %}
+                        {{ post_publish_period }}
+                    {% endcapture %}
+                    {% assign post_counter = 0 %}
+                    <div class="col-xs-12 season-separator">
+                        <h2 class="text-center">
+                            {{ current_publish_period }}
+                        </h2>
+                    </div>
+                {% endunless %}
+                {% assign loopindex2 = post_counter | modulo: 2 %}
+                {% assign loopindex3 = post_counter | modulo: 3 %}
                 <div class="col-xs-6 col-sm-4">
                     <a class="post-link text-center" href="{{ post.url }}">
                         <div class="post-cover">
@@ -107,10 +123,11 @@ title: Bienvenue!
                 </div>
                 {% if loopindex3 == 2 %}
                 <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>
-            {% endif %}
-            {% if loopindex2 == 1 %}
+                {% endif %}
+                {% if loopindex2 == 1 %}
                 <div class="clearfix visible-xs-block"></div>
                 {% endif %}
+                {% assign post_counter = post_counter | plus: 1 %}
             {% endfor %}
             </div>
         </div>
