@@ -24,12 +24,12 @@ jQuery(function() {
         var ref = refs[index];
         text = ref.innerHTML;
 
-        ref_num = document.createElement("span");
+        ref_num = document.createElement("a");
         ref_num.className = "refnum";
         ref_num.innerHTML = "[" + (index + 1) + "]";
 
         ref_body = document.createElement("span");
-        ref_body.className = "refbody";
+        ref_body.className = "well well-sm refbody";
         ref_body.innerHTML = text;
 
         ref.className = "ref";
@@ -43,6 +43,7 @@ jQuery(function() {
     jQuery(".refbody").hide();
     /* Add function to display it when refnum is clicked */
     jQuery(".refnum").click(function(event) {
+        jQuery(".refbody").hide();
         jQuery(this.parentElement).children('.refbody').toggle();
         event.stopPropagation();
     });

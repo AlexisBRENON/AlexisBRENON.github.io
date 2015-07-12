@@ -2,32 +2,19 @@
 /* the reference tooltips style starts here */
 .ref {
   position: relative;
-  vertical-align: baseline;
-  // Do not display any spaces or text between spans
-  font-size: 0;
+  font-size: $font-size-small;
 }
 .refnum {
   position: relative;
-  left: 2px;
+  left: 0.1em;
   bottom: 1ex;
-  color: blue;
-  font-size: .7rem;
-  font-weight: bold;
-  text-decoration: underline;
   cursor: pointer;
 }
 .refbody {
-  font-size: .7rem;
-  line-height: 1.1;
-  display: block;
-  min-width: 20em;
   position: absolute;
-  left: 25px;
-  bottom: 5px ;
-  border: 1px solid;
-  padding: 5px;
-  background-color: white;
-  word-wrap: break-word;
-  z-index: 9999;
-  overflow: auto;
+  min-width: 20vw;
+  margin: 0;
+  left: 3ex;
+  bottom: 1ex ;
+  z-index: 1000;
 }
