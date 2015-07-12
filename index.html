@@ -85,11 +85,14 @@ title: Bienvenue!
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h1 class="text-center">Un peu de temps à perdre&nbsp;?<br/>
-                <small>Lisez quelques articles...</small></h1>
+                <small>Lisez quelques articles...</small>
+            </h1>
             <div class="row posts-list">
             {% assign current_publish_period = "" %}
             {% assign post_counter = 0 %}
-            {% for post in site.posts | limit:12 %}
+            {% assign number_of_post = site.posts | size | minus: 1 %}
+            {% for i in (0..number_of_post) %}
+                {% assign post = site.posts[i] %}
                 {% capture post_publish_period %}
                     {% include utils/post_publish_period.html %}
                 {% endcapture %}
@@ -98,7 +101,7 @@ title: Bienvenue!
                         {{ post_publish_period }}
                     {% endcapture %}
                     {% assign post_counter = 0 %}
-                    <div class="col-xs-12 season-separator">
+                    <div class="col-xs-12 season-separator {{ classes_invisible }}">
                         <h2 class="text-center">
                             {{ current_publish_period }}
                         </h2>
@@ -106,7 +109,25 @@ title: Bienvenue!
                 {% endunless %}
                 {% assign loopindex2 = post_counter | modulo: 2 %}
                 {% assign loopindex3 = post_counter | modulo: 3 %}
-                <div class="col-xs-6 col-sm-4">
+                {% if i > 10 %}
+                {% capture classes_invisible %}
+                    {{ classes_invisible }}
+                    {% unless classes_invisible contains "hidden-post" %}
+                        hidden-post
+                    {% endunless %}
+                    {% if loopindex3 == 0 %}
+                        {% unless classes_invisible contains "hidden-lg hidden-md hidden-sm" %}
+                            hidden-lg hidden-md hidden-sm
+                        {% endunless %}
+                    {% endif %}
+                    {% if loopindex2 == 0 %}
+                        {% unless classes_invisible contains "hidden-xs" %}
+                            hidden-xs 
+                        {% endunless %}
+                    {% endif %}
+                {% endcapture %}
+                {% endif %} 
+                <div class="col-xs-6 col-sm-4 {{ classes_invisible }}">
                     <a class="post-link text-center" href="{{ post.url }}">
                         <div class="post-cover">
                             <img src="{{ post.icon }}" class="post-image"/>
@@ -122,13 +143,21 @@ title: Bienvenue!
                     </a>
                 </div>
                 {% if loopindex3 == 2 %}
-                <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>
+                <div class="clearfix visible-lg-block visible-md-block visible-sm-block
+                    {{ classes_invisible }}"></div>
                 {% endif %}
                 {% if loopindex2 == 1 %}
-                <div class="clearfix visible-xs-block"></div>
+                <div class="clearfix visible-xs-block {{ classes_invisible }}"></div>
                 {% endif %}
                 {% assign post_counter = post_counter | plus: 1 %}
             {% endfor %}
+                <div class="col-xs-12">
+                    <button class="btn btn-primary btn-lg btn-block"
+                            type="button"
+                        onclick="display_more_post()">
+                        Plus d'articles
+                    </button>
+                </div>
             </div>
         </div>
     </div>
