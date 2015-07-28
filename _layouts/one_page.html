@@ -1,4 +1,8 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+{% include 00-opening.html %}
+{% include 05-head.html %}
+
+<body class="one-page">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button"
@@ -17,9 +21,14 @@
             <ul class="nav navbar-nav">
                 <li><a href="#biography">Biographie</a></li>
                 <li><a href="#contacts">Contacts</a></li>
-                <li><a href="#these">Thèse</a></li>
                 <li><a href="#blog">Blog</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
+{{ content }}
+
+{% include 10-body/90-js_inclusions.html %}
+{% include 10-body/99-closing.html %}
+{% include 99-closing.html %}
