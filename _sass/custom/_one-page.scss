@@ -3,10 +3,6 @@
 body.one-page {
     position: relative;
 
-    // Remove margin under navbar in order header is gapless
-    .navbar {
-        margin-bottom: 0;
-    }
 
     // Header has a background with black overlay
     header {

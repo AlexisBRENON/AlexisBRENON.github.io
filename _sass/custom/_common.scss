@@ -1,9 +1,37 @@
+.overlay {
+    color: $component-active-color;
+
+    &.overlay-light {
+        $overlay-alpha: 0.75;
+        background-image: radial-gradient(ellipse at center,
+        rgba($gray-base, $overlay-alpha) 0%,
+        rgba($gray-darker, $overlay-alpha) 100%
+        )
+    }
+
+}
+
 .inverted {
-    background: radial-gradient(ellipse at center, lighten($brand-primary, 10%) 0%, darken($brand-primary, 10%) 100%); /* W3C */
+    background-image: radial-gradient(ellipse at center, lighten($brand-primary, 10%) 0%, darken($brand-primary, 10%) 100%); /* W3C */
     color: $body-bg;
 
     a {
         color: $text-color;
+    }
+}
+
+.row.gutter-small {
+    margin-left: $small-gutter;
+    margin-right: $small-gutter;
+
+    [class*='col-'] {
+        padding-right: $small-gutter;
+        padding-left: $small-gutter;
+    }
+
+    [class*='col-']:not(:first-child), [class*='col-']:not(:last-child) {
+        padding-right: $small-gutter;
+        padding-left: $small-gutter;
     }
 }
 

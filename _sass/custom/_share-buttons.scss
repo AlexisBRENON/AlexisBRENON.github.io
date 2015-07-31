@@ -1,9 +1,17 @@
-/* This gets Facebook to fall into place */
-.share-buttons iframe {
-	vertical-align: middle;
-}
-/* This gets Twitter to seems more aligned */
-.share-buttons .twitter {
-	margin-top: 1px;
+div.share-buttons {
+    margin-top: $padding-base-horizontal;
+    margin-bottom: $padding-base-horizontal;
 }
 
+.btn-share {
+    color: #fff;
+    border: none;
+}
+
+.btn-share-twitter {
+    background-color: #55ACEE;
+}
+
+.btn-share-facebook {
+    background-color: #3B5998;
+}

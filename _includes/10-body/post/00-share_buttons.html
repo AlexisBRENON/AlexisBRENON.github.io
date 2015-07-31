@@ -1,26 +1,15 @@
-<ul class="inline-list share-buttons">
+<div class="share-buttons">
+    <a type="button"
+       class="btn btn-share btn-share-twitter"
+       href="https://twitter.com/intent/tweet?text={{ page.title }}&url=http://{{ site.url }}{{ page.url }}&via=AlexisBRENON&hashtags={{ page.hashtags }}"
+       target="_blank">
+        Partager sur Twitter
+    </a>
 
-  <li class="facebook">
-    <span>
-      <div class="fb-share-button"
-        data-href="{{ site.url }}{{ page.url }}"
-        data-layout="button">
-      </div>
-    </span>
-  </li>
-
-  <li class="twitter">
-    <span>
-      <a class="twitter-share-button"
-          href="https://twitter.com/share"
-          data-url="{{ site.url }}{{ page.url }}"
-          data-text="{{ page.title }}"
-          data-via="AlexisBRENON"
-          data-hashtags="{% for tag in post.tags %}tag,{% endfor %}"
-          data-count="none"
-          data-lang="fr">
-          Tweet
-      </a>
-    </span>
-  </li>
-</ul>
+    <a type="button"
+       class="btn btn-share btn-share-facebook"
+       href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"
+       target="_blank">
+        Partager sur Facebook
+    </a>
+</div>

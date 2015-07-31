@@ -8,16 +8,24 @@
       Un peu de patience.
     </p>
     {% else %}
-      <ul>
         {% for post in site.categories[category] limit:5 %}
-        {% if post.id != page.id %}
-        <li>
-          <a href="{{ site.url }}{{ post.url }}">
-          {{ post.title }}
-          </a>
-        </li>
+        {% assign loopindex = forloop.index0 | modulo: 2 %}
+        {% if loopindex == 0 %}
+            <div class="row gutter-small posts-list">
         {% endif %}
+                <div class="col-xs-6">
+                    <a class="post-link text-center" href="{{ post.url }}">
+                        <div class="post-cover">
+                            <img src="{{ post.icon }}" class="post-image"/>
+                            <div class="post-image-overlay">
+                                <p>{{ post.title }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% if loopindex == 1 %}
+            </div>
+            {% endif %}
         {% endfor %}
-      </ul>
     {% endif %}
 </div>
