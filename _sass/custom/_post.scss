@@ -7,8 +7,33 @@ body.post {
         text-transform: capitalize;
     }
 
-    .post-image-small {
-        max-height: 50vh;
+    .post-image {
+        margin-top: $padding-base-vertical;
+        margin-bottom: $padding-base-vertical;
+
+        .post-image-small {
+            img {
+                max-height: 50vh;
+            }
+        }
+
+        .post-image-large {
+            height: 80vh;
+
+            img {
+                $inset-shadow-size: $padding-base-vertical;
+                position: absolute;
+                left: -1 * $inset-shadow-size;
+                width: 100vw;
+                height: 100%;
+                z-index: -1000;
+                background-position: center 0;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                box-shadow: inset 0px 0px $inset-shadow-size 0px rgba(0,0,0,0.75);
+            }
+        }
     }
 
     @import "custom/pullquote";
@@ -26,11 +51,16 @@ body.post {
         background-position: center;
     }
 
+    aside {
+        background: $body-bg;
+    }
+
     .posts-list {
         .post-link {
             .post-cover {
                 border-radius: $border-radius-base;
                 .post-image {
+                    margin: 0;
                     border-radius: $border-radius-base;
                 }
                 .post-image-overlay {

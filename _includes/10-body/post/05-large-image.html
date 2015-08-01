@@ -1,7 +1,11 @@
 <div class="row post-image">
     <div class="col-xs-12 text-center">
         <a href="{{ include.source-url }}" rel="nofollow">
-            <div class="post-image-small thumbnail">
+            <div class="post-image-large hidden-xs">
+                <img 
+                 style="background-image: url('{{include.image-url}}');"/>
+            </div>
+            <div class="post-image-small thumbnail visible-xs-block">
                 <img class="img-responsive"
                      src="{{ include.image-url }}"
                      alt="{{ include.image-alt }}"/>
