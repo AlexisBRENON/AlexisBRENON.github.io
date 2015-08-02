@@ -27,6 +27,10 @@ function display_more_post () {
     }
     
     if ($('.posts-list .hidden-post').length == 0) {
-        $('.posts-list button').hide();
+        $('#more-post-button').addClass('disabled');
     }
+}
+
+if ($('.posts-list .hidden-post').length == 0) {
+    $('#more-post-button').addClass('disabled');
 }

@@ -1,19 +1,41 @@
 ---
 layout: default
 title: Blog
+body_class: blog
 ---
 
-<main class="large-12 columns">
-    <h3>Blog</h3>
-    <p>
-      Informatique, musique, thèse, etc. Retrouvez ici toutes mes pensées et reflexions sur ce qui rythme ma vie !
-    </p>
-    <hr/>
-    <ul class="medium-block-grid-2 posts-list">
-      {% for post in site.posts %}
-      <li>
-          {% include utils/post_excerpt.html %}
-      </li>
-      {% endfor %}
-    </ul>
+<header class="container-fluid text-center">
+    <div class="post-header-text">
+        <h1>Blog<br/>
+            <small>Toutes mes découvertes, idées et reflexions</small>
+        </h1>
+    </div>
+</header>
+
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            {% for post in site.posts %}
+            <div class="media panel">
+            <a href="{{ post.url }}">
+                <div class="media-left">
+                    <div class="media-object"
+                         style="background-image: url('{{ post.icon }}');">
+                        <img class="hidden" src="{{ post.icon }}"/>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h2 class="media-heading">
+                        {{ post.title }}
+                        <small>
+                            {{ post.date | date: "%Y-%m-%d" }}
+                        </small>
+                    </h2>
+                    {% include utils/post_excerpt.html %}
+                </div>
+            </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </main>

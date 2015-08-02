@@ -154,12 +154,23 @@ title: Bienvenue!
                 {% endif %}
                 {% assign post_counter = post_counter | plus: 1 %}
             {% endfor %}
-                <div class="col-xs-12">
-                    <button class="btn btn-primary btn-lg btn-block"
-                            type="button"
-                        onclick="display_more_post()">
-                        Plus d'articles
-                    </button>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <a class="btn btn-primary btn-lg btn-block"
+                           role="button"
+                           href="/blog/"
+                           >
+                           Tous les articles
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <button id="more-post-button"
+                                class="btn btn-primary btn-lg btn-block"
+                                type="button"
+                                onclick="display_more_post()">
+                            Plus d'articles
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
