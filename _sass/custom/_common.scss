@@ -89,8 +89,10 @@ body {
             // Post image is resize to fit in the div
             .post-image {
                 width: 100%;
-                height: 100%;
+                padding-top: 100%; // Set the height the same size than width
                 @include border-top-radius($border-radius-base);
+                background-position: center center;
+                background-size: cover;
             }
 
             // This overly will cover the whole image

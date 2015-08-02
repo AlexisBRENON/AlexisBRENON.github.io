@@ -130,7 +130,10 @@ title: Bienvenue!
                 <div class="col-xs-6 col-sm-4 {{ classes_invisible }}">
                     <a class="post-link text-center" href="{{ post.url }}">
                         <div class="post-cover">
-                            <img src="{{ post.icon }}" class="post-image"/>
+                            <div class="post-image"
+                                 style="background-image: url('{{ post.icon }}');">
+                                <img src="{{ post.icon }}" class="hidden"/>
+                            </div>
                             <div class="post-image-overlay">
                                 <p>
                                 {% include utils/post_excerpt.html %}
