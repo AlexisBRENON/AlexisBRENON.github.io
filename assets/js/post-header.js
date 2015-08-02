@@ -5,6 +5,8 @@ $(function() {
 
     if (header_image_src.length == 0) {
         header_image_src = '/assets/images/index/background.jpg';
+    } else {
+        header_tag.css('height', '66.6vh');
     }
 
     header_tag.css(
