@@ -28,3 +28,8 @@ defaults:
 gems:
   - jemoji
   - jekyll-sitemap
+
+sass:
+    sass_dir: _sass
+    style: :compressed
+
