@@ -12,15 +12,7 @@
 
             <div class="col-xs-6">
                 <a class="post-link" href="{{ post.url }}">
-                    <div class="post-cover">
-                        <div class="post-image"
-                             style="background-image: url('{{ post.icon }}');">
-                            <img src="{{ post.icon }}" class="hidden"/>
-                        </div>
-                        <div class="post-image-overlay">
-                            <p>{{ post.title }}</p>
-                        </div>
-                    </div>
+                    {% include utils/post_cover.html image=post.icon text=post.title %}
                 </a>
             </div>
 

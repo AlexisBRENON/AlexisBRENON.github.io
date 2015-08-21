@@ -1,19 +1,8 @@
-// Stylesheet for the one-page styled index
-
 body.one-page {
-    position: relative;
 
-    // Header has a background with black overlay
     header {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,.3);
-        background-image: url("/assets/images/index/background.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: cover;
-        color: $body-bg;
         min-height: 100vh;
 
         // The portrait image is resized
@@ -42,16 +31,6 @@ body.one-page {
         }
     }
 
-    .season-separator {
-        h2 {
-            font-family: 'Overlock', $headings-font-family;
-            font-weight: 700;
-            font-style: italic;
-            color: rgba($gray-base, 0.25);
-        }
-    }
-
-
     // Add some padding inside sections
     section {
         padding-top: 2em;
@@ -69,6 +48,29 @@ body.one-page {
             &.pull-left{
                 left: 10%;
             }
+        }
+    }
+
+    .season-separator {
+        h2 {
+            font-family: 'Overlock', $headings-font-family;
+            font-weight: 700;
+            font-style: italic;
+            color: rgba($gray-base, 0.25);
+        }
+    }
+
+    .posts-list {
+        .post-cover {
+            * {
+                @include border-bottom-radius(0);
+            }
+            .post-cover-overlay.overlay:before {
+                @include border-bottom-radius(0);
+            }
+        }
+        .post-title {
+            @include border-bottom-radius($border-radius-base);
         }
     }
 }

@@ -1,18 +1,5 @@
 body.blog {
 
-    header {
-        min-height: 33.3vh;
-        margin-bottom: $padding-base-horizontal;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("/assets/images/index/background.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
     .media {
         transition: all 0.5s ease;
         padding: $padding-base-vertical;

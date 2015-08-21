@@ -1,17 +1,17 @@
 div.share-buttons {
     margin-top: $padding-base-horizontal;
     margin-bottom: $padding-base-horizontal;
-}
 
-.btn-share {
-    color: #fff;
-    border: none;
-}
+    .btn-share {
+        color: #fff;
+        border: none;
 
-.btn-share-twitter {
-    background-color: #55ACEE;
-}
+        &.btn-share-twitter {
+            background-color: #55ACEE;
+        }
 
-.btn-share-facebook {
-    background-color: #3B5998;
+        &.btn-share-facebook {
+            background-color: #3B5998;
+        }
+    }
 }

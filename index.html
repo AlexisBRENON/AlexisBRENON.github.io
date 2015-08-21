@@ -129,19 +129,16 @@ title: Bienvenue!
                 {% endif %} 
                 <div class="col-xs-6 col-sm-4 {{ classes_invisible }}">
                     <a class="post-link text-center" href="{{ post.url }}">
-                        <div class="post-cover">
-                            <div class="post-image"
-                                 style="background-image: url('{{ post.icon }}');">
-                                <img src="{{ post.icon }}" class="hidden"/>
+                        {% capture post_excerpt %}
+                        {% include utils/post_excerpt.html %}
+                        {% endcapture %}
+                        {% include utils/post_cover.html image=post.icon text=post_excerpt %}
+                        <div class="post-title inverted">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h4>{{ post.title }}</h4>
+                                </div>
                             </div>
-                            <div class="post-image-overlay">
-                                <p>
-                                {% include utils/post_excerpt.html %}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <h4>{{ post.title }}</h4>
                         </div>
                     </a>
                 </div>

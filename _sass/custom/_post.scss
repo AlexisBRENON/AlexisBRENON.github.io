@@ -1,6 +1,8 @@
 body.post {
 
-    text-align: justify;
+    header.post-custom-header {
+        min-height: 66.6vh;
+    }
 
     /* Title and date of the post */
     .post-title {
@@ -36,47 +38,11 @@ body.post {
         }
     }
 
+    .post-cover-overlay .row {
+        margin-left: -$small-gutter;
+        margin-right: -$small-gutter;
+    }
+
     @import "custom/pullquote";
     @import "custom/ref-note";
-
-    header {
-        margin-bottom: $padding-base-horizontal;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        &.post-default-header {
-            min-height: 33.3vh;
-            background-image: url("/assets/images/index/background.jpg");
-        }
-        &.post-custom-header {
-            min-height: 66.6vh;
-        }
-    }
-
-    aside {
-        background: $body-bg;
-    }
-
-    .posts-list {
-        .post-link {
-            .post-cover {
-                border-radius: $border-radius-base;
-                .post-image {
-                    margin: 0;
-                    border-radius: $border-radius-base;
-                }
-                .post-image-overlay {
-                    border-radius: $border-radius-base;
-                    p {
-                        text-align: initial;
-                    }
-                }
-            }
-        }
-    }
 }
