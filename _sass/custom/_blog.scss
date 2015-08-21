@@ -6,17 +6,11 @@ body.blog {
         display: flex;
         justify-content: center;
         align-items: center;
-        $overlay-alpha: 0.75;
-        background-image: radial-gradient(ellipse at center,
-        rgba($gray-base, $overlay-alpha) 0%,
-        rgba($gray-darker, $overlay-alpha) 100%
-        ), url("/assets/images/index/background.jpg");
+        background-image: url("/assets/images/index/background.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-
-        * {color: $component-active-color;}
     }
 
     .media {

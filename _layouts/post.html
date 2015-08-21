@@ -3,11 +3,21 @@
 
 {% include 10-body/opening.html body_class='post'%}
 
-<header class="container-fluid text-center overlay overlay-light">
-    <img class="hidden post-header-img" src="{{ page.header_image }}"/>
+{% if page.header_image %}
+<header
+    class="container-fluid text-center overlay overlay-light post-custom-header"
+    style="background-image: url('{{ page.header_image }}');">
+{% else %}
+<header
+    class="container-fluid text-center overlay overlay-light post-default-header">
+{% endif %}
+    <div class="row">
+        <div class="col-xs-12">
     <div class="post-header-text">
         <h1 class="post-title">{{ page.title }}</h1>
         <p>{% include utils/french_date.html date=page.date %}</p>
+    </div>
+        </div>
     </div>
 </header>
 

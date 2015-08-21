@@ -40,7 +40,6 @@ body.post {
     @import "custom/ref-note";
 
     header {
-        min-height: 33.3vh;
         margin-bottom: $padding-base-horizontal;
         display: flex;
         justify-content: center;
@@ -49,6 +48,14 @@ body.post {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        &.post-default-header {
+            min-height: 33.3vh;
+            background-image: url("/assets/images/index/background.jpg");
+        }
+        &.post-custom-header {
+            min-height: 66.6vh;
+        }
     }
 
     aside {

@@ -8,11 +8,7 @@ body.one-page {
         padding-top: 2rem;
         padding-bottom: 2rem;
         box-shadow: 0 2px 5px rgba(0,0,0,.3);
-        $overlay-alpha: 0.75;
-        background-image: radial-gradient(ellipse at center,
-        rgba($gray-base, $overlay-alpha) 0%,
-        rgba($gray-darker, $overlay-alpha) 100%
-        ), url("/assets/images/index/background.jpg");
+        background-image: url("/assets/images/index/background.jpg");
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
