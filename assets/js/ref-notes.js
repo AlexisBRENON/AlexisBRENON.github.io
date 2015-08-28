@@ -1,16 +1,4 @@
-/* My own custom JS */
-
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 'slow');
-        event.preventDefault();
-    });
-});
-
-/* Ref notes management */
+/* Ref notes management (auto-numbering and display) */
 jQuery(function() {
 
     /* Number refnotes */
