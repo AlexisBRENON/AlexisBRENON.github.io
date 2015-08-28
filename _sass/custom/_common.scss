@@ -21,7 +21,7 @@ body > header {
 }
 
 .inverted {
-    background-image: radial-gradient(ellipse at center, lighten($brand-primary, 10%) 0%, darken($brand-primary, 10%) 100%);
+    background-color: $component-active-bg;
     color: $component-active-color;
 }
 
@@ -43,10 +43,7 @@ body > header {
         $overlay-alpha: 0.75;
 
         &:before {
-            background-image: radial-gradient(ellipse at center,
-            rgba($gray-base, $overlay-alpha) 0%,
-            rgba($gray-darker, $overlay-alpha) 100%
-            )
+            background-color: rgba($gray-darker, $overlay-alpha);
         }
     }
 
@@ -54,10 +51,7 @@ body > header {
         $overlay-alpha: 0.9;
 
         &:before {
-            background-image: radial-gradient(ellipse at center,
-            rgba($gray-base, $overlay-alpha) 0%,
-            rgba($gray-darker, $overlay-alpha) 100%
-            )
+            background-color: rgba($gray-darker, $overlay-alpha);
         }
     }
 }
@@ -74,6 +68,7 @@ body > header {
     font-size: $font-size-h2;
     background-color: $component-active-bg;
     color: $component-active-color;
+    box-shadow: 0 4px 8px rgba(0,0,0,.25);
 
     width: 64px;
     height: 64px;
