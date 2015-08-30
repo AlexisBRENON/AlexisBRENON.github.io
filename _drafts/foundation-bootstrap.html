@@ -1,8 +1,8 @@
 ---
 title: "De fond(ation) en comble"
 category: [blog, technique]
-icon: TODO
-header_image: TODO
+icon: /assets/images/posts/foundation_bootstrap/init.png
+header_image: http://foundation.zurb.com/assets/img/homepage/hero-image.svg
 ---
 
 <div class="well">
@@ -33,7 +33,7 @@ designer d'UI serait certainement plus qualifié que moi pour en pointer les dé
 les utilisateurs y passant du temps, ils ont l'habitude de tel ou tel paradigme, disposition ou
 icône. Or le <em>beau</em> est surtout une question d'habitude, comme nous l'a montré l'histoire
 <span class="refnote">
-    todo
+    <a href="https://www.youtube.com/watch?v=Xrp0zJZu0a4">Women's Ideal Body Types Throughout History</a>
 </span>.
 </p>
 
@@ -57,7 +57,7 @@ particulièrement précis, et des frameworks génériques comme ceux-là feront 
 suis donc pas attardé sur tous les autres frameworks qui existent même si je suis persuadé qu'il en
 existe des plus petits répondant autant voire mieux à mes attentes.</p>
 
-<p>Si vous avez lu mon <a href="todo">premier post sur Docker</a> vous devez savoir que j'ai utilisé
+<p>Si vous avez lu mon <a href="/blog/technique/2015/03/25/docker.html">premier post sur Docker</a> vous devez savoir que j'ai utilisé
 Foundation au début du projet. Alors pourquoi être passé à Bootstrap&nbsp;?</p>
 
 <h3>Veni, Vidi, Vici</h3>
@@ -70,12 +70,12 @@ depuis SASS, etc. Alors qu'est-ce qui m'a fait migrer vers Bootstrap me direz-vo
 Principalement deux facteurs.</p>
 
 <p>Primo, Foundation n'inclut pas par défaut sa police d'icône. La Foundation icons font est un
-projet tierce qui arrive avec son lot de dépendances (pas moins de todo fichiers de police) et son
+projet tierce qui arrive avec son lot de dépendances (pas moins de 5 fichiers de police) et son
 fichier CSS chargé à part. Avantage ou inconvénient, je pense que les avis vont diverger, mais pour
 quelqu'un comme moi pas particulièrement à l'aise avec le front design, un framework all-in-one est
 sans contexte un atout&nbsp;!</p>
 
-<p>Secondo, les scripts JS incluent sont pauvres. Au nombre de todo... dont 1 qui est déprécié,
+<p>Secondo, les scripts JS inclus sont pauvres. La plupart m'étaient inutiles,
 autant vous dire que la première version du site fonctionnait quasiment de manière identique avec ou
 sans JavaScript. Parce que si je ne me trouve pas à l'aise au milieu du CSS, avec du code JavaScript
 c'est encore pire. Toutefois, le script qui me manquait le plus, était celui qui est connu sous le
@@ -87,11 +87,12 @@ droite, au bon moment.</p>
 <p>Alors voilà, l'être Humain n'aime pas le changement. J'avais déjà travaillé avec Boostrap et j'y
 suis revenu. Pourtant, au fur et à mesure que j'écris ce billet, je me rend compte que le résultat
 obtenu aujourd'hui, j'aurai très certainement pu l'obtenir avec Foundation&nbsp;; et peut⁻être même
-plus facilement qu'avec Bootstrap au vu du <a href="todo">magnifique code Jekyll</a> qui sert à afficher la grille de
+plus facilement qu'avec Bootstrap au vu du <a
+    href="https://github.com/AlexisBRENON/AlexisBRENON.github.io/blob/feature/twitter_bootstrap/index.html#L90">magnifique code Jekyll</a> qui sert à afficher la grille de
 posts sur la page d'accueil.</p>
 
 <p>Mais cette migration aura quand même eu du bon. Je n'ai pas souvenir d'avoir écrit autant de CSS
-de toute ma vie, et je me suis plutôt bien éclater avec les todo métabalises comme
+de toute ma vie, et je me suis plutôt bien éclater avec les pseudo-balises comme
 <code>:before</code> pour les overlay ou <code>:hover</code> pour les quelques animations. Alors
 oui, l'objectif de l'utilisation d'un framework CSS, c'est justement de réduire la quantité de code
 à écrire, mais le problème avec Bootstrap, c'est qu'il est <a
