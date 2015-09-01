@@ -1,0 +1,118 @@
+---
+title: "De fond(ation) en comble"
+category: [blog, technique]
+icon: /assets/images/posts/foundation_bootstrap/init.png
+header_image: http://foundation.zurb.com/assets/img/homepage/hero-image.svg
+hashtags: bootstrap,foundation,css
+---
+
+<div class="well">
+    L'ensemble du site vient d'être migré depuis le framework CSS <a
+        href="http://foundation.zurb.com/">Foundation 5</a>
+    vers <a href="http://getbootstrap.com/">Bootstrap 3</a>. Retour sur les choix qui ont été fait et ce que j'y ai
+    appris&nbsp;!
+</div>
+
+<!-- more -->
+
+<h3>Un design dépassé</h3>
+
+<p>Bien qu'utilisant un framework récent et étant responsive, le design global du site criait
+davantage <q>
+    JE SUIS DÉMODÉ&nbsp;!
+</q> que <a href="https://www.youtube.com/watch?v=5SIQPfeUTtg">
+    <q>
+        Allez viens&nbsp;! On est bien&nbsp;!
+    </q>
+</a>... C'est principalement pour cette raison que j'ai voulu revoir son design. Pour trouver un
+peu d'inspiration pour corriger ça, rien de tel que d'aller faire un tour sur les sites qui drainent le plus d'utilisateurs sur
+Internet, et qui sont la source de plus de 90% du trafic sur mon blog : Google, Facebook,
+Twitter.</p>
+
+<p>Je ne pense pas que le design de ces mastodontes du web soit sans faille, et un ergonome ou un
+designer d'UI serait certainement plus qualifié que moi pour en pointer les défauts. Toutefois,
+les utilisateurs y passant du temps, ils ont l'habitude de tel ou tel paradigme, disposition ou
+icône. Or le <em>beau</em> est surtout une question d'habitude, comme nous l'a montré l'histoire
+<span class="refnote">
+    <a href="https://www.youtube.com/watch?v=Xrp0zJZu0a4">Women's Ideal Body Types Throughout History</a>
+</span>.
+</p>
+
+<p>Bon c'est décidé, on rafraichit&nbsp;! Mais avec quoi&nbsp;! Pistolet à peinture, rouleau, éponge,
+pinceau, etc. On a que l'embarras du choix. Évaluons rapidement ce qu'on à.</p>
+
+<h3>Il est frais mon framework&nbsp;!</h3>
+
+<p>Il est évident que la mode est au flat design, même Apple s'y est mis. La faute à Android et
+Windows qui imposent leurs choix esthétiques au monde entier. Google a le mérite de distribuer
+sont <a href="https://www.google.com/design/spec/material-design/introduction.html">Material Design
+    (MD)</a> qui permet aux développeurs Android de fournir des applications tierces au
+design cohérent et s'intégrant davantage au design général de Lollipop. Au moment du ravalement de
+façade, le MD n'existait pas sous forme CSS. C'est chose faite depuis quelques temps, avec <a
+        href="http://www.getmdl.io/">Material
+        Design Light</a>, une implémentation allégée en CSS. Autant vous dire que je vous ferai un article dès
+que je l'aurait essayé.</p>
+
+<p>Retour aux deux grands acteurs du marchés, Foundation et Bootstrap. Je n'ai pas de besoin
+particulièrement précis, et des frameworks génériques comme ceux-là feront très bien l'affaire. Je ne me
+suis donc pas attardé sur tous les autres frameworks qui existent même si je suis persuadé qu'il en
+existe des plus petits répondant autant voire mieux à mes attentes.</p>
+
+<p>Si vous avez lu mon <a href="/blog/technique/2015/03/25/docker.html">premier post sur Docker</a> vous devez savoir que j'ai utilisé
+Foundation au début du projet. Alors pourquoi être passé à Bootstrap&nbsp;?</p>
+
+<h3>Veni, Vidi, Vici</h3>
+
+<p>Foundation est un très bon framework, qui gère très bien le responsive design en se basant lui
+aussi sur un système de colonnes et différentes tailles d'écran symboliques (smartphone, tablette,
+standard, large). Il propose de nombreuses classes utilitaires communes, limite le nombre de
+<code>div</code> à insérer, propose une disposition sous forme de grille tout en CSS, se compile
+depuis SASS, etc. Alors qu'est-ce qui m'a fait migrer vers Bootstrap me direz-vous&nbsp;?
+Principalement deux facteurs.</p>
+
+<p>Primo, Foundation n'inclut pas par défaut sa police d'icône. La Foundation icons font est un
+projet tierce qui arrive avec son lot de dépendances (pas moins de 5 fichiers de police) et son
+fichier CSS chargé à part. Avantage ou inconvénient, je pense que les avis vont diverger, mais pour
+quelqu'un comme moi pas particulièrement à l'aise avec le front design, un framework all-in-one est
+sans contexte un atout&nbsp;!</p>
+
+<p>Secondo, les scripts JS inclus sont pauvres. La plupart m'étaient inutiles,
+autant vous dire que la première version du site fonctionnait quasiment de manière identique avec ou
+sans JavaScript. Parce que si je ne me trouve pas à l'aise au milieu du CSS, avec du code JavaScript
+c'est encore pire. Toutefois, le script qui me manquait le plus, était celui qui est connu sous le
+nom de <em>affix</em> chez Bootstrap et qui permet de faire apparaitre ce petit bouton, en bas à
+droite, au bon moment.</p>
+
+<h3>Retour aux sources</h3>
+
+<p>Alors voilà, l'être Humain n'aime pas le changement. J'avais déjà travaillé avec Boostrap et j'y
+suis revenu. Pourtant, au fur et à mesure que j'écris ce billet, je me rend compte que le résultat
+obtenu aujourd'hui, j'aurai très certainement pu l'obtenir avec Foundation&nbsp;; et peut⁻être même
+plus facilement qu'avec Bootstrap au vu du <a
+    href="https://github.com/AlexisBRENON/AlexisBRENON.github.io/blob/feature/twitter_bootstrap/index.html#L90">magnifique code Jekyll</a> qui sert à afficher la grille de
+posts sur la page d'accueil.</p>
+
+<p>Mais cette migration aura quand même eu du bon. Je n'ai pas souvenir d'avoir écrit autant de CSS
+de toute ma vie, et je me suis plutôt bien éclater avec les pseudo-balises comme
+<code>:before</code> pour les overlay ou <code>:hover</code> pour les quelques animations. Alors
+oui, l'objectif de l'utilisation d'un framework CSS, c'est justement de réduire la quantité de code
+à écrire, mais le problème avec Bootstrap, c'est qu'il est <a
+    href="https://wappalyzer.com/categories/web-frameworks">présent
+    partout</a> et que pour se démarquer ne serait-ce qu'un peu, il faut mettre les mains dans le
+cambouis.</p>
+
+<p>Coté JavaScript aussi, je pense que mon niveau à bondi, même si je ne comprends pas toujours
+exactement les subtilités. Je me suis frotté pour la première fois à JQuery et JQueryUI&bnsp;; mieux
+vaut tard que jamais.</p>
+
+<h3>Une évolution constante</h3>
+
+<p>Alors oui, la navigation n'est pas parfaite, le design n'est pas à la pointe et Bootstrap vient
+d'annoncer la sortie de la version 4 en beta. Mais c'est aussi ça la joie d'être développeur, jamais
+rien n'est fini, tout est en constante évolution.</p>
+
+<p>Alors si vous avez des remarques, des suggestions, des problèmes de navigation, n'hésitez pas à
+laisser un commentaires, juste en dessous, par <a href="mailto:alexis.brenon@imag.fr">mail</a> ou
+sur <a href="https://twitter.com/AlexisBRENON/">Twitter</a>.</p>
+
+<p>Sur ce, bonne rentrée à tous et à la prochaine.</p>
