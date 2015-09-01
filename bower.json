@@ -1,8 +1,19 @@
 {
-  "name": "foundation-compass-app",
-  "version": "0.0.1",
-  "private": "true",
+  "name": "Alexis BRENON's website",
+  "version": "1.0.0",
+  "homepage": "https://github.com/AlexisBRENON/AlexisBRENON.github.io",
+  "authors": [
+    "Alexis BRENON <brenon.alexis@gmail.com>"
+  ],
+  "license": "CC BY",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "bootstrap-sass": "~3.3.5"
   }
 }

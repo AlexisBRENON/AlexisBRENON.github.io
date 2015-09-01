@@ -1,0 +1,27 @@
+// Redefine some values set by Bootstrap
+
+.navbar {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-family: 'Overlock', $headings-font-family;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.row.gutter-small {
+    margin-left: $small-gutter;
+    margin-right: $small-gutter;
+
+    [class*='col-'] {
+        padding-right: $small-gutter;
+        padding-left: $small-gutter;
+    }
+
+    [class*='col-']:not(:first-child), [class*='col-']:not(:last-child) {
+        padding-right: $small-gutter;
+        padding-left: $small-gutter;
+    }
+}
+

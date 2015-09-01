@@ -1,0 +1,76 @@
+body.one-page {
+
+    header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: 100vh;
+
+        // The portrait image is resized
+        .img-portrait {
+            $margin: 5*$padding-base-vertical;
+            margin-top: $margin;
+            margin-bottom: $margin;
+            width: 30rem;
+        }
+
+        a {
+            border-radius: 50%;
+            // Dirty trick to fix the unaligned chevron character
+            padding-top: $padding-large-horizontal+4;
+            padding-left: $padding-large-horizontal+4;
+            padding-bottom: $padding-large-horizontal;
+            padding-right: $padding-large-horizontal;
+            font-size: $font-size-h2;
+            color: $component-active-color;
+            transition: background-color 0.5s ease;
+
+            &:hover {
+                background-color: rgba($gray-lighter, 0.25);
+                text-decoration: none;
+            }
+        }
+    }
+
+    // Add some padding inside sections
+    section {
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        .section-icon {
+            position: absolute;
+            font-size: $font-size-h1 * 5;
+            color: rgba($text-color, 0.075) ;
+            z-index: -1;
+
+            &.pull-right {
+                right: 10%;
+            }
+            &.pull-left{
+                left: 10%;
+            }
+        }
+    }
+
+    .season-separator {
+        h2 {
+            font-family: 'Overlock', $headings-font-family;
+            font-weight: 700;
+            font-style: italic;
+            color: rgba($gray-base, 0.25);
+        }
+    }
+
+    .posts-list {
+        .post-cover {
+            * {
+                @include border-bottom-radius(0);
+            }
+            .post-cover-overlay.overlay:before {
+                @include border-bottom-radius(0);
+            }
+        }
+        .post-title {
+            @include border-bottom-radius($border-radius-base);
+        }
+    }
+}

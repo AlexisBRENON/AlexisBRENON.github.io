@@ -1,16 +1,25 @@
-<div>
+<div class="col-xs-6 col-md-12">
     <h3>Derniers posts</h3>
-    <p>
-    <ul>
-        {% for post in site.posts limit:5 %}
-        {% if post.id != page.id %}
-        <li>
-            <a href="{{ site.url }}{{ post.url }}">
-            {{ post.title }}
-            </a>
-        </li>
+    <div class="row gutter-small posts-list">
+
+{% for post in site.posts limit:5 %}
+    {% comment %}Don't display the current article{% endcomment %}
+    {% if post.id != page.id %}
+        {% capture last_post_counter %}{% increment last_post_counter_i %}{% endcapture %}
+        {% if last_post_counter != '4' %}
+            {% assign loopindex2 = last_post_counter | modulo: 2 %}
+
+            <div class="col-xs-6">
+                <a class="post-link" href="{{ post.url }}">
+                    {% include utils/post_cover.html image=post.icon text=post.title %}
+                </a>
+            </div>
+
+            {% if loopindex == 1 %}
+            <div class="clearfix"></div>
+            {% endif %}
         {% endif %}
-        {% endfor %}
-    </ul>
-    </p>
+    {% endif %}
+{% endfor %}
+    </div>
 </div>

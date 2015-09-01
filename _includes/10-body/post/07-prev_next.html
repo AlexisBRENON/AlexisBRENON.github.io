@@ -1,0 +1,22 @@
+<nav>
+    {% unless page.previous.url %}
+        {% assign previous-disabled = 'disabled' %}
+    {% endunless %}
+    {% unless page.next.url %}
+        {% assign next-disabled = 'disabled' %}
+    {% endunless %}
+    <ul class="pager">
+        <li class="previous {{ previous-disabled }}">
+            <a href="{{ page.previous.url }}">
+                <span class="glyphicon glyphicon-menu-left"></span>
+                Post précédent
+            </a>
+        </li>
+        <li class="next {{ next-disabled }}">
+            <a href="{{ page.next.url }}">
+                Post suivant
+                <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </li>
+    </ul>
+</nav>

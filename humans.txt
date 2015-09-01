@@ -11,6 +11,6 @@
   
 /* SITE */
   Standards: HTML5, CSS3
-  Components: jQuery, Foundation
-  Software: Git, Jekyll, Atom
+  Components: jQuery, Bootstrap
+  Software: Git, Jekyll, Vim
   

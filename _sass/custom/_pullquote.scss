@@ -1,0 +1,39 @@
+/* pull-quote */
+.pullquote {
+    font-size: 125%;
+    font-weight: bold;
+    color: $brand-primary;
+    margin-bottom: 1.25rem;
+    padding-top: 1em;
+    min-height: 4em;
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content:"\e111";
+        font-family: 'Glyphicons Halflings';
+        color: $gray-lighter;
+        font-size: 500%;
+        font-weight: normal;
+        line-height: 1em;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+blockquote.pullquote {
+    max-width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+q.pullquote {
+    float: right;
+    max-width: 35%;
+    text-align: right;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}

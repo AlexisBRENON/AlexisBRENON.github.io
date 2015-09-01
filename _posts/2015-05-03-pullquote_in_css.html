@@ -1,118 +1,126 @@
 ---
 title: "Des pullquotes en CSS"
 category: [blog, technique]
-icon: https://s-media-cache-ak0.pinimg.com/736x/69/ac/0d/69ac0d7a965268d1997146846716d18c.jpg
+icon: /assets/images/posts/pullquotes/init.jpg
 ---
 
-<div class="panel post-tldr columns text-justify">
-    <p>
+<div class="well">
     Pour ceux qui l'on remarqué, j'ai récemment
     modifié le style de mes pullquotes, ces extraits de texte qui sont mis en évidence. Et
     comme ça m'a pris un certain temps, je vous propose une petite explication du résultat.
-    </p>
 </div>
 
 <!-- more -->
 
-<div class="post columns text-justify">
-    <h3>Une pullquote c'est quoi</h3>
-    <p>
-    Pour commencer, il faut définir son besoin. Les pullquotes, on les trouve en général dans les
-    magazines papier, très peu sur Internet. Ce sont ces petits blocs de texte, en plein milieu,
-    écrits gros, qui reprennent des extraits importants de l'article. Moi je les trouve super
-    pratique. Lorsque je survole un article, je ne lis que ça. Au pire, ça permet d'avoir une vague
-    idée du contenu, au mieux elles te donnent envie de le lire. Tu vois, c'est un peu comme une
-    bande annonce, t'as un petit aperçu du tout et si ça t'as convaincu, tu vas essayer de retrouver
-    les morceaux au milieu de toute l'oeuvre.
-    <span class="ref">
-        <span class="refnum">[1]</span>
-        <span class="refbody">Non&nbsp;? Il n'y a que moi qui fait ça au ciné&nbsp;?</span>
-    </span>
-    </p>
-    <p>
-    Donc, ce qu'il faut noter c'est qu'on veut afficher des citations de l'article, en gros, un peu
-    n'importe où. On va donc aborder deux choses&nbsp;: d'un coté la sémantique et de l'autre la mise
-    en forme.
-    </p>
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">Edit :</h3>
+    </div>
+    <div class="panel-body">
+        Depuis le moment où j'ai écrit cet article, le design du site à bien changé et le code des
+        pullquotes également. Pour voir le résultat de l'époque, je vous invite à recompiler le site selon
+        sa <a href="TODO">première version</a>.
+    </div>
+</div>
 
-    <h3>La sémantique</h3>
-    <p>
-    À l'heure du Web sémantique et du data mining, il devient important de choisir ses balises
-    judicieusement. On ne peut plus utiliser des <code>div</code> à tout bout de champs pour représenter
-    des blocs et des <code>span</code> pour le reste. Une <em>pullquote</em>, comme son nom l'indique, c'est
-    une citation, et on va donc utiliser les balises à notre disposition : <code>blockquote</code> et
-    <code>q</code>.
-    </p>
-    <p>
-    Quelle est la différence me direz-vous. Et bien si l'on s'en tient à la 
-    <a href="http://www.w3schools.com/html/html_quotation_elements.asp">norme du W3C</a>,
-    la balise <code>q</code> est une balise <em>inline</em> qui doit être utilisée pour les courtes
-    citations. À l'inverse, <code>blockquote</code> est une balise de type <em>block</em> qui doit être
-    utilisée pour les citations plus longues.
-    </p>
-    <p>
-    La longueur d'une citation étant assez subjective, on va se servir de cette différence
-    principalement pour la mise en page. Ainsi on différenciera les pullquotes inter-paragraphes, et
-    les pullquotes intra-paragraphe. Maintenant, passons au design.
-    </p>
+<h3>Une pullquote c'est quoi</h3>
+<p>
+Pour commencer, il faut définir son besoin. Les pullquotes, on les trouve en général dans les
+magazines papier, très peu sur Internet. Ce sont ces petits blocs de texte, en plein milieu,
+écrits gros, qui reprennent des extraits importants de l'article. Moi je les trouve super
+pratique. Lorsque je survole un article, je ne lis que ça. Au pire, ça permet d'avoir une vague
+idée du contenu, au mieux elles te donnent envie de le lire. Tu vois, c'est un peu comme une
+bande annonce, t'as un petit aperçu du tout et si ça t'as convaincu, tu vas essayer de retrouver
+les morceaux au milieu de toute l'oeuvre.
+<span class="ref">
+    <span class="refnum">[1]</span>
+    <span class="refbody">Non&nbsp;? Il n'y a que moi qui fait ça au ciné&nbsp;?</span>
+</span>
+</p>
+<p>
+Donc, ce qu'il faut noter c'est qu'on veut afficher des citations de l'article, en gros, un peu
+n'importe où. On va donc aborder deux choses&nbsp;: d'un coté la sémantique et de l'autre la mise
+en forme.
+</p>
 
-    <h3>Le CSS</h3>
-    <p>
-    Pour commencer, on va créer une classe qui sera commune quelque soit la balise que l'on utilise.
-    Pour faire original, on va simplement l'appeler <code>pullquote</code>. Comme je le disais, une
-    pullquote doit être visible, elle doit ressortir, on va donc commencer par augmenter la taille
-    et la graisse de la police. On utilise aussi une couleur différente (mais pas trop) de la
-    couleur de base, ce qui nous donne quelque chose comme ça&nbsp;:
-    <p>
-    <pre class="code">.pullquote {
+<h3>La sémantique</h3>
+<p>
+À l'heure du Web sémantique et du data mining, il devient important de choisir ses balises
+judicieusement. On ne peut plus utiliser des <code>div</code> à tout bout de champs pour représenter
+des blocs et des <code>span</code> pour le reste. Une <em>pullquote</em>, comme son nom l'indique, c'est
+une citation, et on va donc utiliser les balises à notre disposition : <code>blockquote</code> et
+<code>q</code>.
+</p>
+<p>
+Quelle est la différence me direz-vous. Et bien si l'on s'en tient à la 
+<a href="http://www.w3schools.com/html/html_quotation_elements.asp">norme du W3C</a>,
+la balise <code>q</code> est une balise <em>inline</em> qui doit être utilisée pour les courtes
+citations. À l'inverse, <code>blockquote</code> est une balise de type <em>block</em> qui doit être
+utilisée pour les citations plus longues.
+</p>
+<p>
+La longueur d'une citation étant assez subjective, on va se servir de cette différence
+principalement pour la mise en page. Ainsi on différenciera les pullquotes inter-paragraphes, et
+les pullquotes intra-paragraphe. Maintenant, passons au design.
+</p>
+
+<h3>Le CSS</h3>
+<p>
+Pour commencer, on va créer une classe qui sera commune quelque soit la balise que l'on utilise.
+Pour faire original, on va simplement l'appeler <code>pullquote</code>. Comme je le disais, une
+pullquote doit être visible, elle doit ressortir, on va donc commencer par augmenter la taille
+et la graisse de la police. On utilise aussi une couleur différente (mais pas trop) de la
+couleur de base, ce qui nous donne quelque chose comme ça&nbsp;:
+<p>
+<pre>.pullquote {
     font-size: 125%;
     font-weight: bold;
     color: $monokai-yellow;
 }</pre>
-    <p>
-    Dans mon cas, j'utilise SASS, d'où l'utilisation d'une variable pour la couleur, à vous de
-    choisir la votre.
-    Voilà pour le cas général, maintenant on va s'amuser un peu avec le type de balise utilisé.
-    </p>
-    <p>
-    Comme je vous le disais, on va utiliser la balise <code>blockquote</code> pour réaliser des
-    pullquotes entre deux paragraphes. Dans l'idée une pullquote est très concentrée, elle ne
-    s'étend pas sur tout une ligne, pour ma part j'ai choisi de n'utiliser que trois quarts de la
-    largeur, et de la positionner au centre. La balise <code>blockquote</code> génère
-    généralement une ligne verticale sur la gauche, ici je ne la veux pas, donc on enlève toutes
-    les bordures. Ce qui nous donne&nbsp;:
-    </p>
-    <pre class=code>blockquote.pullquote {
+<p>
+Dans mon cas, j'utilise SASS, d'où l'utilisation d'une variable pour la couleur, à vous de
+choisir la votre.
+Voilà pour le cas général, maintenant on va s'amuser un peu avec le type de balise utilisé.
+</p>
+<p>
+Comme je vous le disais, on va utiliser la balise <code>blockquote</code> pour réaliser des
+pullquotes entre deux paragraphes. Dans l'idée une pullquote est très concentrée, elle ne
+s'étend pas sur tout une ligne, pour ma part j'ai choisi de n'utiliser que trois quarts de la
+largeur, et de la positionner au centre. La balise <code>blockquote</code> génère
+généralement une ligne verticale sur la gauche, ici je ne la veux pas, donc on enlève toutes
+les bordures. Ce qui nous donne&nbsp;:
+</p>
+<pre>blockquote.pullquote {
     max-width: 75%;
     margin-right: auto;
     margin-left: auto;
     border: none;
 }</pre>
-    <p>
-    Rien de très sorcier pour l'instant. On va maintenant s'attaquer à la balise <code>q</code>.
-    Celle-ci pourra être utiliser directement à l'intérieur d'un paragraphe. Dans un
-    magazine les pullquotes sont placées un peu n'importe où et ça ne gène généralement pas la
-    lecture. En revanche sur un site il est important de conserver une certaine continuitée.
-    J'ai donc décidé de la placer à droite, de cette façon le texte est toujours bien aligné à
-    gauche (le point de départ de la lecture). Encore une fois, il faut que ça reste compact et on
-    veut continuer à avoir du texte lisible à côté, on fixe donc la largeur à 35% de la ligne. Pour
-    qu'on puisse la placer à droite et que le texte se mette en forme en fonction, il faut
-    transformer la balise en <code>inline-block</code> et utiliser la propriété <code>float</code>.
-    Enfin on aligne le texte à droite.
-    </p>
-    <pre class="code">q.pullquote {
+<p>
+Rien de très sorcier pour l'instant. On va maintenant s'attaquer à la balise <code>q</code>.
+Celle-ci pourra être utiliser directement à l'intérieur d'un paragraphe. Dans un
+magazine les pullquotes sont placées un peu n'importe où et ça ne gène généralement pas la
+lecture. En revanche sur un site il est important de conserver une certaine continuitée.
+J'ai donc décidé de la placer à droite, de cette façon le texte est toujours bien aligné à
+gauche (le point de départ de la lecture). Encore une fois, il faut que ça reste compact et on
+veut continuer à avoir du texte lisible à côté, on fixe donc la largeur à 35% de la ligne. Pour
+qu'on puisse la placer à droite et que le texte se mette en forme en fonction, il faut
+transformer la balise en <code>inline-block</code> et utiliser la propriété <code>float</code>.
+Enfin on aligne le texte à droite.
+</p>
+<pre>q.pullquote {
     float: right;
     max-width: 35%;
     text-align: right;
     display: inline-block;
 }</pre>
-    <p>
-    Voilà une bonne base mais avec ça, on va avoir des problèmes de marges. La pullquote ne semblera
-    pas centrée verticalement entre deux paragraphes et pire, le texte des paragraphes pourrait
-    venir se coller aux pullquotes de droite... On va donc rajouter quelques marges pour
-    éviter ces problèmes :
-    </p>
-    <pre class="code">.pullquote {
+<p>
+Voilà une bonne base mais avec ça, on va avoir des problèmes de marges. La pullquote ne semblera
+pas centrée verticalement entre deux paragraphes et pire, le texte des paragraphes pourrait
+venir se coller aux pullquotes de droite... On va donc rajouter quelques marges pour
+éviter ces problèmes :
+</p>
+<pre>.pullquote {
     font-size: 125%;
     font-weight: bold;
     color: $monokai-yellow;
@@ -127,46 +135,46 @@ q.pullquote {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }</pre>
-    <p>
-    Voilà pour des pullquotes bien placées et qui ressortent déjà pas mal. Mais on va faire encore
-    un peu mieux.
-    </p>
+<p>
+Voilà pour des pullquotes bien placées et qui ressortent déjà pas mal. Mais on va faire encore
+un peu mieux.
+</p>
 
-    <h3>Le filigranne</h3>
-    <p>
-    Pour bien faire comprendre qu'il s'agit d'une citation, rien de mieux que de rajouter des
-    guillemets, mais pas n'importe comment. Pour commencer, il faut choisir des guillements
-    esthétiques, ce qui n'est pas le cas pour la plupart des polices. Dans mon cas, j'ai utilisé la
-    police d'icones <a href="http://zurb.com/playground/foundation-icon-fonts-3"
-                       rel="nofollow">Foundation Icon Fonts 3</a> qui fourni une icone
-    représentant des guillemets ouvrants et fermants. Libre à vous de choisir autre chose. On
-    commence donc simplement&nbsp;:
-    </p>
-    <pre class="code">.pullquote:before {
+<h3>Le filigranne</h3>
+<p>
+Pour bien faire comprendre qu'il s'agit d'une citation, rien de mieux que de rajouter des
+guillemets, mais pas n'importe comment. Pour commencer, il faut choisir des guillements
+esthétiques, ce qui n'est pas le cas pour la plupart des polices. Dans mon cas, j'ai utilisé la
+police d'icones <a href="http://zurb.com/playground/foundation-icon-fonts-3"
+                   rel="nofollow">Foundation Icon Fonts 3</a> qui fourni une icone
+               représentant des guillemets ouvrants et fermants. Libre à vous de choisir autre chose. On
+               commence donc simplement&nbsp;:
+</p>
+<pre>.pullquote:before {
     content:"\f1a3"; /* Quote character of Foundation Icon Fonts 3 */
     font-family: "foundation-icons";
     color: $monokai-light;
 }</pre>
-    <p>
-    Ici, j'utilises une couleur proche de la couleur d'arrière plan, juste un peu plus claire. Bon
-    c'est bien, mais elle ressort pas beacoup notre icone, on va donc augmenter sa taille. Le
-    problème, c'est qu'en augmentant la taille, on augmente également l'interligne, et du
-    coup notre première ligne se retrouvera séparée du reste de la citation. Pour corriger
-    ça, on utilise la balise <code>line-height</code> pour forcer l'interligne&nbsp;:</p>
-    <pre class=code>
+<p>
+Ici, j'utilises une couleur proche de la couleur d'arrière plan, juste un peu plus claire. Bon
+c'est bien, mais elle ressort pas beacoup notre icone, on va donc augmenter sa taille. Le
+problème, c'est qu'en augmentant la taille, on augmente également l'interligne, et du
+coup notre première ligne se retrouvera séparée du reste de la citation. Pour corriger
+ça, on utilise la balise <code>line-height</code> pour forcer l'interligne&nbsp;:</p>
+<pre class=code>
     font-size: 500%;
     font-weight: normal; /* On augmente la taille, pas besoin en plus d'être en gras */
     line-height: 1rem;</pre>
-    <p>Là, c'est plus visible ! Mais j'aimerais que l'icone apparaisse en arrière-plan de ma
-    citation. C'est là que ça commence à se corser, il va falloir jouer avec les
-    <code>z-index</code>. Or, cette propriété ne s'utilise que sur des 
-    <a href="http://www.alsacreations.com/astuce/lire/84-comment-fonctionne-la-proprit-css-z-index.html">
-        éléments qui sont positionés
-    </a>, avec <code>relative</code>, <code>absolute</code> ou <code>fixed</code>. Dans
-    notre cas, on ne veut pas particulièrement déplacer notre élément, on va donc ce contenter
-    d'un <code>relative</code> qui ne fera rien de particulier. On va ensuite placer le texte
-    au-dessus de l'icone&nbsp;:</p>
-    <pre class=code>.pullquote {
+<p>Là, c'est plus visible ! Mais j'aimerais que l'icone apparaisse en arrière-plan de ma
+citation. C'est là que ça commence à se corser, il va falloir jouer avec les
+<code>z-index</code>. Or, cette propriété ne s'utilise que sur des 
+<a href="http://www.alsacreations.com/astuce/lire/84-comment-fonctionne-la-proprit-css-z-index.html">
+    éléments qui sont positionés
+</a>, avec <code>relative</code>, <code>absolute</code> ou <code>fixed</code>. Dans
+notre cas, on ne veut pas particulièrement déplacer notre élément, on va donc ce contenter
+d'un <code>relative</code> qui ne fera rien de particulier. On va ensuite placer le texte
+au-dessus de l'icone&nbsp;:</p>
+<pre>.pullquote {
     ...
     position: relative;
     z-index: 0;
@@ -177,14 +185,14 @@ q.pullquote {
     position: relative;
     z-index: -1;
 }</pre>
-    <p>Et voilà, le tour est joué ! On termine en corrigeant un peu la position de l'icone, et
-    en l'alignant à gauche pour corriger l'alignement de la citation.</p>
+<p>Et voilà, le tour est joué ! On termine en corrigeant un peu la position de l'icone, et
+en l'alignant à gauche pour corriger l'alignement de la citation.</p>
 
-    <h3>Le résultat</h3>
-    <p>Voilà le CSS qui regroupe tout. Pour des exemples d'utilisation, le code de l'article <a
-         href="/blog/technique/2015/04/21/Programming_sucks.html">Programming Sucks</a> en est plein
+<h3>Le résultat</h3>
+<p>Voilà le CSS qui regroupe tout. Pour des exemples d'utilisation, le code de l'article <a
+   href="/blog/technique/2015/04/21/Programming_sucks.html">Programming Sucks</a> en est plein
      ! Je vous invites donc à le consulter.</p>
-    <pre class=code>/* pull-quote */
+<pre>/* pull-quote */
 .pullquote {
     font-size: 125%;
     font-weight: bold;
@@ -221,7 +229,6 @@ q.pullquote {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }</pre>
-    <p>J'espère que cet article t'aura aidé. N'hésite pas à faire des remarques ou à proposer
-    des améliorations, là juste en-dessous, dans les commentaires.
-    </p>
-</div>
+<p>J'espère que cet article t'aura aidé. N'hésite pas à faire des remarques ou à proposer
+des améliorations, là juste en-dessous, dans les commentaires.
+</p>

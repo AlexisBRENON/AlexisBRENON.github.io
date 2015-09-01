@@ -1,14 +1,7 @@
 {% assign m = include.date | date: "%-m" %}
 {% assign a = include.date | date: "%a" %}
-{% case a %}
-  {% when 'Mon' %}lundi
-  {% when 'Tue' %}mardi
-  {% when 'Wed' %}mercredi
-  {% when 'Thu' %}jeudi
-  {% when 'Fri' %}vendredi
-  {% when 'Sat' %}samedi
-  {% when 'Sun' %}dimanche
-{% endcase %}
+
+Article publié le  
 {{ include.date | date: "%-d" }}
 {% case m %}
   {% when '1' %}janvier
@@ -24,4 +17,13 @@
   {% when '11' %}novembre
   {% when '12' %}décembre
 {% endcase %}
-{{ include.date | date: "%Y" }}
+{{ include.date | date: "%Y" }}, c'était un 
+{% case a %}
+  {% when 'Mon' %}lundi.
+  {% when 'Tue' %}mardi.
+  {% when 'Wed' %}mercredi.
+  {% when 'Thu' %}jeudi.
+  {% when 'Fri' %}vendredi.
+  {% when 'Sat' %}samedi.
+  {% when 'Sun' %}dimanche.
+{% endcase %}

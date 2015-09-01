@@ -1,11 +1,11 @@
 title: Alexis BRENON
-url: http://alexisbrenon.github.io/
+url: alexisbrenon.github.io
 author: Alexis BRENON
 linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile
 twitter: AlexisBRENON
 github: AlexisBRENON
 
-exclude: [bower_components, bower.json, config.rb, Gemfile, Gemfile.lock, readme.md]
+exclude: [bower_components, bower.json, readme.md]
 
 defaults:
   -
@@ -27,3 +27,9 @@ defaults:
 
 gems:
   - jemoji
+  - jekyll-sitemap
+
+sass:
+    sass_dir: _sass
+    style: :compressed
+

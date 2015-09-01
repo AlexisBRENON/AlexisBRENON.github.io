@@ -1,0 +1,163 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+    text-align: justify;
+}
+
+body > header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 33.3vh;
+    margin-bottom: $padding-base-horizontal;
+
+    background-image: url("/assets/images/index/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+
+.inverted {
+    background-color: $component-active-bg;
+    color: $component-active-color;
+}
+
+.overlay {
+    position: relative;
+    color: $component-active-color;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: " ";
+        display: block;
+    }
+
+    &.overlay-light {
+        $overlay-alpha: 0.75;
+
+        &:before {
+            background-color: rgba($gray-darker, $overlay-alpha);
+        }
+    }
+
+    &.overlay-dark {
+        $overlay-alpha: 0.9;
+
+        &:before {
+            background-color: rgba($gray-darker, $overlay-alpha);
+        }
+    }
+}
+
+.back-to-top {
+    display: block;
+    position: fixed;
+    bottom: 8*$padding-base-vertical;
+    right: 2*$padding-base-horizontal;
+    visibility: hidden;
+    opacity: 0;
+
+    border-radius: 50%;
+    font-size: $font-size-h2;
+    background-color: $component-active-bg;
+    color: $component-active-color;
+    box-shadow: 0 4px 8px rgba(0,0,0,.25);
+
+    width: 64px;
+    height: 64px;
+    padding-left: 18px;
+    padding-top: 13px;
+    z-index: 1000;
+
+    transition: opacity 0.5s ease 0s, visibility 0s linear 0.6s;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $component-active-bg;
+        color: $component-active-color;
+    }
+
+    &.affix {
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 0.5s ease 0.1s;
+        opacity: 1;
+    }
+}
+
+
+.post-cover {
+    position: relative;
+    * {
+        border-radius: $border-radius-base;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 100%; // Cheat to have the same height than the width
+    }
+
+    .post-cover-content {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .post-cover-overlay {
+        &.overlay:before {
+            border-radius: $border-radius-base;
+        }
+        position: absolute;
+        top: 0;
+        height: 100%;
+        padding-left: $padding-base-horizontal;
+        padding-right: $padding-base-horizontal;
+        padding-top: $padding-base-vertical;
+        padding-bottom: $padding-base-vertical;
+    }
+}
+
+.posts-list {
+    .post-link {
+        display: block;
+        transition: box-shadow 0.5s ease;
+        margin-bottom: $padding-large-vertical;
+        border-radius: $border-radius-base;
+
+        .post-cover-overlay {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    }
+
+    .post-link:hover {
+        text-decoration: none;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+
+        .post-cover-overlay {
+            opacity: 100;
+        }
+    }
+}
+
+body > footer {
+    padding: $line-height-small + em;
+    padding-bottom: 0;
+    box-shadow: 0 -1px 5px rgba(0,0,0,.3);
+
+    a {
+        color: inherit;
+    }
+}
+

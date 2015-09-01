@@ -1,23 +1,28 @@
-<div>
+<div class="col-xs-6 col-md-12">
     <h3>Posts liés</h3>
-    {% assign category = page.categories[1] %}
-    {% assign number_related_post = site.categories[category] | size %}
-    {% if number_related_post < 2 %}
-    <p>
-      Aucun pour l'instant...<br/>
-      Un peu de patience.
-    </p>
-    {% else %}
-      <ul>
-        {% for post in site.categories[category] limit:5 %}
-        {% if post.id != page.id %}
-        <li>
-          <a href="{{ site.url }}{{ post.url }}">
-          {{ post.title }}
-          </a>
-        </li>
+    <div class="row gutter-small posts-list">
+
+{% assign category = page.categories[1] %}
+{% for post in site.categories[category] limit:5 %}
+    {% comment %}Don't display the current article{% endcomment %}
+    {% if post.id != page.id %}
+        {% capture post_counter %}{% increment post_counter_i %}{% endcapture %}
+        {% if post_counter != '4' %}
+            {% assign loopindex2 = post_counter | modulo: 2 %}
+
+            <div class="col-xs-6">
+                <a class="post-link" href="{{ post.url }}">
+                    {% include utils/post_cover.html image=post.icon text=post.title %}
+                </a>
+            </div>
+
+            {% if loopindex == 1 %}
+            <div class="clearfix"></div>
+            {% endif %}
+
         {% endif %}
-        {% endfor %}
-      </ul>
     {% endif %}
+{% endfor %}
+
+    </div>
 </div>
