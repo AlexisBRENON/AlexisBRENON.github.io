@@ -88,6 +88,16 @@ a.btn {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
+.btn-outline {
+  color: $body-bg;
+  border-color: $btn-default-border;
+
+  &.focus, &:focus, &:hover {
+    color: $body-bg;
+    background-color: rgba($btn-default-bg, 0.25)
+  }
+}
+
 
 // Link buttons
 // -------------------------

@@ -13,7 +13,7 @@ body.one-page {
             width: 30rem;
         }
 
-        a {
+        a.page-scroll {
             border-radius: 50%;
             // Dirty trick to fix the unaligned chevron character
             padding-top: $padding-large-horizontal+4;
