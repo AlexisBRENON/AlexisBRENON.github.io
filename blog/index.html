@@ -5,41 +5,114 @@ body_class: blog
 ---
 
 <header class="container-fluid text-center overlay overlay-light">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="post-header-text">
-                <h1>Blog<br/>
-                    <small>Toutes mes découvertes, idées et reflexions</small>
-                </h1>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="post-header-text">
+        <h1>Blog<br/>
+          <small>Toutes mes découvertes, idées et reflexions</small>
+        </h1>
+      </div>
     </div>
+  </div>
 </header>
 
 <main class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
-            {% for post in site.posts %}
-            <div class="media panel">
-            <a href="{{ post.url }}">
-                <div class="media-left">
-                    <div class="media-object"
-                         style="background-image: url('{{ post.icon }}');">
-                        <img class="hidden" src="{{ post.icon }}"/>
-                    </div>
-                </div>
-                <div class="media-body">
-                    <h2 class="media-heading">
-                        {{ post.title }}
-                        <small>
-                            {{ post.date | date: "%Y-%m-%d" }}
-                        </small>
-                    </h2>
-                    {% include utils/post_excerpt.html %}
-                </div>
-            </a>
+<div class="row posts-list">
+  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+  <!-- Variable initialisation -->    
+  {% assign current_publish_period = "" %}
+  {% assign number_of_post = site.posts | size | minus: 1 %}
+  {% assign post_counter = 0 %}
+
+  <!-- Display all the posts -->
+  {% for i in (0..number_of_post) %}
+    {% assign post = site.posts[i] %}
+    
+    <!-- Get the publish season of the post -->
+    {% capture post_publish_period %}
+      {% include utils/post_publish_period.html %}
+    {% endcapture %}
+
+    <!-- Display the season name if not the same as the previous post -->
+    {% unless current_publish_period contains post_publish_period %}
+      {% capture current_publish_period %}
+        {{ post_publish_period }}
+      {% endcapture %}
+      <!-- Reset number of post on row (line break) -->
+      {% assign post_counter = 0 %}
+      <div class="col-xs-12 season-separator {{ classes_invisible }}">
+        <h2 class="text-center">
+          {{ current_publish_period }}
+        </h2>
+      </div>
+    {% endunless %}
+
+    <!-- Count how many posts are displayed in row -->
+    {% assign loopindex2 = post_counter | modulo: 2 %}
+    {% assign loopindex3 = post_counter | modulo: 3 %}
+    <!-- Display only 10 first posts -->
+    {% if i > 10 %}
+      {% capture classes_invisible %}
+        {{ classes_invisible }}
+        <!-- Set the generic class -->
+        {% unless classes_invisible contains "hidden-post" %}
+          hidden-post
+        {% endunless %}
+
+        <!-- Handle different screen size layout -->
+        {% if loopindex3 == 0 %}
+          {% unless classes_invisible contains "hidden-lg hidden-md hidden-sm" %}
+            hidden-lg hidden-md hidden-sm
+          {% endunless %}
+        {% endif %}
+        {% if loopindex2 == 0 %}
+          {% unless classes_invisible contains "hidden-xs" %}
+            hidden-xs 
+          {% endunless %}
+        {% endif %}
+      {% endcapture %}
+    {% endif %}
+
+    <!-- Create the post card -->
+    <div class="col-xs-6 col-sm-4 {{ classes_invisible }}">
+      <a class="post-link text-center" href="{{ post.url }}">
+        {% capture post_excerpt %}
+          {% include utils/post_excerpt.html %}
+        {% endcapture %}
+        {% include utils/post_cover.html image=post.icon text=post_excerpt %}
+        <div class="post-title inverted">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>{{ post.title }}</h4>
             </div>
-            {% endfor %}
+          </div>
         </div>
+      </a>
     </div>
+
+    <!-- Line break -->
+    {% if loopindex3 == 2 %}
+      <div class="clearfix visible-lg-block visible-md-block visible-sm-block {{ classes_invisible }}"></div>
+    {% endif %}
+    {% if loopindex2 == 1 %}
+      <div class="clearfix visible-xs-block {{ classes_invisible }}"></div>
+    {% endif %}
+    
+    <!-- One more post has been displayed -->
+    {% assign post_counter = post_counter | plus: 1 %}
+  {% endfor %}
+
+  <!-- Button to display 10 more posts -->
+  <div class="row">
+    <div class="col-xs-12">
+      <button id="more-post-button"
+              class="btn btn-primary btn-lg btn-block"
+              type="button"
+              onclick="display_more_post()">
+        Plus d'articles
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
 </main>

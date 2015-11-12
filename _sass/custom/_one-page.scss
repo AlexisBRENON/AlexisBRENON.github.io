@@ -50,27 +50,4 @@ body.one-page {
             }
         }
     }
-
-    .season-separator {
-        h2 {
-            font-family: 'Overlock', $headings-font-family;
-            font-weight: 700;
-            font-style: italic;
-            color: rgba($gray-base, 0.25);
-        }
-    }
-
-    .posts-list {
-        .post-cover {
-            * {
-                @include border-bottom-radius(0);
-            }
-            .post-cover-overlay.overlay:before {
-                @include border-bottom-radius(0);
-            }
-        }
-        .post-title {
-            @include border-bottom-radius($border-radius-base);
-        }
-    }
 }
