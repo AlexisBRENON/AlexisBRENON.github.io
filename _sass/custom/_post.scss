@@ -43,6 +43,13 @@ body.post {
         margin-right: -$small-gutter;
     }
 
+    .post-limited-width-blocks > * {
+      margin-bottom: $padding-large-vertical;
+      background-color: white;
+      border-radius: $border-radius-base;
+      box-shadow: 0px 0px $padding-base-vertical 0px rgba(0,0,0,0.3);
+    }
+
     @import "custom/pullquote";
     @import "custom/ref-note";
 }
