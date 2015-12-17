@@ -82,5 +82,40 @@ title: Bienvenue!
           </div>
         </div>
       </section>
+
+      <section id="publications">
+        <div class="section-icon pull-right">
+          <span class="glyphicon glyphicon-book"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-left">
+            <h1 class="text-center">Publications</h1>
+            <p><a href="https://www.researchgate.net/profile/Alexis_Brenon">See all on ResearchGate</a></p>
+            <h2>2015</h2>
+            <ul>
+              {% for publication in site.data.publications %}
+                <li>
+                  <p>
+                  {% for author in publication.author %}
+                    {% if forloop.last %}
+                      {{ author.firstname }} {{ author.lastname }}.
+                    {% else %}
+                      {{ author.firstname }} {{ author.lastname }},
+                    {% endif %}
+                  {% endfor %}
+                  {{ publication.title }}.
+                  In <em>{{ publication.booktitle }}</em>
+                  ({{ publication.year }}).</p>
+                  <ul class="list-inline">
+                    <li><a href="{{publication.url}}">PDF file</a></li>
+                    <li> | </li>
+                    <li><a href="{{publication.bibtex}}">Bibtex</a></li>
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
   </div>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "Brenon2015",
+    "type": "inproceedings",
+    "author": [
+      {
+        "name": "Brenon, Alexis",
+        "firstname": "Alexis",
+        "lastname": "Brenon"
+      },
+      {
+        "name": "Portet, François",
+        "firstname": "François",
+        "lastname": "Portet"
+      },
+      {
+        "name": "Vacher, Michel",
+        "firstname": "Michel",
+        "lastname": "Vacher"
+      }
+    ],
+    "title": "Using Statistico-Relational Model for Activity Recognition in Smart Home",
+    "booktitle": "Proceedings of Workshop and Poster Papers of the European Conference on Ambient Intelligence 2015",
+    "year": "2015",
+    "editor": [
+      {
+        "firstname": "Koutkias",
+        "lastname": "Vassilis"
+      },
+      {
+        "firstname": "Andreas",
+        "lastname": "Komninos"
+      },
+      {
+        "firstname": "Vassilis-Javed",
+        "lastname": "Khan"
+      },
+      {
+        "firstname": "Petros",
+        "lastname": "Nicopolitidis"
+      }
+    ],
+    "volume": "1528",
+    "address": "Athens, Greece",
+    "month": "November",
+    "publisher": "CEUR-WS.org",
+    "url": "https://www.researchgate.net/publication/283356847_Using_Statistico-Relational_Model_for_Activity_Recognition_in_Smart_Home?utm_content=buffera710f",
+    "bibtex": "/assets/bibtex/ami2015.txt"
+  }
+]
