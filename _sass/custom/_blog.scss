@@ -1,4 +1,7 @@
 body.blog {
+  header {
+    background: none;
+  }
 
   .season-separator {
     h2 {
@@ -11,7 +14,7 @@ body.blog {
 
   .posts-list {
     margin-bottom: 2*$padding-large-vertical;
-    
+
     .post-cover {
       * {
         @include border-bottom-radius(0);
@@ -25,4 +28,3 @@ body.blog {
     }
   }
 }
-

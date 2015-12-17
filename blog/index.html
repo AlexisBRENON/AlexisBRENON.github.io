@@ -5,6 +5,14 @@ body_class: blog
 ---
 
 <header class="container-fluid text-center overlay overlay-light">
+  <div class="center-block" style="
+    position: absolute;
+    top: 0;
+    left: 75%;
+    z-index: -1;">
+    <img src="/assets/images/posts/blog.png"
+      style="position: relative; left: -75%; min-width: 100vw; min-height:33.3vh;"/>
+  </div>
   <div class="row">
     <div class="col-xs-12">
       <div class="post-header-text">
@@ -16,10 +24,11 @@ body_class: blog
   </div>
 </header>
 
-<main class="container-fluid">
-<div class="row posts-list">
-  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
-  <!-- Variable initialisation -->    
+<div class="container-fluid">
+  <main class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <div class="row posts-list">
+      <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+  <!-- Variable initialisation -->
   {% assign current_publish_period = "" %}
   {% assign number_of_post = site.posts | size | minus: 1 %}
   {% assign post_counter = 0 %}
@@ -27,7 +36,7 @@ body_class: blog
   <!-- Display all the posts -->
   {% for i in (0..number_of_post) %}
     {% assign post = site.posts[i] %}
-    
+
     <!-- Get the publish season of the post -->
     {% capture post_publish_period %}
       {% include utils/post_publish_period.html %}
@@ -67,7 +76,7 @@ body_class: blog
         {% endif %}
         {% if loopindex2 == 0 %}
           {% unless classes_invisible contains "hidden-xs" %}
-            hidden-xs 
+            hidden-xs
           {% endunless %}
         {% endif %}
       {% endcapture %}
@@ -97,7 +106,7 @@ body_class: blog
     {% if loopindex2 == 1 %}
       <div class="clearfix visible-xs-block {{ classes_invisible }}"></div>
     {% endif %}
-    
+
     <!-- One more post has been displayed -->
     {% assign post_counter = post_counter | plus: 1 %}
   {% endfor %}
@@ -116,3 +125,4 @@ body_class: blog
   </div>
 </div>
 </main>
+</div>
