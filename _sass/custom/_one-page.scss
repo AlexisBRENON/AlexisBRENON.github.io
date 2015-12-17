@@ -13,7 +13,7 @@ body.one-page {
             width: 30rem;
         }
 
-        a {
+        a.page-scroll {
             border-radius: 50%;
             // Dirty trick to fix the unaligned chevron character
             padding-top: $padding-large-horizontal+4;
@@ -48,29 +48,6 @@ body.one-page {
             &.pull-left{
                 left: 10%;
             }
-        }
-    }
-
-    .season-separator {
-        h2 {
-            font-family: 'Overlock', $headings-font-family;
-            font-weight: 700;
-            font-style: italic;
-            color: rgba($gray-base, 0.25);
-        }
-    }
-
-    .posts-list {
-        .post-cover {
-            * {
-                @include border-bottom-radius(0);
-            }
-            .post-cover-overlay.overlay:before {
-                @include border-bottom-radius(0);
-            }
-        }
-        .post-title {
-            @include border-bottom-radius($border-radius-base);
         }
     }
 }

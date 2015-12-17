@@ -1,7 +1,11 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@AlexisBRENON" />
 <meta name="twitter:title" content="{{ page.title }}" />
-<meta 
+<meta
     name="twitter:description"
     content="{{ page.excerpt | strip_newlines | replace: '<br/>', '\n' | strip_html | replace: '\n', '<br/>' }}" />
+{% if page.icon contains 'http://' or page.icon contains 'https://' %}
 <meta name="twitter:image" content="{{ page.icon }}" />
+{% else %}
+<meta name="twitter:image" content="https://{{ site.url }}{{ page.icon }}" />
+{% endif %}

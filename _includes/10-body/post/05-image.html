@@ -2,9 +2,9 @@
     <div class="col-xs-12 text-center">
         <a href="{{ include.source-url }}" rel="nofollow">
             {% if include.size == "large" %}
-            <div class="post-image-large hidden-xs">
-                <img 
-                 style="background-image: url('{{include.image-url}}');"/>
+            <div class="post-image-large hidden-xs"
+                style="background-image: url('{{include.image-url}}');">
+                <img class="hide invisible" href="{{include.image-url}}"/>
             </div>
             {% endif %}
             <div class="post-image-small thumbnail
@@ -21,4 +21,3 @@
         </a>
     </div>
 </div>
-

@@ -1,0 +1,24 @@
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://{{ site.url }}{{ page.url }}" />
+<meta property="og:site_name" content="Alexis BRENON - Website" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta
+    property="og:description"
+    content="{{ page.excerpt | strip_newlines | replace: '<br/>', '\n' | strip_html | replace: '\n', '<br/>' }}" />
+{% if page.header_image %}
+    {% if page.header_image contains 'http://' or page.header_image contains 'https://' %}
+        {% capture share_image %}{{ page.header_image }}{% endcapture %}
+    {% else %}
+        {% capture share_image %}https://{{ site.url }}{{ page.header_image }}{% endcapture %}
+    {% endif %}
+{% else %}
+    {% if page.icon contains 'http://' or page.icon contains 'https://' %}
+        {% capture share_image %}{{ page.icon }}{% endcapture %}
+    {% else %}
+        {% capture share_image %}https://{{ site.url }}{{ page.icon }}{% endcapture %}
+    {% endif %}
+{% endif %}
+<meta property="og:image" content="{{share_image}}" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:author" content="https://www.facebook.com/alexis.brenonbastien" />
+<meta property="article:publisher" content="https://www.facebook.com/alexis.brenonbastien" />
