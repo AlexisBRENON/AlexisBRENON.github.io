@@ -2,6 +2,8 @@ body {
     overflow-x: hidden;
     position: relative;
     text-align: justify;
+    background-image: url("/assets/images/clean-textile.png");
+    background-repeat: repeat;
 }
 
 body > header {
@@ -18,6 +20,20 @@ body > header {
     background-size: cover;
     background-position: center;
     box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+
+main {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  border-radius: $border-radius-base;
+  margin-bottom: $padding-large-vertical;
+  position: relative;
+  z-index: 0;
+
+  * {
+    z-index: 1;
+  }
 }
 
 .inverted {
@@ -160,4 +176,3 @@ body > footer {
         color: inherit;
     }
 }
-

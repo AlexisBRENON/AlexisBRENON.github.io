@@ -1,0 +1,13 @@
+@InProceedings{Brenon2015,
+  Title                    = {Using Statistico-Relational Model for Activity Recognition in Smart Home},
+  Author                   = {Brenon, Alexis and Portet, François and Vacher, Michel},
+  Booktitle                = {Proceedings of Workshop and Poster Papers of the European Conference on Ambient Intelligence 2015},
+  Publisher                = {CEUR-WS.org},
+  Year                     = {2015},
+  Month                    = {November},
+  Address                  = {Athens, Greece},
+  Editor                   = {Vassilis, Koutkias and Komninos, Andreas and Khan, Vassilis-Javed and Nicopolitidis, Petros},
+  Volume                   = {1528},
+  Language                 = {English},
+  Url                      = {https://www.researchgate.net/publication/283356847_Using_Statistico-Relational_Model_for_Activity_Recognition_in_Smart_Home?utm_content=buffera710f}
+}

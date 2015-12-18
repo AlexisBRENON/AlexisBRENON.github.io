@@ -21,62 +21,101 @@ title: Bienvenue!
     </div>
 </header>
 
-<section id="biography" class="container-fluid text-center">
-    <div class="row">
-        <div class="section-icon pull-right">
-            <span class="glyphicon glyphicon-user"></span>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-            <h1>Who Am I?</h1>
-            <p>
+<div class="container-fluid text-center">
+  <main class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <section id="biography">
+      <div class="section-icon pull-right">
+        <span class="glyphicon glyphicon-user"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <h1>Who Am I?</h1>
+          <p>
             My name is <strong>Alexis BRENON</strong>, I'm a <strong>24 years old</strong>
-            <strong>PhD student</strong> at 
+            <strong>PhD student</strong> at
             <a href="http://www.liglab.fr">Laboratoire d'Informatique de Grenoble (LIG)</a> since
             November 2014.
             In the <a href="http://getalp.imag.fr/">GETALP</a> team, I take part in the CASSIE
             project where my thesis subject is:
-            </p>
-            <div class="well">
-              Context-Aware Interactions in Smart-Home
-            </div>
+          </p>
+          <div class="well">
+            Context-Aware Interactions in Smart-Home
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="contact" class="container-fluid">
-    <div class="row">
-        <div class="section-icon pull-left">
-            <span class="glyphicon glyphicon-envelope"></span>
-        </div>
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-            <h1>You want to meet me?</h1>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <h2>In Real Life</h2>
-                    <address>
-                        Bureau B211 - Bâtiment IM²AG B<br/>
-                        41 Rue des Mathématiques<br/>
-                        38400 St-Martin-d'Hères<br/>
-                        France
-                    </address>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <h2>Remotely</h2>
-                    <address>
-                        <a href="mailto://alexis.brenon@imag.fr"/>alexis.brenon@imag.fr</a><br/>
-                        +33 (0)4 76 63 55 73
-                    </address>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <h2>Online</h2>
-                    <address>
-                        <a href="https://github.com/AlexisBRENON">GitHub</a><br/>
-                        <a href="https://twitter.com/AlexisBRENON">Twitter</a><br/>
-                        <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
-                            LinkedIn</a>
-                    </address>
-                </div>
+    <section id="contact">
+      <div class="section-icon pull-left">
+        <span class="glyphicon glyphicon-envelope"></span>
+      </div>
+      <h1>You want to meet me?</h1>
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <h2>In Real Life</h2>
+              <address>
+                Bureau B211 - Bâtiment IM²AG B<br/>
+                41 Rue des Mathématiques<br/>
+                38400 St-Martin-d'Hères<br/>
+                France
+              </address>
             </div>
+            <div class="col-xs-12 col-sm-4">
+              <h2>Remotely</h2>
+              <address>
+                <a href="mailto://alexis.brenon@imag.fr"/>alexis.brenon@imag.fr</a><br/>
+                +33 (0)4 76 63 55 73
+              </address>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <h2>Online</h2>
+              <address>
+                <a href="https://github.com/AlexisBRENON">GitHub</a><br/>
+                <a href="https://twitter.com/AlexisBRENON">Twitter</a><br/>
+                <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
+                  LinkedIn</a>
+                </address>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
+
+      <section id="publications">
+        <div class="section-icon pull-right">
+          <span class="glyphicon glyphicon-book"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-left">
+            <h1 class="text-center">Publications</h1>
+            <p><a href="https://www.researchgate.net/profile/Alexis_Brenon">See all on ResearchGate</a></p>
+            <h2>2015</h2>
+            <ul>
+              {% for publication in site.data.publications %}
+                <li>
+                  <p>
+                  {% for author in publication.author %}
+                    {% if forloop.last %}
+                      {{ author.firstname }} {{ author.lastname }}.
+                    {% else %}
+                      {{ author.firstname }} {{ author.lastname }},
+                    {% endif %}
+                  {% endfor %}
+                  {{ publication.title }}.
+                  In <em>{{ publication.booktitle }}</em>
+                  ({{ publication.year }}).</p>
+                  <ul class="list-inline">
+                    <li><a href="{{publication.url}}">PDF file</a></li>
+                    <li> | </li>
+                    <li><a href="{{publication.bibtex}}">Bibtex</a></li>
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
