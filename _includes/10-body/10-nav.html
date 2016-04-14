@@ -35,7 +35,13 @@
                      Projects <span class="caret"></span>
                    </a>
                    <ul class="dropdown-menu">
-                     <li><a href="/projects/vinyl/">Vinyl</a></li>
+                     {% for project in site.data.projects %}
+                     <li>
+                       <a href="{{ project.url }}">
+                         {{ project.name }}
+                       </a>
+                     </li>
+                     {% endfor %}
                    </ul>
                  </li>
             </ul>
