@@ -1,17 +1,25 @@
 title: Alexis BRENON
-url: alexisbrenon.github.io/
+url: localhost:4000/
 author: Alexis BRENON
 linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile
 twitter: AlexisBRENON
 github: AlexisBRENON
 
-exclude: [readme.md, _config_local.yml]
+exclude: [readme.md, _config.yml]
 
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
       type: posts
+    values:
+      layout: "post"
+      excerpt_separator: "<!-- More -->"
+      author: "Alexis BRENON"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: drafts
     values:
       layout: "post"
       excerpt_separator: "<!-- More -->"
@@ -23,4 +31,4 @@ gems:
 
 sass:
     sass_dir: _sass
-    style: :compressed
+    style: :extended
