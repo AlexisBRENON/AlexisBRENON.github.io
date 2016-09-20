@@ -1,0 +1,10 @@
+@InProceedings{Brenon2016b,
+  Title                    = {Preliminary Study of Adaptive Decision-Making System for Vocal Command in Smart Home},
+  Author                   = {Brenon, Alexis and Portet, François and Vacher, Michel},
+  Booktitle                = {Proceedings of Poster Papers of The 12th International Conference on Intelligent Environments (IE'16)},
+  Year                     = {2016},
+  Month                    = {September},
+  Address                  = {London, United Kingdom},
+  Language                 = {English},
+  Url                      = {https://www.researchgate.net/publication/308335025_Preliminary_Study_of_Adaptive_Decision-Making_System_for_Vocal_Command_in_Smart_Home}
+}

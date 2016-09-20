@@ -1,0 +1,10 @@
+@InProceedings{Brenon2016a,
+  Title                    = {Étude préliminaire d'une méthode de prise de décision adaptative pour la commande vocale dans un habitat intelligent},
+  Author                   = {Brenon, Alexis and Portet, François and Vacher, Michel},
+  Booktitle                = {Proceedings de la journée de Rencontre des Jeunes Chercheurs en Intelligence Artificielle (RJCIA) 2016},
+  Year                     = {2016},
+  Month                    = {June},
+  Address                  = {Clermont-Ferrand, France},
+  Language                 = {Français},
+  Url                      = {https://www.researchgate.net/publication/304570630_Etude_preliminaire_d%27une_methode_de_prise_de_decision_adaptative_pour_la_commande_vocale_dans_un_habitat_intelligent}
+}

@@ -50,4 +50,16 @@ body.one-page {
             }
         }
     }
+
+    #publications {
+      li p {
+        margin-bottom: 0.25em;
+      }
+      li {
+        padding-bottom: 0.66em;
+      }
+      ul.list-inline li {
+        padding-bottom: inherit;
+      }
+    }
 }

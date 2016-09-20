@@ -1,5 +1,61 @@
 [
   {
+    "id": "Brenon2016b",
+    "type": "inproceedings",
+    "author": [
+      {
+        "name": "Brenon, Alexis",
+        "firstname": "Alexis",
+        "lastname": "Brenon"
+      },
+      {
+        "name": "Portet, François",
+        "firstname": "François",
+        "lastname": "Portet"
+      },
+      {
+        "name": "Vacher, Michel",
+        "firstname": "Michel",
+        "lastname": "Vacher"
+      }
+    ],
+    "title": "Preliminary Study of Adaptive Decision-Making System for Vocal Command in Smart Home",
+    "booktitle": "Proceedings of Poster Papers of The 12th International Conference on Intelligent Environments (IE'16)",
+    "year": "2016",
+    "address": "London, United Kingdom",
+    "month": "September",
+    "url": "https://www.researchgate.net/publication/308335025_Preliminary_Study_of_Adaptive_Decision-Making_System_for_Vocal_Command_in_Smart_Home",
+    "bibtex": "/assets/bibtex/ie2016.txt"
+  },
+  {
+    "id": "Brenon2016a",
+    "type": "inproceedings",
+    "author": [
+      {
+        "name": "Brenon, Alexis",
+        "firstname": "Alexis",
+        "lastname": "Brenon"
+      },
+      {
+        "name": "Portet, François",
+        "firstname": "François",
+        "lastname": "Portet"
+      },
+      {
+        "name": "Vacher, Michel",
+        "firstname": "Michel",
+        "lastname": "Vacher"
+      }
+    ],
+    "title": "Étude préliminaire d'une méthode de prise de décision adaptative pour la commande vocale dans un habitat intelligent",
+    "booktitle": "Proceedings de la journée de Rencontre des Jeunes Chercheurs en Intelligence Artificielle (RJCIA) 2016",
+    "year": "2016",
+    "address": "Clermont-Ferrand, France",
+    "month": "Juin",
+    "url": "https://www.researchgate.net/publication/304570630_Etude_preliminaire_d%27une_methode_de_prise_de_decision_adaptative_pour_la_commande_vocale_dans_un_habitat_intelligent",
+    "bibtex": "/assets/bibtex/rfia2016.txt"
+  },
+  {
     "id": "Brenon2015",
     "type": "inproceedings",
     "author": [
