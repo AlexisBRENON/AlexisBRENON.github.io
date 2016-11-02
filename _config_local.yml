@@ -1,34 +1,6 @@
-title: Alexis BRENON
 url: localhost:4000/
-author: Alexis BRENON
-linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile
-twitter: AlexisBRENON
-github: AlexisBRENON
-
-exclude: [readme.md, _config.yml]
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: posts
-    values:
-      layout: "post"
-      excerpt_separator: "<!-- More -->"
-      author: "Alexis BRENON"
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: drafts
-    values:
-      layout: "post"
-      excerpt_separator: "<!-- More -->"
-      author: "Alexis BRENON"
-
-gems:
-  - jemoji
-  - jekyll-sitemap
+host: "0.0.0.0"
+port: 4000
 
 sass:
-    sass_dir: _sass
     style: :extended

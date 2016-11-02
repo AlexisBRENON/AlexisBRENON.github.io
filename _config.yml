@@ -14,12 +14,13 @@ defaults:
       type: posts
     values:
       layout: "post"
-      excerpt_separator: "<!-- More -->"
+      excerpt_separator: "<!-- more -->"
       author: "Alexis BRENON"
 
 gems:
   - jemoji
   - jekyll-sitemap
+  - jekyll-coffeescript
 
 sass:
     sass_dir: _sass
