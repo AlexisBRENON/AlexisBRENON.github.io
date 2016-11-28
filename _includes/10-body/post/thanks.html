@@ -1,0 +1,18 @@
+{% if page.thanks %}
+  <ul class="list-inline m-t-lg">
+    <li class="text">Contributions et corrections de la part de :</li>
+  {% for contributer in page.thanks %}
+    <li>
+      <a
+        {% if contributer.link %}
+        href="{{ contributer.link }}">
+        {% else %}
+        href="https://github.com/{{contributer}}/"
+        {% endif %}
+        rel="author">
+        {{contributer}}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
