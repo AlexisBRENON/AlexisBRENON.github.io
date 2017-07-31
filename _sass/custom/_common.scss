@@ -23,10 +23,16 @@ body > header {
 }
 
 main {
-  overflow: hidden;
+//  overflow: hidden;
   background-color: white;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
   border-radius: $border-radius-base;
+
+  @media print {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
   margin-bottom: $padding-large-vertical;
   position: relative;
   z-index: 0;
