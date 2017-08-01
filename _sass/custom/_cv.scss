@@ -113,6 +113,8 @@ body.resume {
         }
 
         .cv-main {
+          line-height: floor(($line-height-computed - 1));
+
           .cv-block {
             h2 {
               display: inline-block;
