@@ -7,10 +7,10 @@ title: "CV - Resumé"
   <div class="hidden-print">
     <div class="cv-control">
       <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-french">
+        <label class="btn btn-french active">
           <input type="radio" name="cv-lang" id="fr" autocomplete="off"/> Français
         </label>
-        <label class="btn btn-english active">
+        <label class="btn btn-english">
           <input type="radio" name="cv-lang" id="en" autocomplete="off" checked/> English
         </label>
       </div>
@@ -19,14 +19,14 @@ title: "CV - Resumé"
   </div>
 
 <main class="cv-page">
-  <div id="french" lang="fr" style="display:none" class="cv-page-item">
+  <div id="french" lang="fr" class="cv-page-item">
     <aside>
       <img class="img-responsive img-circle img-portrait center-block" alt="Portrait" src="/assets/images/portrait.jpg">
       <h1>Alexis BRENON<br/>
         <small>Recherche Appliquée</small>
       </h1>
 
-      <ul class="list-unstyled">
+      <ul class="list-unstyled identity-list">
         <li> <i class="material-icons">cake</i>20 décembre 1991 (25 ans)</li>
         <li> <i class="material-icons">smartphone</i>06 74 43 25 21</li>
         <li> <i class="material-icons">email</i>brenon.alexis@gmail.com</li>
@@ -42,176 +42,392 @@ title: "CV - Resumé"
       
       <div class="cv-skills">
         <h2>Compétences</h2>
-        <ul class="list-unstyled">
-          <li><dl><dt>Python</dt>
-              <dd class="progress">
-              <div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <span class="sr-only">90%</span>
-              </div>
-              </dd>
-            </dl></li>
-          <li><dl><dt>Lua/Torch</dt>
-              <dd class="progress">
-              <div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                <span class="sr-only">90%</span>
-              </div>
-              </dd>
-            </dl></li>
-          <li><dl><dt>Bash/Git</dt>
-              <dd class="progress">
-              <div class="progress-bar " role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="sr-only">80%</span>
-              </div>
-              </dd>
-            </dl></li>
-          <li><dl><dt>HTML/CSS/JS</dt>
-              <dd class="progress">
-              <div class="progress-bar " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                <span class="sr-only">70%</span>
-              </div>
-              </dd>
-            </dl></li>
-          <li><dl><dt>Docker/VM</dt>
-              <dd class="progress">
-              <div class="progress-bar " role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                <span class="sr-only">50%</span>
-              </div>
-              </dd>
-            </dl></li>
-          <li class="hidden-print dropup">
-            <button class="btn btn-link dropdown-toggle" type="button" id="dropdown-skills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Plus <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu p-a-md" aria-labeledby="dropdown-skills">
-              <li><dl><dt>C/C++</dt>
-                  <dd class="progress">
-                  <div class="progress-bar " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                    <span class="sr-only">70%</span>
-                  </div>
-                  </dd>
-                </dl></li>
-              <li><dl><dt>Java</dt>
-                  <dd class="progress">
-                  <div class="progress-bar " role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                    <span class="sr-only">70%</span>
-                  </div>
-                  </dd>
-                </dl></li>
-              <li><dl><dt>Android</dt>
-                  <dd class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                    <span class="sr-only">30%</span>
-                  </div>
-                  </dd>
-                </dl></li>
-              <li><dl><dt>MIPS/Assembleur</dt>
-                  <dd class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20%</span>
-                  </div>
-                  </dd>
-                </dl></li>
-            </ul>
-          </li>
+        <h3>Linguistiques</h3>
+        <ul class="list-unstyled cv-list-lang">
+          <li>🇫🇷 Français : natif</li>
+          <li>🇬🇧 Anglais : utilisation professionnelle</li>
+        </ul>
+
+        <h3>Techniques</h3>
+        <ul class="list-unstyled cv-list-hskill">
+          <li><img class="skill-icon hskill-asm"/> Asssembler</li>
+          <li><img class="skill-icon hskill-bash"/> Bash</li>
+          <li><img class="skill-icon hskill-cpp"/> C/C++</li>
+          <li><img class="skill-icon hskill-docker"/> Docker</li>
+          <li><img class="skill-icon hskill-git"> Git</li>
+          <li><img class="skill-icon hskill-html"/> HTML/CSS/JS</li>
+          <li><img class="skill-icon hskill-java"/> Java</li>
+          <li><img class="skill-icon hskill-latex"/> Latex</li>
+          <li><img class="skill-icon hskill-lua"/> Lua/Torch</li>
+          <li><img class="skill-icon hskill-python"/> Python</li>
+        </ul>
+
+        <h3>Humaines</h3>
+        <ul class="list-unstyled cv-list-sskill">
+          <li><i class="material-icons sskill-collaboration">people</i> Collaboratif</li>
+          <li><i class="material-icons sskill-inventivity">wb_incandescent</i> Inventif</li>
+          <li><i class="material-icons sskill-perseverence">hourglass_full</i> Perséverant</li>
+          <li><i class="material-icons sskill-rigorous">straighten</i> Rigoureux</li>
         </ul>
       </div>
     </aside>
 
     <div class="cv-main">
       <div class="cv-block cv-scolarity">
-        <h2>Scolarité</h2>
+        <h2>Parcours</h2>
         <div class="table-responsive">
           <table>
             <tr>
-              <td>En cours</td>
-              <td>Doctorant en Informatique<br/>
-                Modèle profond pour le contrôle vocal adaptatif d’un habitat intelligent</td>
-              <td>Université Grenoble Alpes (Grenoble)</td>
+              <td class="date">En cours</td>
+              <td class="label">Doctorant en Informatique</td>
+              <td class="place">Université Grenoble Alpes</td>
             </tr>
             <tr>
-              <td>2014</td>
-              <td>Master 2 Génie Logiciel<br/>
-                Alternance chez STMicroelectronics<br/>
-                <strong>Avec mention</strong></td>
-              <td>Université Joseph Fourier (Grenoble)</td>
+              <td class="date" rowspan="2">2014</td>
+              <td class="label">Master 2 Génie Logiciel <small>avec mention</small></td>
+              <td class="place">Université Joseph Fourier</td>
             </tr>
             <tr>
-              <td>2013</td>
-              <td>Master 1 Informatique<br/>
-                Stage chez WyPlay</td>
-              <td>Aix-Marseille Université (Marseille)</td>
+              <td class="label">Alternant ingénieur logiciel</td>
+              <td class="place">STMicroelectronics</td>
             </tr>
             <tr>
-              <td>2012</td>
-              <td>Licence Informatique<br/>
-                Stage chez Dipiom Media<br/>
-                <strong>Avec mention</strong></td>
-              <td>Université Claude Bernard (Lyon)</td>
+              <td class="date" rowspan="2">2013</td>
+              <td class="label">Master 1 Informatique</td>
+              <td class="place">Aix-Marseille Université</td>
             </tr>
             <tr>
-              <td>2009</td>
-              <td>Baccalauréat Scientifique<br/>
-                Option Sciences de l'Ingénieur<br/>
-                Spécialité Mathématiques<br/>
-                <strong>Avec mention</strong></td>
-              <td>Lycée Rosa Parks (Neuville s/ Saône)</td>
+              <td class="label">Stagiaire ingénieur logiciel</td>
+              <td class="place">Wyplay</td>
+            </tr>
+            <tr>
+              <td class="date" rowspan="2">2012</td>
+              <td class="label">Licence Informatique <small>avec mention</small></td>
+              <td class="place">Université Claude Bernard</td>
+            </tr>
+            <tr>
+              <td class="label">Stagiaire développeur logiciel</td>
+              <td class="place">Dipiom Media</td>
+            </tr>
+            <tr>
+              <td class="date">2009</td>
+              <td class="label">Baccalauréat Scientifique <small>avec mention</small></td>
+              <td class="place">Lycée Rosa Parks (69)</td>
             </tr>
           </table>
         </div>
       </div>
-      <div class="cv-block cv-experiences">
-        <h2>Expériences</h2>
-        <div class="table-responsive">
-          <table>
-            <tr>
-              <td>2014/09<br/>2013/09</td>
-              <td>Développement de logiciels pour l'analyse des traces d'exécution de systèmes embarqués<br/>
-                M. Serge DE PAOLI (04.76.92.56.20)</td>
-              <td>Alternance<br/>STMicroelectronics</br>(Crolles)</td>
-            </tr>
-            <tr>
-              <td>2013/07<br/>2013/04</td>
-              <td>Port sur architecture MIPS de l'interpréteur Pypi<br/>M. Aurèle TRAYNARD (04.91 .45.71 .80)</td>
-              <td>Stage<br/>Wyplay<br/>(Allauch)</td>
-            </tr>
-            <tr>
-              <td>2012/09<br/>2012/05</td>
-              <td>Développement d'un lecteur multimédia basé sur XBMC<br/>M. Éric BOISSEAU (09.72.22.88.52)</td>
-              <td>Stage<br/>Dipiom Media<br/>(Lyon)</td>
-            </tr>
-          </table>
+      <div class="cv-block cv-achievements">
+        <h2>Réalisations</h2>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">work</i>
+          </div>
+          <div class="cv-achievement-title">
+            ARCADES
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-cpp"/>
+              <img class="skill-icon hskill-git"/>
+              <img class="skill-icon hskill-lua"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-inventivity">wb_incandescent</i>
+              <i class="material-icons sskill-perseverence">hourglass_full</i>
+              <i class="material-icons sskill-rigorous">straighten</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Système intelligent de prise de décision adaptative en contexte dans les habitats intelligents.
+          </div>
+          <div class="cv-achievement-ref">
+            M. Michel VACHER (Univ. Grenoble Alpes) &mdash; +33 (0)4.57.42.14.38
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">school</i>
+          </div>
+          <div class="cv-achievement-title">
+            Publications
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-latex"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-collaboration">people</i>
+              <i class="material-icons sskill-rigorous">straighten</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Publication d'article scientifiques dans des conférences d'envergures nationales et internationales.
+          </div>
+          <div class="cv-achievement-ref">
+            M. Michel VACHER (Univ. Grenoble Alpes) &mdash; +33 (0)4.57.42.14.38<br/>
+            <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">home</i>
+          </div>
+          <div class="cv-achievement-title">
+            StreamRecord
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-bash"/>
+              <img class="skill-icon hskill-git"/>
+              <img class="skill-icon hskill-python"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-inventivity">wb_incandescent</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Enregistrement et segmentation d'un flux audio sous linux, disponible via l'utilitaire <code>pip</code>.
+          </div>
+          <div class="cv-achievement-ref">
+            <a href="https://github.com/AlexisBRENON/deezer_record">github.com/AlexisBRENON/deezer_record</a>
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">work</i>
+          </div>
+          <div class="cv-achievement-title">
+            TraceDecoder
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-cpp"/>
+              <img class="skill-icon hskill-java"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-collaboration">people</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Amélioration des systèmes de traitement et d'affichage des traces d'exécutions de systèmes embarqués.
+          </div>
+          <div class="cv-achievement-ref">
+            M. Serge DePAOLI (STMicroelectronics) &mdash; +33 (0)4.76.92.56.20
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">work</i>
+          </div>
+          <div class="cv-achievement-title">
+            Portage MIPS de PiPy
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-asm"/>
+              <img class="skill-icon hskill-bash"/>
+              <img class="skill-icon hskill-python"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-perseverence">hourglass_full</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Portage de l'interpréteur Python avec compilateur à la volée PiPy pour un fonctionnement sur achitecture MIPS.
+          </div>
+          <div class="cv-achievement-ref">
+            M. Aurèle TRAYNARD (WyPlay) &mdash; +33 (0)4.91.45.71.80
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">work</i>
+          </div>
+          <div class="cv-achievement-title">
+            Lecteur multimédia open-source
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-bash"/>
+              <img class="skill-icon hskill-python"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-inventivity">wb_incandescent</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Développement d'un lecteur multimédia pour le grand public sur la base de briques logicielles open-source.
+          </div>
+          <div class="cv-achievement-ref">
+            M. Éric BOISSEAU &mdash; +33 (0)9.72.22.88.52
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">home</i>
+          </div>
+          <div class="cv-achievement-title">
+            Contributions Open-Source
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-cpp"/>
+              <img class="skill-icon hskill-git"/>
+              <img class="skill-icon hskill-lua"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-collaboration">people</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Contributions à différents projets open-source comme Chromium ou AwesomeWM.
+          </div>
+          <div class="cv-achievement-ref">
+            <a href="https://github.com/AlexisBRENON/">github.com/AlexisBRENON/</a>
+          </div>
+        </div>
+
+        <div class="cv-achievement-item">
+          <div class="cv-achievement-frame">
+            <i class="material-icons">home</i>
+          </div>
+          <div class="cv-achievement-title">
+            Serveur personnel
+          </div>
+          <div class="cv-achievement-skills">
+            <div class="cv-achievement-hskills">
+              <img class="skill-icon hskill-bash"/>
+              <img class="skill-icon hskill-docker"/>
+            </div>
+            <div class="cv-achievement-sskills">
+              <i class="material-icons sskill-inventivity">wb_incandescent</i>
+              <i class="material-icons sskill-rigorous">straighten</i>
+            </div>
+          </div>
+          <div class="cv-achievement-details">
+            Serveur Debian personnel : multimedia (Kodi), cloud (OwnCloud), raspberry pi (Boblight), etc...
+          </div>
+        </div>
+
+        <div class="hidden-print dropup">
+          <button class="btn btn-link dropdown-toggle" type="button" id="dropdown-achievements" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More <span class="caret"></span>
+          </button>
+          <div class="dropdown-menu p-a-md" aria-labeledby="dropdown-achievements">
+            <div class="cv-achievement-item">
+              <div class="cv-achievement-frame">
+                <i class="material-icons">school</i>
+              </div>
+              <div class="cv-achievement-title">
+                Jeu de la vie
+              </div>
+              <div class="cv-achievement-skills">
+                <div class="cv-achievement-hskills">
+                  <img class="skill-icon hskill-git"/>
+                  <img class="skill-icon hskill-java"/>
+                </div>
+                <div class="cv-achievement-sskills">
+                  <i class="material-icons sskill-collaboration">people</i>
+                </div>
+              </div>
+              <div class="cv-achievement-details">
+                Développement en binôme d'une application graphique d'automate cellulaire.
+              </div>
+              <div class="cv-achievement-ref">
+                <a href="https://github.com/AlexisBRENON/life-game-lif13">github.com/AlexisBRENON/life-game-lif13</a>
+              </div>
+            </div>
+
+            <div class="cv-achievement-item">
+              <div class="cv-achievement-frame">
+                <i class="material-icons">school</i>
+              </div>
+              <div class="cv-achievement-title">
+                Stellody
+              </div>
+              <div class="cv-achievement-skills">
+                <div class="cv-achievement-hskills">
+                  <img class="skill-icon hskill-cpp"/>
+                </div>
+                <div class="cv-achievement-sskills">
+                  <i class="material-icons sskill-collaboration">people</i>
+                  <i class="material-icons sskill-inventivity">wb_incandescent</i>
+                </div>
+              </div>
+              <div class="cv-achievement-details">
+                Développement en binôme d'un lecteur audio avec affichage 3D de la médiathèque.
+              </div>
+              <div class="cv-achievement-ref">
+                <a href="https://github.com/AlexisBRENON/stellody">github.com/AlexisBRENON/stellody</a>
+              </div>
+            </div>
+
+            <div class="cv-achievement-item">
+              <div class="cv-achievement-frame">
+                <i class="material-icons">home</i>
+              </div>
+              <div class="cv-achievement-title">
+                Vinyl
+              </div>
+              <div class="cv-achievement-skills">
+                <div class="cv-achievement-hskills">
+                  <img class="skill-icon hskill-git"/>
+                  <img class="skill-icon hskill-html"/>
+                </div>
+                <div class="cv-achievement-sskills">
+                  <i class="material-icons sskill-inventivity">wb_incandescent</i>
+                  <i class="material-icons sskill-perseverence">hourglass_full</i>
+                </div>
+              </div>
+              <div class="cv-achievement-details">
+                Framework de création de posters et de présentations scientifique (similaire a LaTeX Beamer) en HTML/CSS/JS.
+              </div>
+              <div class="cv-achievement-ref">
+                <a href="https://github.com/AlexisBRENON/Vinyl">github.com/AlexisBRENON/Vinyl</a>
+              </div>
+            </div>
+
+            <div class="cv-achievement-item">
+              <div class="cv-achievement-frame">
+                <i class="material-icons">home</i>
+              </div>
+              <div class="cv-achievement-title">
+                Hyperion2Boblight
+              </div>
+              <div class="cv-achievement-skills">
+                <div class="cv-achievement-hskills">
+                  <img class="skill-icon hskill-git"/>
+                  <img class="skill-icon hskill-python"/>
+                </div>
+                <div class="cv-achievement-sskills">
+                  <i class="material-icons sskill-inventivity">wb_incandescent</i>
+                  <i class="material-icons sskill-rigorous">straighten</i>
+                </div>
+              </div>
+              <div class="cv-achievement-details">
+                Application serveur-client pour le controle de systèmes AmbiLight commandés par Boblight. Disponible via l'utilitaire <code>pip</code>.
+              </div>
+              <div class="cv-achievement-ref">
+                <a href="https://github.com/AlexisBRENON/hyperion2boblight">github.com/AlexisBRENON/hyperion2boblight</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="cv-block cv-hobbies">
-        <h2>Loisirs & Réalisations</h2>
-        <div class="responsive-table">
-          <table>
-            <tr>
-              <td>FOSS</td>
-              <td>Membre de la communauté Free and Open Source Softwares, je publie mes propres travaux et contribue à des projets libres (AwesomeWM, Chromium, etc.)</td>
-            </tr>
-            <tr>
-              <td>CAO</td>
-              <td>Musicien et graphiste autodidacte, j'utilise et prévoit de contribuer à des projets comme MuseScore, Ardour, GIMP, Inkscape ou Scribus.</td>
-            </tr>
-            <tr>
-              <td>DIY</td>
-              <td>J'ai assemblé un serveur/lecteur multimédia utilisant Kodi couplé à un Raspberry Pi pour la création d'un système du type Ambilight.</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="cv-block cv-publications">
-        <h2>Publications</h2>
-        <p>Alexis Brenon, François Portet et Michel Vacher (2016). «&nbsp;Preliminary Study of Adaptive Decision-Making System for Vocal Command in Smart Home&nbsp;». In : Proceedings of Poster Papers of The 12th International Conference on Intelligent Environments (IE'16).</p>
-        <p>Alexis Brenon, François Portet et Michel Vacher (2016). «&nbsp;Étude préliminaire d'une méthode de prise de décision adaptative pour la commande vocale dans un habitat intelligent&nbsp;». In : Proceedings de la journée de Rencontre des Jeunes Chercheurs en Intelligence Artificielle (RJCIA) 2016.</p>
-        <p>Alexis Brenon, François Portet et Michel Vacher (2015). «&nbsp;Using Statistico-Relational Model for Activity Recognition in Smart Home&nbsp;». In : Proceedings of Workshop and Poster Papers of the European Conference on Ambient Intelligence 2015.</p>
-      </div>
+
     </div>
 
   </div>
 
-  <div id="english" lang="en" class="cv-page-item">
+  <div id="english" lang="en" style="display:none" class="cv-page-item">
     <aside>
       <img class="img-responsive img-circle img-portrait center-block" alt="Portrait" src="/assets/images/portrait.jpg">
       <h1>Alexis BRENON<br/>

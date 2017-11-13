@@ -12,6 +12,43 @@ body.resume {
       margin-left: $padding-base-horizontal;
     }
 
+    @each $icon in (
+      asm
+      bash
+      cpp
+      docker
+      git
+      html
+      java
+      latex
+      lua
+      python
+    ) {
+      img.hskill-#{$icon} {
+        content: url("/assets/images/cv/logos/#{$icon}.svg");
+      }
+    }
+
+    i.material-icons[class*=sskill-] {
+      vertical-align: middle;
+    }
+
+    .sskill-inventivity {
+      transform: rotateZ(180deg);
+    }
+    .sskill-rigorous {
+      content: "straighten";
+    }
+
+    .skill-icon {
+      display: inline-block;
+      width: 1.25em;
+    }
+
+    .material-icons {
+      font-size: 1.25em;
+    }
+
     .cv-control {
       @extend main;
       padding: $padding-base-vertical $padding-base-horizontal;
@@ -68,6 +105,7 @@ body.resume {
           justify-content: space-between;
         }
 
+
         aside {
           background-color: #f5f5f5;
 
@@ -82,11 +120,11 @@ body.resume {
               color: $text-color;
             }
           }
-          .material-icons {
-            font-size: 18px;
-            position: relative;
-            top: 4px;
-            margin-right: $padding-base-horizontal;
+
+          .identity-list .material-icons {
+            margin: $padding-small-vertical $padding-base-horizontal;
+            margin-left: 0px;
+            vertical-align: middle;
           }
           .cv-about {
             p {
@@ -94,6 +132,14 @@ body.resume {
             }
           }
           .cv-skills {
+            ul {
+              columns: 2;
+
+              &.cv-list-lang {
+                columns: initial;
+              }
+            }
+
             dt {
               font-size: 133%;
               font-weight: normal;
@@ -143,12 +189,13 @@ body.resume {
               table {
                 border-collapse: separate;
                 border-spacing: $padding-xs-horizontal;
+                width: 100%;
                 tr {
                   margin-bottom: $padding-base-vertical;
                   td {
                     vertical-align: top;
 
-                    &:nth-child(1) {
+                    &.date {
                       padding-right: $padding-xs-horizontal;
                       border-right: 1px dotted $gray-light;
                       width: 15%;
@@ -160,7 +207,7 @@ body.resume {
             }
 
             &.cv-scolarity, &.cv-experiences {
-              table tr td:nth-child(3) {
+              table tr td.place {
                 font-size: 70%;
                 color: $gray-light;
                 width: 25%;
@@ -168,11 +215,73 @@ body.resume {
               }
             }
 
-            &.cv-scolarity {
-              table tr td:nth-child(2) {
-                &:first-line {
-                  color: $brand-primary;
+            &.cv-achievements {
+              flex: 1; // Make it stetch
+
+              display: flex;
+              flex-flow: column;
+              justify-content: space-between;
+              align-items: start;
+
+              .dropup {
+                width: 100%;
+
+                .dropdown-menu {
+                  padding: $padding-base-vertical $padding-small-horizontal;
+                  border: 2px solid $gray;
+                }
+              }
+
+              .cv-achievement-item {
+                display: grid;
+                grid-template-columns: 2em 1fr auto;
+                grid-column-gap: $padding-xs-horizontal;
+                margin-bottom: $padding-large-vertical;
+                
+                .cv-achievement-frame {
+                  grid-column: 1;
+                  grid-row: 1;
+
+                  font-size: 125%;
+                }
+
+                .cv-achievement-title {
+                  grid-column: 2;
+                  grid-row: 1;
+
+                  font-size: 150%;
                   font-weight: bold;
+                  color: $brand-primary;
+
+                  margin-bottom: $padding-base-vertical;
+                }
+
+                .cv-achievement-skills {
+                  grid-column: 3;
+                  grid-row: 1;
+
+                  justify-self: end;
+
+                  & > div {
+                    display: inline-block;
+                  }
+
+                  .cv-achievement-sskills {
+                    &:before {
+                      content: "/";
+                      margin: 0 0.33em;
+                    }
+                  }
+                }
+
+                .cv-achievement-details {
+                  grid-column: 1 / 4;
+                  grid-row: 2;
+                }
+
+                .cv-achievement-ref {
+                  grid-column: 1 / 4;
+                  grid-row: 3;
                 }
               }
             }
