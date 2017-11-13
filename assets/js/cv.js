@@ -39,7 +39,9 @@ jQuery(function() {
     var fadeTo = function(lang) {
       var currents = jQuery('.translate-wrapper > .translate-current');
       currents.fadeOut("", function() {
-        currents.html(currents.siblings('.translate-' + lang).html());
+        currents.each(function(idx, current) {
+          jQuery(current).html(jQuery(current).siblings('.translate-' + lang).html());
+        });
         currents.fadeIn("");
       });
     }
