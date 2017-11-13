@@ -15,18 +15,43 @@ jQuery(function() {
     cvPages.css('height', cvPageContainer.css('height'));
   }
 
-  var setToggleAction = function() {
-    jQuery('.cv-control .btn-english').click(function () {
-      jQuery('.cv-page-item#french').fadeOut(1000);
-      jQuery('.cv-page-item#english').fadeIn(1000);
+  var prepareTranslateSwitchers = function() {
+    var currentLang = jQuery('.cv-control label.active')[0].classList.value.match(/btn-(\S*)/)[1];
+
+    jQuery('.translate-wrapper').each(function(idx, wrapper) {
+      var current = jQuery(wrapper).children('.translate-current')[0];
+      if (current === undefined) {
+        current = document.createElement(wrapper.tagName);
+        jQuery(current).css('display', 'none').addClass('translate-current');
+        wrapper.prepend(current);
+      }
+
+      jQuery(current).html(
+        jQuery(current).siblings('.translate-' + currentLang).html()
+      );
+
+      jQuery(wrapper).children().css('display', 'none')
+      jQuery(current).css('display', "");
     });
-    jQuery('.cv-control .btn-french').click(function () {
-      jQuery('.cv-page-item#french').fadeIn(1000);
-      jQuery('.cv-page-item#english').fadeOut(1000);
+  }
+
+  var setToggleAction = function() {
+    var fadeTo = function(lang) {
+      var currents = jQuery('.translate-wrapper > .translate-current');
+      currents.fadeOut("", function() {
+        currents.html(currents.siblings('.translate-' + lang).html());
+        currents.fadeIn("");
+      });
+    }
+
+    jQuery('.cv-control label').each(function (idx, label) {
+      var lang = label.classList.value.match(/btn-(\S*)/)[1];
+      jQuery(label).click(function () {fadeTo(lang);});
     });
   }
   
   setPageHeight();
+  prepareTranslateSwitchers();
   setToggleAction();
 
   /* Make page resize on window resizing */

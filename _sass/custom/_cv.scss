@@ -49,6 +49,15 @@ body.resume {
       font-size: 1.25em;
     }
 
+    .translate-wrapper {
+      .translate-french {
+        display: none;
+      }
+      .translate-english {
+        display: initial; // Show english in JS is disabled
+      }
+    }
+
     .cv-control {
       @extend main;
       padding: $padding-base-vertical $padding-base-horizontal;
