@@ -38,11 +38,11 @@ jQuery(function() {
   var setToggleAction = function() {
     var fadeTo = function(lang) {
       var currents = jQuery('.translate-wrapper > .translate-current');
-      currents.fadeOut("", function() {
+      currents.fadeOut(200, function() {
         currents.each(function(idx, current) {
           jQuery(current).html(jQuery(current).siblings('.translate-' + lang).html());
         });
-        currents.fadeIn("");
+        currents.fadeIn(600);
       });
     }
 
