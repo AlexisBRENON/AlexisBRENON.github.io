@@ -99,206 +99,212 @@ body.resume {
 
     .cv-page {
       position: relative;
-      max-width: 21cm;
-      min-height: 296.9mm;
+
+      display: grid;
       
-      .cv-page-item {
-        position: absolute;
-        left: 0; top: 0;
-        min-height: 100%;
+      &>* {
+        padding: $padding-base-vertical $padding-base-horizontal;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-        &>* {
-          padding: $padding-base-vertical $padding-base-horizontal;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+      aside {
+        &#front {
+          grid-area: f-aside;
+        }
+        &#back {
+          grid-area: b-aside;
+        }
+        background-color: #f5f5f5;
+
+        .img-portrait {
+          width: 80%;
+          box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75);
+        }
+        &#front .img-portrait {
+          margin-top: 2rem;
+        }
+        &#back.img-portrait {
+          margin-bottom: 2rem;
+        }
+        
+        h1 {
+          color: $brand-primary;
+          small {
+            color: $text-color;
+            font-size: 60%;
+          }
         }
 
-
-        aside {
-          background-color: #f5f5f5;
-
-          .img-portrait {
-            width: 80%;
-            margin-top:10%;
-            box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75);
-          }
-          h1 {
-            color: $brand-primary;
-            small {
-              color: $text-color;
-            }
-          }
-
-          .identity-list .material-icons {
-            margin: $padding-small-vertical $padding-xs-horizontal;
-            margin-left: 0px;
-            vertical-align: middle;
-          }
-          .cv-about {
-            p {
-              hyphens: auto;
-            }
-          }
-          .cv-skills {
-            ul {
-              columns: 2;
-
-              &.cv-list-lang {
-                columns: initial;
-              }
-            }
-
-            dt {
-              font-size: 133%;
-              font-weight: normal;
-            }
-
-            .dropdown-menu {
-              width: 100%;
-              background-color: #f5f5f5;
-
-              li {
-                margin-right: $padding-small-horizontal;
-                margin-left: $padding-small-horizontal;
-              }
-            }
-          }
-
+        .identity-list .material-icons {
+          margin: $padding-small-vertical $padding-xs-horizontal;
+          margin-left: 0px;
+          vertical-align: middle;
         }
+        .cv-about {
+          p {
+            hyphens: auto;
+          }
+        }
+        .cv-skills {
+          ul {
+            columns: 2;
 
-        .cv-main {
-          line-height: floor(($line-height-computed - 1));
+            &.cv-list-lang {
+              columns: initial;
+            }
+          }
 
-          .cv-block {
+          dt {
+            font-size: 133%;
+            font-weight: normal;
+          }
+
+          .dropdown-menu {
+            width: 100%;
+            background-color: #f5f5f5;
+
+            li {
+              margin-right: $padding-small-horizontal;
+              margin-left: $padding-small-horizontal;
+            }
+          }
+        }
+      }
+
+      .cv-main {
+        line-height: floor(($line-height-computed - 1));
+        grid-area: main;
+
+        .cv-block {
+          h2 {
+            display: inline-block;
+            border-radius: $border-radius-base;
+            padding-right: $padding-xs-horizontal;
+            padding-left: $padding-xs-horizontal;
+            padding-top: $padding-xs-vertical;
+            padding-bottom: $padding-xs-vertical;
+            margin: $padding-large-vertical 0;
+          }
+          &:nth-child(odd) {
             h2 {
-              display: inline-block;
-              border-radius: $border-radius-base;
-              padding-right: $padding-xs-horizontal;
-              padding-left: $padding-xs-horizontal;
-              padding-top: $padding-xs-vertical;
-              padding-bottom: $padding-xs-vertical;
-              margin: $padding-large-vertical 0;
+              background-color: $brand-primary;
+              color: $gray-lighter;
             }
-            &:nth-child(odd) {
-              h2 {
-                background-color: $brand-primary;
-                color: $gray-lighter;
-              }
+          }
+          &:nth-child(even) {
+            h2 {
+              background-color: $gray-lighter;
             }
-            &:nth-child(even) {
-              h2 {
-                background-color: $gray-lighter;
+          }
+        }
+
+        .cv-block {
+          &.cv-scolarity, &.cv-experiences, &.cv-hobbies {
+            table {
+              border-collapse: separate;
+              border-spacing: $padding-xs-horizontal;
+              width: 100%;
+              tr {
+                margin-bottom: $padding-base-vertical;
+                td {
+                  vertical-align: top;
+
+                  &.date {
+                    padding-right: $padding-xs-horizontal;
+                    border-right: 1px dotted $gray-light;
+                    width: 15%;
+                    text-align: right;
+                  }
+                }
               }
             }
           }
 
-          .cv-block {
-            &.cv-scolarity, &.cv-experiences, &.cv-hobbies {
-              table {
-                border-collapse: separate;
-                border-spacing: $padding-xs-horizontal;
-                width: 100%;
-                tr {
-                  margin-bottom: $padding-base-vertical;
-                  td {
-                    vertical-align: top;
+          &.cv-scolarity, &.cv-experiences {
+            table tr td.place {
+              font-size: 70%;
+              color: $gray-light;
+              width: 25%;
+              text-align: right;
+            }
+          }
 
-                    &.date {
-                      padding-right: $padding-xs-horizontal;
-                      border-right: 1px dotted $gray-light;
-                      width: 15%;
-                      text-align: right;
-                    }
-                  }
-                }
+          &.cv-achievements {
+            flex: 1; // Make it stetch
+
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: start;
+
+            .dropup {
+              width: 100%;
+
+              .dropdown-menu {
+                padding: $padding-base-vertical $padding-small-horizontal;
+                border: 2px solid $gray;
               }
             }
 
-            &.cv-scolarity, &.cv-experiences {
-              table tr td.place {
-                font-size: 70%;
-                color: $gray-light;
-                width: 25%;
-                text-align: right;
-              }
-            }
+            .cv-achievement-item {
+              display: grid;
+              grid-template-columns: 2em 1fr auto;
+              grid-column-gap: $padding-xs-horizontal;
+              width: 100%;
+              margin-bottom: $padding-large-vertical;
+              page-break-inside: avoid;
 
-            &.cv-achievements {
-              flex: 1; // Make it stetch
+              .cv-achievement-frame {
+                grid-column: 1;
+                grid-row: 1;
 
-              display: flex;
-              flex-flow: column;
-              justify-content: space-between;
-              align-items: start;
-
-              .dropup {
-                width: 100%;
-
-                .dropdown-menu {
-                  padding: $padding-base-vertical $padding-small-horizontal;
-                  border: 2px solid $gray;
-                }
+                font-size: 125%;
               }
 
-              .cv-achievement-item {
-                display: grid;
-                grid-template-columns: 2em 1fr auto;
-                grid-column-gap: $padding-xs-horizontal;
-                width: 100%;
-                margin-bottom: $padding-large-vertical;
-                page-break-inside: avoid;
-                
-                .cv-achievement-frame {
-                  grid-column: 1;
-                  grid-row: 1;
+              .cv-achievement-title {
+                grid-column: 2;
+                grid-row: 1;
 
-                  font-size: 125%;
+                font-size: 150%;
+                font-weight: bold;
+                color: $brand-primary;
+
+                margin-bottom: $padding-base-vertical;
+              }
+
+              .cv-achievement-skills {
+                grid-column: 3;
+                grid-row: 1;
+
+                justify-self: end;
+
+                & > div {
+                  display: inline-block;
                 }
 
-                .cv-achievement-title {
-                  grid-column: 2;
-                  grid-row: 1;
-
-                  font-size: 150%;
-                  font-weight: bold;
-                  color: $brand-primary;
-
-                  margin-bottom: $padding-base-vertical;
-                }
-
-                .cv-achievement-skills {
-                  grid-column: 3;
-                  grid-row: 1;
-
-                  justify-self: end;
-
-                  & > div {
-                    display: inline-block;
-                  }
-
-                  .cv-achievement-sskills {
-                    &:before {
-                      content: "/";
-                      margin: 0 0.33em;
-                    }
+                .cv-achievement-sskills {
+                  &:before {
+                    content: "/";
+                    margin: 0 0.33em;
                   }
                 }
+              }
 
-                .cv-achievement-details {
-                  grid-column: 1 / 4;
-                  grid-row: 2;
+              .cv-achievement-details {
+                grid-column: 1 / 4;
+                grid-row: 2;
 
-                  * {
-                    margin-bottom: 0px;
-                  }
-                  
+                * {
+                  margin-bottom: 0px;
                 }
 
-                .cv-achievement-ref {
-                  grid-column: 1 / 4;
-                  grid-row: 3;
-                }
+              }
+
+              .cv-achievement-ref {
+                grid-column: 1 / 4;
+                grid-row: 3;
               }
             }
           }
@@ -319,22 +325,12 @@ body.resume {
 
       .cv-page {
         margin: 0;
-        width: 21cm !important;
-        height: 296.9mm !important;
-
-        .cv-page-item {
-          height: 100% !important;
-          &>* {
-            height: 100% !important;
-          }
-          aside {
-            width: 7cm;
-            float: left;
-          }
-          .cv-main {
-            margin-left: 33%
-          }
-        }
+        width: 209mm;
+        height: 296mm;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 296mm;
+        grid-template-areas:
+        "f-aside main";
       }
     }
   }
@@ -342,32 +338,20 @@ body.resume {
 
 @media screen and (max-width:21cm) {
   body.resume .cv-container .cv-page {
-    width: 100%;
-    .cv-page-item {
-      aside {
-        width: 100%;
-      }
-      .cv-main {
-        margin-left:0;
-        width: 100%;
-      }
-    }
+    grid-template-areas:
+      "f-aside"
+      "main"
   }
 }
 
 @media screen and (min-width: 21.1cm) {
   body.resume .cv-container .cv-page {
-    width: 21cm;
-
-    .cv-page-item>* {
-      height: 100%;
-    }
-    aside {
-      width: 33%;
-      float: left;
-    }
-    .cv-main {
-      margin-left: 33%
-    }
+    width: 209mm;
+    min-height: 296mm;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 296mm minmax(0px, auto);
+    grid-template-areas:
+      "f-aside   main"
+      ".         main";
   }
 }

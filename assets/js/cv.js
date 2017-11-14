@@ -1,19 +1,4 @@
 jQuery(function() {
-  var setPageHeight = function() {
-    var cvPageContainer = jQuery('.cv-page')
-    cvPageContainer.css('height', '');
-
-    var cvPages = jQuery('.cv-page > div')
-    cvPages.css('height', '');
-
-    var maxHeight = Math.max.apply(null, 
-      cvPages.map(function() {
-        return jQuery(this).height();
-      }).get());
-
-    cvPageContainer.css('height', maxHeight + 'px');
-    cvPages.css('height', cvPageContainer.css('height'));
-  }
 
   var prepareTranslateSwitchers = function() {
     var currentLang = jQuery('.cv-control label.active')[0].classList.value.match(/btn-(\S*)/)[1];
@@ -52,14 +37,6 @@ jQuery(function() {
     });
   }
   
-  setPageHeight();
   prepareTranslateSwitchers();
   setToggleAction();
-
-  /* Make page resize on window resizing */
-  var resizeTimer;
-  jQuery(window).resize(function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(setPageHeight, 250);
-  });
 })
