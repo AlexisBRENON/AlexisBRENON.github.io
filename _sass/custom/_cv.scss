@@ -131,7 +131,7 @@ body.resume {
           }
 
           .identity-list .material-icons {
-            margin: $padding-small-vertical $padding-base-horizontal;
+            margin: $padding-small-vertical $padding-xs-horizontal;
             margin-left: 0px;
             vertical-align: middle;
           }
@@ -245,7 +245,9 @@ body.resume {
                 display: grid;
                 grid-template-columns: 2em 1fr auto;
                 grid-column-gap: $padding-xs-horizontal;
+                width: 100%;
                 margin-bottom: $padding-large-vertical;
+                page-break-inside: avoid;
                 
                 .cv-achievement-frame {
                   grid-column: 1;
@@ -286,6 +288,11 @@ body.resume {
                 .cv-achievement-details {
                   grid-column: 1 / 4;
                   grid-row: 2;
+
+                  * {
+                    margin-bottom: 0px;
+                  }
+                  
                 }
 
                 .cv-achievement-ref {

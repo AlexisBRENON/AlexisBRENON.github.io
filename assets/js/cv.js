@@ -21,7 +21,7 @@ jQuery(function() {
     jQuery('.translate-wrapper').each(function(idx, wrapper) {
       var current = jQuery(wrapper).children('.translate-current')[0];
       if (current === undefined) {
-        current = document.createElement(wrapper.tagName);
+        current = document.createElement(jQuery(wrapper).children()[0].tagName);
         jQuery(current).css('display', 'none').addClass('translate-current');
         wrapper.prepend(current);
       }
