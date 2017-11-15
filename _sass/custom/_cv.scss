@@ -24,9 +24,10 @@ body.resume {
       lua
       python
     ) {
-      img.hskill-#{$icon} {
-        content: url("/assets/images/cv/logos/#{$icon}.svg");
-      }
+      .hskill-#{$icon} {
+          background-image: url("/assets/images/cv/logos/#{$icon}.svg");
+          background-size: 100%;
+        }
     }
 
     i.material-icons[class*=sskill-] {
@@ -43,6 +44,8 @@ body.resume {
     .skill-icon {
       display: inline-block;
       width: 1.25em;
+      height: 1.25em;
+      vertical-align: middle;
     }
 
     .material-icons {
