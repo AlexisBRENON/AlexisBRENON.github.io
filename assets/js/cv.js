@@ -36,7 +36,19 @@ jQuery(function() {
       jQuery(label).click(function () {fadeTo(lang);});
     });
   }
+
+  var setExpandJournals = function() {
+    console.log(this)
+    jQuery('.cv-publications-item').each(function (idx, item) {
+      console.log(item)
+      jQuery(item).click(function(e) {
+        console.log(e);
+        jQuery(this).children('.cv-publications-item-journal').slideToggle();
+      });
+    });
+  }
   
   prepareTranslateSwitchers();
   setToggleAction();
+  setExpandJournals();
 })

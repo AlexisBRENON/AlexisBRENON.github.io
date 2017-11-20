@@ -57,7 +57,7 @@ body.resume {
         display: none;
       }
       .translate-english {
-        display: initial; // Show english in JS is disabled
+        // Show english in JS is disabled
       }
     }
 
@@ -231,6 +231,21 @@ body.resume {
               color: $gray-light;
               width: 25%;
               text-align: right;
+            }
+          }
+
+          &.cv-publications {
+            .cv-publications-item {
+              margin-bottom: $padding-base-vertical;
+              cursor: pointer;
+
+              & > div {
+                display: inline
+              }
+
+              .cv-publications-item-journal {
+                display: none;
+              }
             }
           }
 

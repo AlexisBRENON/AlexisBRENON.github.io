@@ -34,8 +34,8 @@ title: "CV - Resumé"
       <img class="img-responsive img-circle img-portrait center-block" alt="Portrait" src="/assets/images/portrait.jpg">
       <h1>Alexis BRENON<br/>
         <small class="translate-wrapper">
-          <span class="translate-french" lang="fr">Ingénieur machine learning</span>
-          <span class="translate-english" lang="en">Machine learning engineer</span>
+          <span class="translate-french" lang="fr">Recherche appliquée</span>
+          <span class="translate-english" lang="en">Applied researcher</span>
         </small>
       </h1>
 
@@ -58,9 +58,9 @@ title: "CV - Resumé"
         </h2>
         <div class="translate-wrapper">
         <p class="translate-french" lang="fr">
-        Sur le point de soutenir une thèse de doctorat à propos de <strong>la prise de décision adaptative dans l'habitat intelligent</strong>, je recherche un emploi en tant qu'<strong>ingénieur en apprentissage automatique</strong>. J'espère ainsi prendre part au développement de nouvelles techno&shy;logies et les rendre acces&shy;sibles au grand public.
+        Sur le point de soutenir une thèse de doctorat à propos de <strong>la prise de décision adaptative dans l'habitat intelligent</strong>, je recherche un emploi en tant que <strong>chercheur appliqué</strong>. J'espère ainsi prendre part au développement de nouvelles techno&shy;logies fondées sur <strong>l'appren&shy;tissage automatique</strong>  et les rendre acces&shy;sibles au grand public.
         </p>
-        <p class="translate-english" lang="en">My name is <strong>Alexis BRENON</strong>. I am <strong>25 years old</strong> and I am going to defend my thesis about <strong>Adaptive Decision Making in Smart-Home</strong>. I am seeking for a position as a <strong>machine learning engineer</strong> to develop new technologies and bring them to the mainstream market.
+        <p class="translate-english" lang="en">My name is <strong>Alexis BRENON</strong>. I am <strong>25 years old</strong> and I am going to defend my thesis about <strong>adaptive decision-making in smart-home</strong>. I am seeking for a position as an <strong>applied researcher</strong> to develop new technologies based on <strong>machine learning</strong> and bring them to the mainstream market.
         </p>
       </div>
       
@@ -231,6 +231,46 @@ title: "CV - Resumé"
           </table>
         </div>
       </div>
+
+      <div class="cv-block cv-publications">
+        <h2>Publications</h2>
+
+        <div class="cv-block-content">
+          <div class="translate-wrapper">
+            <p class="translate-french" lang="fr">
+              Accessibles sur <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
+            </p>
+            <p class="translate-english" lang="en">
+              Open access on <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
+            </p>
+          </div>
+
+          {% for publication in site.data.publications %}
+          <div class="cv-publications-item">
+            <div class="cv-publications-item-authors">
+              {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
+              {% assign numAuthors = publication.author | size %}
+              {% if numAuthors > 1 %}
+              <span class="translate-wrapper">
+                <span class="translate-french" lang="fr">et coll.</span>
+                <span class="translate-english" lang="en">et al.</span>
+              </span>
+              {% endif %}
+            </div>
+            <div class="cv-publications-item-year">
+              ({{ publication.year }}).
+            </div>
+            <div class="cv-publications-item-title">
+              {{ publication.title }}.
+            </div>
+            <div class="cv-publications-item-journal">
+              In <em>{{ publication.booktitle }}</em>
+            </div>
+          </div>
+          {% endfor %}
+        </div> <!-- Publications block content -->
+      </div> <!-- Publications block -->
+
       <div class="cv-block cv-achievements">
         <h2 class="translate-wrapper">
           <span class="translate-french" lang="fr">Réalisations</span>
@@ -276,39 +316,6 @@ title: "CV - Resumé"
           </div>
           <div class="cv-achievement-ref">
             M. Michel VACHER (Univ. Grenoble Alpes) &mdash; +33 (0)4.57.42.14.38
-          </div>
-        </div>
-
-        <div class="cv-achievement-item">
-          <div class="cv-achievement-frame">
-            <i class="material-icons">school</i>
-          </div>
-          <div class="cv-achievement-title">
-            Publications
-          </div>
-          <div class="cv-achievement-skills">
-            <div class="cv-achievement-hskills">
-              <i class="skill-icon hskill-latex"></i>
-            </div>
-            <div class="cv-achievement-sskills">
-              <i class="material-icons sskill-collaboration">people</i>
-              <i class="material-icons sskill-rigorous">straighten</i>
-            </div>
-          </div>
-          <div class="cv-achievement-details">
-            <div class="translate-wrapper">
-              <p class="translate-french" lang="fr">Publication d'articles scientifiques dans des conférences d'envergures nationales et internationales.</p>
-              <p class="translate-english" lang="en">Research publications in national and international conferences.</p>
-            </div>
-            <ul>
-              {% for publication in site.data.publications %}
-              <li>{{ publication.title }} ({{ publication.year }})</li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="cv-achievement-ref">
-            M. Michel VACHER (Univ. Grenoble Alpes) &mdash; +33 (0)4.57.42.14.38<br/>
-            <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
           </div>
         </div>
 
