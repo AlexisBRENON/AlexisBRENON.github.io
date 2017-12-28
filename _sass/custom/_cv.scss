@@ -113,10 +113,10 @@ body.resume {
       }
 
       aside {
-        &#front {
+        &.cv-side.front {
           grid-area: f-aside;
         }
-        &#back {
+        &.cv-side.back {
           grid-area: b-aside;
         }
         background-color: #f5f5f5;
@@ -178,7 +178,12 @@ body.resume {
 
       .cv-main {
         line-height: floor(($line-height-computed - 1));
-        grid-area: main;
+        &.front {
+          grid-area: f-main;
+        }
+        &.back {
+          grid-area: b-main;
+        }
 
         .cv-block {
           h2 {
@@ -250,21 +255,12 @@ body.resume {
           }
 
           &.cv-achievements {
-            flex: 1; // Make it stetch
+            flex: 1; // Make it stretch
 
             display: flex;
             flex-flow: column;
             justify-content: space-between;
             align-items: start;
-
-            .dropup {
-              width: 100%;
-
-              .dropdown-menu {
-                padding: $padding-base-vertical $padding-small-horizontal;
-                border: 2px solid $gray;
-              }
-            }
 
             .cv-achievement-item {
               display: grid;
@@ -345,10 +341,12 @@ body.resume {
         margin: 0;
         width: 209mm;
         height: 296mm;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 296mm;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 296mm 1mm 296mm;
         grid-template-areas:
-        "f-aside main";
+        "f-aside f-main f-main"
+        ".       .      ."
+        "b-main  b-main b-aside ";
       }
     }
   }
@@ -358,7 +356,9 @@ body.resume {
   body.resume .cv-container .cv-page {
     grid-template-areas:
       "f-aside"
-      "main"
+      "f-main"
+      "b-main"
+      "b-aside"
   }
 }
 
@@ -366,10 +366,10 @@ body.resume {
   body.resume .cv-container .cv-page {
     width: 209mm;
     min-height: 296mm;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 296mm minmax(0px, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 296mm 296mm;
     grid-template-areas:
-      "f-aside   main"
-      ".         main";
+      "f-aside f-main f-main"
+      "b-main  b-main b-aside";
   }
 }

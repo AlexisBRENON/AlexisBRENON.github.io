@@ -30,7 +30,7 @@ title: "CV - Resumé"
   </div>
 
 <main class="cv-page">
-  <aside id="front">
+  <aside class="cv-side front">
       <img class="img-responsive img-circle img-portrait center-block" alt="Portrait" src="/assets/images/portrait.jpg">
       <h1>Alexis BRENON<br/>
         <small class="translate-wrapper">
@@ -143,7 +143,7 @@ title: "CV - Resumé"
       </div>
     </aside>
 
-    <div class="cv-main">
+    <div class="cv-main front">
       <div class="cv-block cv-scolarity">
         <h2 class="translate-wrapper">
           <span class="translate-french" lang="fr">Parcours</span>
@@ -268,13 +268,13 @@ title: "CV - Resumé"
         </div> <!-- Publications block content -->
       </div> <!-- Publications block -->
 
-      <div class="cv-block cv-achievements">
+      <div class="cv-block cv-achievements" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
         <h2 class="translate-wrapper">
           <span class="translate-french" lang="fr">Réalisations</span>
           <span class="translate-english" lang="en">Achievements</span>
         </h2>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">work</i>
           </div>
@@ -316,7 +316,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">home</i>
           </div>
@@ -354,7 +354,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">work</i>
           </div>
@@ -391,7 +391,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">work</i>
           </div>
@@ -433,7 +433,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">work</i>
           </div>
@@ -477,7 +477,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">home</i>
           </div>
@@ -513,7 +513,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">home</i>
           </div>
@@ -553,7 +553,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">school</i>
           </div>
@@ -595,7 +595,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">school</i>
           </div>
@@ -632,7 +632,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">home</i>
           </div>
@@ -671,7 +671,7 @@ title: "CV - Resumé"
           </div>
         </div>
 
-        <div class="cv-achievement-item">
+        <div class="cv-achievement-item" draggable="true" ondragstart="achievementItem_dragstart_handler(event);">
           <div class="cv-achievement-frame">
             <i class="material-icons">home</i>
           </div>
@@ -710,6 +710,14 @@ title: "CV - Resumé"
         </div>
       </div>
     </div>
+
+    <div class="cv-main back">
+      <div class="cv-block cv-achievements" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+      </div>
+    </div>
+
+    <aside class="cv-side back">
+    </aside>
 </main>
 </div>
 </div>
