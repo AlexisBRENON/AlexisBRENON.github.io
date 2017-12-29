@@ -36,13 +36,31 @@ var setToggleAction = function() {
 }
 
 var setExpandJournals = function() {
-  console.log(this)
   jQuery('.cv-publications-item').each(function (idx, item) {
-    console.log(item)
     jQuery(item).click(function(e) {
-      console.log(e);
       jQuery(this).children('.cv-publications-item-journal').slideToggle();
     });
+  });
+}
+
+var splitLastBlock = function() {
+  var last_block = jQuery('.cv-main.front .cv-block').last();
+  var max_height = last_block.height();
+
+  var current_height = 0;
+  var items_to_move = [];
+  last_block.children().each(function (idx, item) {
+    current_height = current_height + $(item).outerHeight(true);
+    if (current_height > max_height) {
+      items_to_move.push(item);
+    }
+  });
+
+  var back = jQuery('.cv-main.back')
+  var back_block = last_block.clone().empty();
+  back.prepend(back_block)
+  jQuery.each(items_to_move, function(idx, item) {
+    back_block.append(item);
   });
 }
 
@@ -63,6 +81,7 @@ function drop_handler(ev) {
   // Get the id of the target and add the moved element to the target's DOM
   var data = ev.dataTransfer.getData("text/plain");
   var elem = jQuery(document.getElementById(data));
+
   var target = $(ev.target).parents('.cv-block')[0];
   if (target === undefined) {
     target = ev.target;
@@ -75,4 +94,5 @@ jQuery(function() {
   prepareTranslateSwitchers();
   setToggleAction();
   setExpandJournals();
+  window.setTimeout(splitLastBlock, 500);
 })
