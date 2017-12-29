@@ -12,6 +12,10 @@ body.resume {
       margin-left: $padding-base-horizontal;
     }
 
+
+//== Icons management
+//
+//** Hard skill icons based on svg images
     @each $icon in (
       asm
       bash
@@ -30,28 +34,25 @@ body.resume {
         }
     }
 
+//** Reduce size of icons
+    .material-icons {
+      font-size: 1.25em;
+    }
+//** Align icons with text
     i.material-icons[class*=sskill-] {
       vertical-align: middle;
     }
-
-    .sskill-inventivity {
-      transform: rotateZ(180deg);
-    }
-    .sskill-rigorous {
-      content: "straighten";
-    }
-
     .skill-icon {
       display: inline-block;
       width: 1.25em;
       height: 1.25em;
       vertical-align: middle;
     }
-
-    .material-icons {
-      font-size: 1.25em;
+    .sskill-inventivity {
+      transform: rotateZ(180deg);
     }
 
+//== Translation management
     .translate-wrapper {
       .translate-french {
         display: none;
@@ -61,6 +62,7 @@ body.resume {
       }
     }
 
+//** Translation buttons
     .cv-control {
       @extend main;
       padding: $padding-base-vertical $padding-base-horizontal;
@@ -100,40 +102,42 @@ body.resume {
       }
     }
 
+//== CV pages
     .cv-page {
       position: relative;
 
       display: grid;
       
       &>* {
-        padding: $padding-base-vertical $padding-base-horizontal;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
 
+      .sep {
+        display: none;
+      }
+
       aside {
+        background-color: #f5f5f5;
+        padding: $padding-small-horizontal;
+
         &.cv-side.front {
           grid-area: f-aside;
         }
         &.cv-side.back {
           grid-area: b-aside;
         }
-        background-color: #f5f5f5;
 
         .img-portrait {
           width: 80%;
+          margin-top: 2.3rem;
           box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75);
-        }
-        &#front .img-portrait {
-          margin-top: 2rem;
-        }
-        &#back.img-portrait {
-          margin-bottom: 2rem;
         }
         
         h1 {
           color: $brand-primary;
+          line-height: 0.8;
           small {
             color: $text-color;
             font-size: 60%;
@@ -145,11 +149,13 @@ body.resume {
           margin-left: 0px;
           vertical-align: middle;
         }
+
         .cv-about {
           p {
             hyphens: auto;
           }
         }
+
         .cv-skills {
           ul {
             columns: 2;
@@ -158,26 +164,13 @@ body.resume {
               columns: initial;
             }
           }
-
-          dt {
-            font-size: 133%;
-            font-weight: normal;
-          }
-
-          .dropdown-menu {
-            width: 100%;
-            background-color: #f5f5f5;
-
-            li {
-              margin-right: $padding-small-horizontal;
-              margin-left: $padding-small-horizontal;
-            }
-          }
         }
       }
 
       .cv-main {
         line-height: floor(($line-height-computed - 1));
+        padding: $padding-small-horizontal;
+
         &.front {
           grid-area: f-main;
         }
@@ -185,6 +178,18 @@ body.resume {
           grid-area: b-main;
         }
 
+        .cv-block {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          flex: 1 0 auto;
+
+          &:first-child, &:last-child {
+            justify-content: space-between;
+          }
+        }
+
+        //** Blocks title
         .cv-block {
           h2 {
             display: inline-block;
@@ -194,7 +199,13 @@ body.resume {
             padding-top: $padding-xs-vertical;
             padding-bottom: $padding-xs-vertical;
             margin: $padding-large-vertical 0;
+            align-self: flex-start;
           }
+          // Remove top margin of the first title
+          &:first-child h2 {
+            margin-top: 0px;
+          }
+
           &:nth-child(odd) {
             h2 {
               background-color: $brand-primary;
@@ -209,7 +220,7 @@ body.resume {
         }
 
         .cv-block {
-          &.cv-scolarity, &.cv-experiences, &.cv-hobbies {
+          &.cv-scolarity {
             table {
               border-collapse: separate;
               border-spacing: $padding-xs-horizontal;
@@ -225,19 +236,17 @@ body.resume {
                     width: 15%;
                     text-align: right;
                   }
+                  &.place {
+                    font-size: 70%;
+                    color: $gray-light;
+                    width: 25%;
+                    text-align: right;
+                  }
                 }
               }
             }
           }
 
-          &.cv-scolarity, &.cv-experiences {
-            table tr td.place {
-              font-size: 70%;
-              color: $gray-light;
-              width: 25%;
-              text-align: right;
-            }
-          }
 
           &.cv-publications {
             .cv-publications-item {
@@ -255,7 +264,7 @@ body.resume {
           }
 
           &.cv-achievements {
-            flex: 1; // Make it stretch
+            flex: 3 1 auto;
 
             display: flex;
             flex-flow: column;
@@ -342,7 +351,7 @@ body.resume {
         width: 209mm;
         height: 296mm;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 296mm 1mm 296mm;
+        grid-template-rows: 296.5mm 1mm 296.5mm;
         grid-template-areas:
         "f-aside f-main f-main"
         ".       .      ."
@@ -367,9 +376,16 @@ body.resume {
     width: 209mm;
     min-height: 296mm;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 296mm 296mm;
+    grid-template-rows: 296mm 1pt 296mm;
     grid-template-areas:
       "f-aside f-main f-main"
+      "sep     sep    sep"
       "b-main  b-main b-aside";
+  }
+
+  .sep {
+    display: block !important;
+    grid-area: sep;
+    background-color: $gray-light;
   }
 }

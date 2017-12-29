@@ -62,6 +62,7 @@ title: "CV - Resumé"
         </p>
         <p class="translate-english" lang="en">My name is <strong>Alexis BRENON</strong>. I am <strong>25 years old</strong> and I recently defended my thesis about <strong>deep model for adaptive decision-making in smart-home</strong>. I am seeking for a position as an <strong>applied researcher</strong> to develop new technologies based on <strong>machine learning</strong> and bring them to the mainstream market.
         </p>
+        </div>
       </div>
       
       <div class="cv-skills">
@@ -232,40 +233,38 @@ title: "CV - Resumé"
       <div class="cv-block cv-publications">
         <h2>Publications</h2>
 
-        <div class="cv-block-content">
-          <div class="translate-wrapper">
-            <p class="translate-french" lang="fr">
-              Accessibles sur <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
-            </p>
-            <p class="translate-english" lang="en">
-              Open-access on <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
-            </p>
-          </div>
+        <div class="translate-wrapper">
+          <p class="translate-french" lang="fr">
+            Accessibles sur <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
+          </p>
+          <p class="translate-english" lang="en">
+            Open-access on <a href="https://cv.archives-ouvertes.fr/alexisbrenon">cv.archives-ouvertes.fr/alexisbrenon</a>
+          </p>
+        </div>
 
-          {% for publication in site.data.publications %}
-          <div class="cv-publications-item">
-            <div class="cv-publications-item-authors">
-              {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
-              {% assign numAuthors = publication.author | size %}
-              {% if numAuthors > 1 %}
-              <span class="translate-wrapper">
-                <span class="translate-french" lang="fr">et coll.</span>
-                <span class="translate-english" lang="en">et al.</span>
-              </span>
-              {% endif %}
-            </div>
-            <div class="cv-publications-item-year">
-              ({{ publication.year }}).
-            </div>
-            <div class="cv-publications-item-title">
-              {{ publication.title }}.
-            </div>
-            <div class="cv-publications-item-journal">
-              In <em>{{ publication.booktitle }}</em>
-            </div>
+        {% for publication in site.data.publications %}
+        <div class="cv-publications-item">
+          <div class="cv-publications-item-authors">
+            {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
+            {% assign numAuthors = publication.author | size %}
+            {% if numAuthors > 1 %}
+            <span class="translate-wrapper">
+              <span class="translate-french" lang="fr">et coll.</span>
+              <span class="translate-english" lang="en">et al.</span>
+            </span>
+            {% endif %}
           </div>
-          {% endfor %}
-        </div> <!-- Publications block content -->
+          <div class="cv-publications-item-year">
+            ({{ publication.year }}).
+          </div>
+          <div class="cv-publications-item-title">
+            {{ publication.title }}.
+          </div>
+          <div class="cv-publications-item-journal">
+            In <em>{{ publication.booktitle }}</em>
+          </div>
+        </div>
+        {% endfor %}
       </div> <!-- Publications block -->
 
       <div class="cv-block cv-achievements" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
@@ -716,6 +715,8 @@ title: "CV - Resumé"
 
     <aside class="cv-side back">
     </aside>
+
+    <div class="sep"></div>
 </main>
 </div>
 </div>
