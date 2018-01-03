@@ -129,10 +129,24 @@ body.resume {
           grid-area: b-aside;
         }
 
-        .img-portrait {
+        @each $page in (front, back) {
+          &.#{$page} div.img-portrait {
+            background-image: url("/assets/images/cv/portrait_#{$page}.jpg");
+          }
+        }
+        div.img-portrait {
+          align-self: center;
           width: 80%;
+          border-radius: 50%;
           margin-top: 2.3rem;
           box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75);
+          background-size: cover;
+
+          &:before {
+            display: block;
+            content: "";
+            padding-top: 100%;
+          }
         }
         
         h1 {
