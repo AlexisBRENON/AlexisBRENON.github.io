@@ -234,33 +234,42 @@ body.resume {
         }
 
         .cv-block {
-          &.cv-scolarity {
-            table {
-              border-collapse: separate;
-              border-spacing: $padding-xs-horizontal;
-              width: 100%;
-              tr {
-                margin-bottom: $padding-base-vertical;
-                td {
-                  vertical-align: top;
+          &.cv-career {
+            .cv-career-epoch {
+              display: grid;
+              grid-template-areas: "date items";
+              grid-template-columns: 15% 85%;
+              grid-column-gap: $padding-xs-horizontal;
+            }
 
-                  &.date {
-                    padding-right: $padding-xs-horizontal;
-                    border-right: 1px dotted $gray-light;
-                    width: 15%;
-                    text-align: right;
-                  }
-                  &.place {
-                    font-size: 70%;
-                    color: $gray-light;
-                    width: 25%;
-                    text-align: right;
-                  }
-                }
-              }
+            .cv-career-date {
+              grid-area: date;
+              padding-right: $padding-xs-horizontal;
+              border-right: 1px dotted $gray-light;
+              text-align: right;
+              padding-top: ($padding-base-vertical * 0.5);
+            }
+            .cv-career-items {
+              grid-area: items;
+              display: flex;
+              flex-flow: column nowrap;
+            }
+
+            .cv-career-item {
+              display: grid;
+              grid-template-areas: "label place";
+              margin: ($padding-base-vertical * 0.5) 0;
+            }
+            .cv-career-label {
+              grid-area: label;
+            }
+            .cv-career-place {
+              grid-area: place;
+              font-size: 70%;
+              color: $gray-light;
+              text-align: right;
             }
           }
-
 
           &.cv-publications {
             .cv-publications-item {
