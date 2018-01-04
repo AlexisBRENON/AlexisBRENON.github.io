@@ -1,5 +1,19 @@
 [
   {
+    "id": "Brenon2017",
+    "type": "thesis",
+    "author": [
+      {
+        "name": "Brenon, Alexis",
+        "firstname": "Alexis",
+        "lastname": "Brenon"
+      }
+    ],
+    "title": "Modèle profond pour le contrôle vocal adaptatif d'un habitat intelligent",
+    "year": "2017",
+    "month": "December"
+  },
+  {
     "id": "Brenon2016b",
     "type": "inproceedings",
     "author": [

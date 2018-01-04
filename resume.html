@@ -189,9 +189,11 @@ title: "CV - Resumé"
           <div class="cv-publications-item-title">
             {{ publication.title }}.
           </div>
+          {% if publication.booktitle %}
           <div class="cv-publications-item-journal">
             In <em>{{ publication.booktitle }}</em>
           </div>
+          {% endif %}
         </div>
         {% endfor %}
       </div> <!-- Publications block -->

@@ -121,6 +121,7 @@ body.resume {
       aside {
         background-color: #f5f5f5;
         padding: $padding-small-horizontal;
+        padding-bottom: 0;
 
         &.cv-side.front {
           grid-area: f-aside;
@@ -184,6 +185,7 @@ body.resume {
       .cv-main {
         line-height: floor(($line-height-computed - 1));
         padding: $padding-small-horizontal;
+        padding-bottom: 0;
 
         &.front {
           grid-area: f-main;
@@ -240,6 +242,7 @@ body.resume {
               grid-template-areas: "date items";
               grid-template-columns: 15% 85%;
               grid-column-gap: $padding-xs-horizontal;
+              margin-bottom: $padding-xs-vertical;
             }
 
             .cv-career-date {
@@ -247,7 +250,7 @@ body.resume {
               padding-right: $padding-xs-horizontal;
               border-right: 1px dotted $gray-light;
               text-align: right;
-              padding-top: ($padding-base-vertical * 0.5);
+              padding-top: $padding-xs-vertical;
             }
             .cv-career-items {
               grid-area: items;
@@ -258,7 +261,7 @@ body.resume {
             .cv-career-item {
               display: grid;
               grid-template-areas: "label place";
-              margin: ($padding-base-vertical * 0.5) 0;
+              margin-top: $padding-xs-vertical;
             }
             .cv-career-label {
               grid-area: label;
