@@ -358,6 +358,13 @@ body.resume {
             }
           }
         }
+
+        &.back {
+          .cv-block {
+            justify-content: flex-start;
+          }
+        }
+
       }
     }
   }
@@ -381,7 +388,7 @@ body.resume {
         grid-template-areas:
         "f-aside f-main f-main"
         ".       .      ."
-        "b-main  b-main b-aside ";
+        "b-main  b-main b-main ";
       }
     }
   }
@@ -393,7 +400,7 @@ body.resume {
       "f-aside"
       "f-main"
       "b-main"
-      "b-aside"
+      "b-main"
   }
 }
 
@@ -406,7 +413,7 @@ body.resume {
     grid-template-areas:
       "f-aside f-main f-main"
       "sep     sep    sep"
-      "b-main  b-main b-aside";
+      "b-main  b-main b-main";
   }
 
   .sep {
