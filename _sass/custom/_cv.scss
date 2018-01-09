@@ -120,11 +120,13 @@ body.resume {
 
       aside {
         background-color: #f5f5f5;
-        padding: $padding-small-horizontal;
-        padding-bottom: 0;
 
         &.cv-side.front {
           grid-area: f-aside;
+          padding-top: $padding-base-vertical;
+          padding-bottom: $padding-base-vertical;
+          padding-left: $padding-large-horizontal;
+          padding-right: $padding-small-horizontal;
         }
         &.cv-side.back {
           grid-area: b-aside;
@@ -189,9 +191,17 @@ body.resume {
 
         &.front {
           grid-area: f-main;
+          padding-top: $padding-base-vertical;
+          padding-bottom: $padding-base-vertical;
+          padding-left: $padding-small-horizontal;
+          padding-right: $padding-large-horizontal;
         }
         &.back {
           grid-area: b-main;
+          padding-top: (1.5 * $padding-large-vertical);
+          padding-bottom: (1.5 * $padding-large-vertical);
+          padding-left: $padding-large-horizontal;
+          padding-right: $padding-large-horizontal;
         }
 
         .cv-block {
@@ -216,10 +226,6 @@ body.resume {
             padding-bottom: $padding-xs-vertical;
             margin: $padding-large-vertical 0;
             align-self: flex-start;
-          }
-          // Remove top margin of the first title
-          &:first-child h2 {
-            margin-top: 0px;
           }
 
           &:nth-child(odd) {
