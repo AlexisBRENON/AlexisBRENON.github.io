@@ -2,5 +2,7 @@ url: localhost:4000/
 host: "0.0.0.0"
 port: 4000
 
+title: Alexis BRENON
+
 sass:
     style: :extended

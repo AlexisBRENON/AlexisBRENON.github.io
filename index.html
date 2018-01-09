@@ -1,6 +1,6 @@
 ---
 layout: one_page
-title: Bienvenue!
+title: Home
 ---
 
 <header class="container-fluid text-center overlay overlay-light">
@@ -11,7 +11,7 @@ title: Bienvenue!
                  src="/assets/images/portrait.jpg"/>
             <div>
                 <h1>Alexis BRENON</h1>
-                <h2>Phd Student</h2>
+                <h2>Applied researcher</h2>
             </div>
 
             <a href="#biography"
@@ -28,19 +28,19 @@ title: Bienvenue!
         <span class="glyphicon glyphicon-user"></span>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <h1>Who Am I?</h1>
           <p>
-            My name is <strong>Alexis BRENON</strong>, I'm a <strong>24 years old</strong>
-            <strong>PhD student</strong> at
-            <a href="http://www.liglab.fr">Laboratoire d'Informatique de Grenoble (LIG)</a> since
-            November 2014.
-            In the <a href="http://getalp.imag.fr/">GETALP</a> team, I take part in the CASSIE
-            project where my thesis subject is:
+            My name is <strong>Alexis BRENON</strong>, I'm a <strong>26 years old</strong>
+            <strong>applied researcher</strong>. I defended my Ph.D. thesis in December 2017 about:
           </p>
           <div class="well">
-            Context-Aware Interactions in Smart-Home
+            deep model for adaptive context-aware decision making in smart-home
           </div>
+          <p>
+            I am currently looking for a new position.
+            Find more informations about me in <a href="./resume.html">my CV</a>.
+          </p>
         </div>
       </div>
     </section>
@@ -51,31 +51,26 @@ title: Bienvenue!
       </div>
       <h1>You want to meet me?</h1>
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
           <div class="row">
             <div class="col-xs-12 col-sm-4">
               <h2>In Real Life</h2>
               <address>
-                Bureau 370 - Bâtiment IMAG<br/>
-                700 avenue Centrale<br/>
-                Domaine Universitaire<br/>
-                38401 St-Martin-d'Hères<br/>
-                France
+                Not Applicable for the moment
               </address>
             </div>
             <div class="col-xs-12 col-sm-4">
               <h2>Remotely</h2>
               <address>
-                <a href="mailto://alexis.brenon@imag.fr"/>alexis.brenon@imag.fr</a><br/>
-                +33 (0)4 57 42 16 47
+                <a href="mailto://brenon.alexis+website@gmail.com">brenon.alexis+website@gmail.com</a>
               </address>
             </div>
             <div class="col-xs-12 col-sm-4">
               <h2>Online</h2>
               <address>
+                <a href="https://fr.linkedin.com/in/AlexisBRENON">LinkedIn</a><br>
                 <a href="https://github.com/AlexisBRENON">GitHub</a><br/>
-                <a href="https://twitter.com/AlexisBRENON">Twitter</a><br/>
-                <a href="https://fr.linkedin.com/in/AlexisBRENON">LinkedIn</a>
+                <a href="https://twitter.com/AlexisBRENON">Twitter</a>
               </address>
               </div>
             </div>
@@ -88,31 +83,12 @@ title: Bienvenue!
           <span class="glyphicon glyphicon-book"></span>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-left">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-left">
             <h1 class="text-center">Publications</h1>
-            <p><a href="https://www.researchgate.net/profile/Alexis_Brenon">See all on ResearchGate</a></p>
-            <ul>
-              {% for publication in site.data.publications %}
-                <li>
-                  <p>
-                  {% for author in publication.author %}
-                    {% if forloop.last %}
-                      {{ author.firstname }} {{ author.lastname }}.
-                    {% else %}
-                      {{ author.firstname }} {{ author.lastname }},
-                    {% endif %}
-                  {% endfor %}
-                  {{ publication.title }}.
-                  In <em>{{ publication.booktitle }}</em>
-                  ({{ publication.year }}).</p>
-                  <ul class="list-inline">
-                    <li><a href="{{publication.url}}">PDF file</a></li>
-                    <li> | </li>
-                    <li><a href="{{publication.bibtex}}">Bibtex</a></li>
-                  </ul>
-                </li>
-              {% endfor %}
-            </ul>
+            <p><a href="https://cv.archives-ouvertes.fr/alexisbrenon">See all on HAL</a></p>
+            <iframe class="hal-publications" frameborder="0" src="
+            http://hal.archives-ouvertes.fr/Public/afficheRequetePubli.php?auteur_exp=Alexis,Brenon&annee_publideb=2014&annee_publifin=2040&labos_exp=LIG&CB_auteur=oui&CB_titre=oui&CB_identifiant=oui&CB_article=oui&langue=Francais&tri_exp=annee_publi&tri_exp2=typdoc&tri_exp3=date_publi&ordre_aff=TA&Fen=Aff&css=../css/VisuCondense.css">
+            </object>
           </div>
         </div>
       </section>
