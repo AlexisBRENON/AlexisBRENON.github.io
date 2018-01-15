@@ -1,0 +1,73 @@
+---
+---
+
+@import "variables";
+@import "bootstrap";
+@import "custom/bootstrap-override";
+
+body {
+  background-color: transparent;
+}
+
+HTML, BODY, A, TABLE, TR, TD, FORM, INPUT, SELECT, TEXTAREA, DIV, P, SPAN, H1, H2, H3, H4, H5, B, UL, LI, DD, DL, DT {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+#res_script {
+  background-color: transparent;
+  width: 100%;
+
+  .Rubrique {
+    display: none;
+  }
+  .SousRubrique {
+    display: none;
+  }
+
+  dl.NoticeRes {
+    display: block;
+
+    dt.ChampRes {
+      display: none;
+    }
+    dd.ValeurRes {
+      display: inline;
+      margin-left: initial;
+    }
+  }
+
+  .Titre {
+    font-weight: inherit;
+    &:before {
+      content: "\0022";
+    }
+    &:after {
+      content: "\0022";
+    }
+  }
+  .Auteurs {
+    &:before {
+      content: "by ";
+    }
+    &:after {
+      content: ".";
+    }
+  }
+  .article {
+    &:before {
+      content: "In: ";
+    }
+  }
+  .Identifiant {
+    &:before {
+      content: "";
+      display: block;
+    }
+
+    a {
+      color: $link-color;
+    }
+  }
+
+}
