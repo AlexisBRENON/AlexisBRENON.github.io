@@ -266,7 +266,9 @@ body.resume {
 
             .cv-career-item {
               display: grid;
-              grid-template-areas: "label place";
+              grid-template-areas:
+                "label place"
+                "desc  desc";
               margin-top: $padding-xs-vertical;
             }
             .cv-career-label {
@@ -277,6 +279,11 @@ body.resume {
               font-size: 70%;
               color: $gray-light;
               text-align: right;
+            }
+            .cv-career-description {
+              grid-area: desc;
+              display: none;
+              padding-left: $padding-base-horizontal;
             }
           }
 

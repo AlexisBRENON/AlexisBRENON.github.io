@@ -44,6 +44,13 @@ var setExpandJournals = function() {
     });
   });
 }
+var setExpandCareer = function() {
+  jQuery('.cv-career-item').each(function (idx, item) {
+    jQuery(item).click(function(e) {
+      jQuery(this).children('.cv-career-description').slideToggle();
+    });
+  });
+}
 
 var moveLastBlockItems = function() {
   var front_block = jQuery('.cv-main.front .cv-block').last();
@@ -117,5 +124,6 @@ jQuery(function() {
   prepareTranslateSwitchers();
   setToggleAction();
   setExpandJournals();
+  setExpandCareer();
   window.setTimeout(splitLastBlock, 500);
 })
