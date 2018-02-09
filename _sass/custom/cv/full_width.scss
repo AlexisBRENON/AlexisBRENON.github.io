@@ -1,0 +1,57 @@
+
+@media print, screen and (min-width: 21.1cm) {
+  body.resume {
+
+    .cv-page {
+      width: 209mm;
+      min-height: 296mm;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 296mm 1pt 296mm;
+      grid-template-areas:
+      "f-aside f-main f-main"
+      "sep     sep    sep"
+      "b-main  b-main b-main";
+
+      .sep {
+        display: block;
+      }
+    }
+
+    .cv-block.cv-career {
+      .cv-career-epoch {
+        grid-template-areas: "date items";
+        grid-template-columns: 15% 85%;
+        grid-column-gap: $padding-xs-horizontal;
+      }
+
+      .cv-career-date {
+        padding-right: $padding-xs-horizontal;
+        border-right: 1px dotted $gray-light;
+        text-align: right;
+        padding-top: $padding-xs-vertical;
+      }
+
+      .cv-career-item {
+        grid-template-areas:
+        "label place"
+        "desc  desc";
+      }
+      .cv-career-place {
+        text-align: right;
+      }
+    }
+
+    .cv-block.cv-achievements {
+      .cv-achievement-item {
+        grid-template-areas:
+        "frame   title   skills"
+        "details details details"
+        "ref     ref     ref";
+        grid-template-columns: 2em 1fr auto;
+        grid-column-gap: $padding-xs-horizontal;
+      }
+    }
+
+
+  }
+}

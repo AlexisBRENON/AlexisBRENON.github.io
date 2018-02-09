@@ -1,0 +1,53 @@
+
+@media screen and (max-width:21cm) {
+  body.resume {
+
+    .cv-page {
+      grid-template-areas:
+      "f-aside"
+      "f-main"
+      "b-main"
+      "b-main";
+
+      .sep {
+        display: none;
+      }
+    }
+
+    .cv-block.cv-career {
+      .cv-career-epoch {
+        grid-template-areas:
+        "date"
+        "items";
+        grid-template-columns: 1fr;
+        grid-row-gap: $padding-xs-vertical;
+      }
+
+      .cv-career-date {
+        padding-bottom: $padding-xs-vertical;
+        border-bottom: 1px dotted $gray-light;
+        text-align: center;
+      }
+
+      .cv-career-item {
+        grid-template-areas:
+        "label"
+        "desc"
+        "place";
+      }
+    }
+
+    .cv-block.cv-achievements {
+      .cv-achievement-item {
+        grid-template-areas:
+        "frame   title"
+        ".       skills"
+        "details details"
+        "ref     ref";
+        grid-template-columns: 2em auto;
+        grid-column-gap: $padding-xs-horizontal;
+      }
+    }
+
+  }
+}

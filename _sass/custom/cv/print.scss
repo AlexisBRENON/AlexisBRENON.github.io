@@ -1,0 +1,30 @@
+
+@media print {
+  body.resume {
+
+    background: none;
+
+    .cv-container {
+      background: none;
+      padding: 0;
+      justify-content: flex-start;
+
+      .cv-page {
+        margin: 0;
+        width: 209mm;
+        height: 296mm;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 296mm 1mm 296mm;
+        grid-template-areas:
+        "f-aside f-main f-main"
+        ".       .      ."
+        "b-main  b-main b-main ";
+
+        .sep {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

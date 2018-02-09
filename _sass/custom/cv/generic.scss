@@ -1,0 +1,364 @@
+
+body.resume {
+
+  .cv-container {
+    font-family: "Signika", $font-family-sans-serif;
+    padding-top: $padding-large-vertical;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &>* {
+      margin-right: $padding-base-horizontal;
+      margin-left: $padding-base-horizontal;
+    }
+
+
+//== Icons management
+//
+//** Hard skill icons based on svg images
+    @each $icon in (
+      asm
+      bash
+      cpp
+      docker
+      git
+      html
+      java
+      latex
+      lua
+      python
+    ) {
+      .hskill-#{$icon} {
+          background-image: url("/assets/images/cv/logos/#{$icon}.svg");
+          background-size: 100%;
+        }
+    }
+
+//** Reduce size of icons
+    .material-icons {
+      font-size: 1.25em;
+    }
+//** Align icons with text
+    i.material-icons[class*=sskill-] {
+      vertical-align: middle;
+    }
+    .skill-icon {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      vertical-align: middle;
+    }
+    .sskill-inventivity {
+      transform: rotateZ(180deg);
+    }
+
+//== Translation management
+    .translate-wrapper {
+      .translate-french {
+        display: none;
+      }
+      .translate-english {
+        // Show english in JS is disabled
+      }
+    }
+
+//** Translation buttons
+    .cv-control {
+      @extend main;
+      padding: $padding-base-vertical $padding-base-horizontal;
+      display: flex;
+      flex-direction: column;
+
+      &>* {
+        margin: $padding-base-vertical auto;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: stretch;
+
+        label { width:100%; }
+
+        .btn {
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: $gray-lighter;
+          background-blend-mode: overlay;
+
+          &.active {
+            background-color: $gray-darker;
+            color: $gray-lighter;
+          }
+        }
+
+        .btn-english {
+          background-image: url('/assets/images/cv/en.svg');
+        }
+        .btn-french {
+          background-image: url('/assets/images/cv/fr.svg');
+        }
+      }
+    }
+
+//== CV pages
+    .cv-page {
+      position: relative;
+
+      display: grid;
+      
+      &>* {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .sep {
+        grid-area: sep;
+        background-color: $gray-light;
+      }
+
+      aside {
+        background-color: #f5f5f5;
+
+        &.cv-side.front {
+          grid-area: f-aside;
+          padding-top: $padding-base-vertical;
+          padding-bottom: $padding-base-vertical;
+          padding-left: $padding-large-horizontal;
+          padding-right: $padding-small-horizontal;
+        }
+        &.cv-side.back {
+          grid-area: b-aside;
+        }
+
+        @each $page in (front, back) {
+          &.#{$page} div.img-portrait {
+            background-image: url("/assets/images/cv/portrait_#{$page}.jpg");
+          }
+        }
+        div.img-portrait {
+          align-self: center;
+          width: 80%;
+          border-radius: 50%;
+          margin-top: 2.3rem;
+          box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.75);
+          background-size: cover;
+
+          &:before {
+            display: block;
+            content: "";
+            padding-top: 100%;
+          }
+        }
+        
+        h1 {
+          color: $brand-primary;
+          line-height: 0.8;
+          small {
+            color: $text-color;
+            font-size: 60%;
+          }
+        }
+
+        .identity-list .material-icons {
+          margin: $padding-small-vertical $padding-xs-horizontal;
+          margin-left: 0px;
+          vertical-align: middle;
+        }
+
+        .cv-about {
+          p {
+            hyphens: auto;
+          }
+        }
+
+        .cv-skills {
+          ul {
+            columns: 2;
+
+            &.cv-list-lang {
+              columns: initial;
+            }
+          }
+        }
+      }
+
+      .cv-main {
+        line-height: floor(($line-height-computed - 1));
+        padding: $padding-small-horizontal;
+        padding-bottom: 0;
+
+        &.front {
+          grid-area: f-main;
+          padding-top: $padding-base-vertical;
+          padding-bottom: $padding-base-vertical;
+          padding-left: $padding-small-horizontal;
+          padding-right: $padding-large-horizontal;
+        }
+        &.back {
+          grid-area: b-main;
+          padding-top: (1.5 * $padding-large-vertical);
+          padding-bottom: (1.5 * $padding-large-vertical);
+          padding-left: $padding-large-horizontal;
+          padding-right: $padding-large-horizontal;
+        }
+
+        .cv-block {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          flex: 1 0 auto;
+
+          &:first-child, &:last-child {
+            justify-content: space-between;
+          }
+        }
+
+        //** Blocks title
+        .cv-block {
+          h2 {
+            display: inline-block;
+            border-radius: $border-radius-base;
+            padding-right: $padding-xs-horizontal;
+            padding-left: $padding-xs-horizontal;
+            padding-top: $padding-xs-vertical;
+            padding-bottom: $padding-xs-vertical;
+            margin: $padding-large-vertical 0;
+            align-self: flex-start;
+          }
+
+          &:nth-child(odd) {
+            h2 {
+              background-color: $brand-primary;
+              color: $gray-lighter;
+            }
+          }
+          &:nth-child(even) {
+            h2 {
+              background-color: $gray-lighter;
+            }
+          }
+        }
+
+        .cv-block {
+          &.cv-career {
+            .cv-career-epoch {
+              display: grid;
+              margin-bottom: $padding-xs-vertical;
+            }
+
+            .cv-career-date {
+              grid-area: date;
+            }
+            .cv-career-items {
+              grid-area: items;
+              display: flex;
+              flex-flow: column nowrap;
+            }
+
+            .cv-career-item {
+              display: grid;
+              margin-top: $padding-xs-vertical;
+            }
+            .cv-career-label {
+              grid-area: label;
+            }
+            .cv-career-place {
+              grid-area: place;
+              font-size: 70%;
+              color: $gray-light;
+            }
+            .cv-career-description {
+              grid-area: desc;
+              display: none;
+              padding-left: $padding-base-horizontal;
+            }
+          }
+
+          &.cv-publications {
+            .cv-publications-item {
+              margin-bottom: $padding-base-vertical;
+              cursor: pointer;
+
+              & > div {
+                display: inline
+              }
+
+              .cv-publications-item-journal {
+                display: none;
+              }
+            }
+          }
+
+          &.cv-achievements {
+            flex: 3 1 auto;
+
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: start;
+
+            .cv-achievement-item {
+              display: grid;
+              width: 100%;
+              margin-bottom: $padding-large-vertical;
+              page-break-inside: avoid;
+
+              .cv-achievement-frame {
+                grid-area: frame;
+                font-size: 125%;
+              }
+
+              .cv-achievement-title {
+                grid-area: title;
+                font-size: 150%;
+                font-weight: bold;
+                color: $brand-primary;
+                margin-bottom: $padding-base-vertical;
+              }
+
+              .cv-achievement-skills {
+                grid-area: skills;
+                justify-self: end;
+
+                & > div {
+                  display: inline-block;
+                }
+
+                .cv-achievement-sskills {
+                  &:before {
+                    content: "/";
+                    margin: 0 0.33em;
+                  }
+                }
+              }
+
+              .cv-achievement-details {
+                grid-area: details;
+
+                * {
+                  margin-bottom: 0px;
+                }
+
+              }
+
+              .cv-achievement-ref {
+                grid-area: ref;
+              }
+            }
+          }
+        }
+
+        &.back {
+          .cv-block {
+            justify-content: flex-start;
+          }
+        }
+
+      }
+    }
+  }
+}
