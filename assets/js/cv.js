@@ -93,6 +93,24 @@ var splitLastBlock = function() {
   moveLastBlockItems();
 }
 
+var prepareResizeEvent = function() {
+  var resizeTimeout
+  var resizeThrottler = function() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        actualResizeHandler();
+      }, 1000); // The actualResizeHandler will execute at a rate of 15fps
+    }
+  }
+
+  var actualResizeHandler = function() {
+    moveLastBlockItems();
+  }
+
+  jQuery(window).resize(resizeThrottler);
+}
 
 var achievementItem_dragstart_handler = function(ev) {
   jQuery(ev.target).attr('id', 'tmp_drag');
@@ -126,4 +144,5 @@ jQuery(function() {
   setExpandJournals();
   setExpandCareer();
   window.setTimeout(splitLastBlock, 500);
+  prepareResizeEvent();
 })
