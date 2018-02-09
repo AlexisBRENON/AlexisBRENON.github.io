@@ -1,0 +1,39 @@
+
+.cv-block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  flex: 1 0 auto;
+
+  &:first-child, &:last-child {
+    justify-content: space-between;
+  }
+
+  //** Blocks title
+  h2 {
+    display: inline-block;
+    border-radius: $border-radius-base;
+    padding-right: $padding-xs-horizontal;
+    padding-left: $padding-xs-horizontal;
+    padding-top: $padding-xs-vertical;
+    padding-bottom: $padding-xs-vertical;
+    margin: $padding-large-vertical 0;
+    align-self: flex-start;
+  }
+
+  &:nth-child(odd) {
+    h2 {
+      background-color: $brand-primary;
+      color: $gray-lighter;
+    }
+  }
+  &:nth-child(even) {
+    h2 {
+      background-color: $gray-lighter;
+    }
+  }
+
+  @import "blocks/achievement";
+  @import "blocks/career";
+  @import "blocks/publications";
+}

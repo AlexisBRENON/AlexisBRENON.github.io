@@ -1,0 +1,25 @@
+
+//== CV pages
+.cv-page {
+  position: relative;
+  display: grid;
+
+  &>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sep {
+    grid-area: sep;
+    background-color: $gray-light;
+  }
+
+  @import "cv-side";
+  @import "cv-main";
+
+  @import "cv-block";
+  .back .cv-block {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,16 @@
+
+.cv-main {
+  line-height: floor(($line-height-computed - 1));
+  padding-top: $padding-base-vertical;
+  padding-bottom: $padding-base-vertical;
+  padding-left: $padding-small-horizontal;
+  padding-right: $padding-large-horizontal;
+
+  &.front {
+    grid-area: f-main;
+  }
+  &.back {
+    grid-area: b-main;
+  }
+}
+

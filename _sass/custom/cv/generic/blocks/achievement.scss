@@ -1,0 +1,56 @@
+
+&.cv-achievements {
+  flex: 3 1 auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: start;
+
+  .cv-achievement-item {
+    display: grid;
+    width: 100%;
+    margin-bottom: $padding-large-vertical;
+    page-break-inside: avoid;
+  }
+
+  .cv-achievement-frame {
+    grid-area: frame;
+    font-size: 125%;
+  }
+
+  .cv-achievement-title {
+    grid-area: title;
+    font-size: 150%;
+    font-weight: bold;
+    color: $brand-primary;
+  }
+
+  .cv-achievement-skills {
+    grid-area: skills;
+    margin-bottom: $padding-base-vertical;
+
+    & > div {
+      display: inline-block;
+    }
+  }
+
+  .cv-achievement-sskills {
+    &:before {
+      content: "/";
+      margin: 0 0.33em;
+    }
+  }
+
+  .cv-achievement-details {
+    grid-area: details;
+    * {
+      margin-bottom: 0px;
+    }
+  }
+
+  .cv-achievement-ref {
+    grid-area: ref;
+  }
+
+}

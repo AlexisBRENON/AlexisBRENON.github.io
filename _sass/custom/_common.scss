@@ -47,6 +47,10 @@ main {
     color: $component-active-color;
 }
 
+header.overlay {
+  margin-top: -2 * $padding-large-vertical;
+}
+
 .overlay {
     position: relative;
     color: $component-active-color;

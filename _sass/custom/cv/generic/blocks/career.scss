@@ -1,0 +1,34 @@
+
+&.cv-career {
+  .cv-career-epoch {
+    display: grid;
+    margin-bottom: $padding-xs-vertical;
+  }
+
+  .cv-career-date {
+    grid-area: date;
+  }
+  .cv-career-items {
+    grid-area: items;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .cv-career-item {
+    display: grid;
+    margin-top: $padding-xs-vertical;
+  }
+  .cv-career-label {
+    grid-area: label;
+  }
+  .cv-career-place {
+    grid-area: place;
+    font-size: 70%;
+    color: $gray-light;
+  }
+  .cv-career-description {
+    grid-area: desc;
+    display: none;
+    padding-left: $padding-base-horizontal;
+  }
+}

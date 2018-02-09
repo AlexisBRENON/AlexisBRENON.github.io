@@ -1,0 +1,12 @@
+
+.cv-container {
+  font-family: "Signika", $font-family-sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &>* {
+    margin-right: $padding-base-horizontal;
+    margin-left: $padding-base-horizontal;
+  }
+}

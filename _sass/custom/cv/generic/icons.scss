@@ -1,0 +1,41 @@
+
+//== Icons management
+//
+//** Hard skill icons based on svg images
+@each $icon in (
+  asm
+  bash
+  cpp
+  docker
+  git
+  html
+  java
+  latex
+  lua
+  python
+) {
+  .hskill-#{$icon} {
+    background-image: url("/assets/images/cv/logos/#{$icon}.svg");
+    background-size: 100%;
+  }
+}
+
+//** Reduce size of icons
+.material-icons {
+  font-size: 1.25em;
+}
+
+//** Align icons with text
+i.material-icons[class*=sskill-] {
+  vertical-align: middle;
+}
+
+.skill-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+}
+.sskill-inventivity {
+  transform: rotateZ(180deg);
+}

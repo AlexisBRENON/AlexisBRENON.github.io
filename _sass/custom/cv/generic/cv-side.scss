@@ -1,0 +1,47 @@
+
+.cv-side {
+  background-color: #f5f5f5;
+  padding-top: $padding-base-vertical;
+  padding-bottom: $padding-base-vertical;
+  padding-left: $padding-large-horizontal;
+  padding-right: $padding-small-horizontal;
+
+  &.front {
+    grid-area: f-aside;
+  }
+  &.back {
+    grid-area: b-aside;
+  }
+
+
+  h1 {
+    color: $brand-primary;
+    line-height: 0.8;
+    small {
+      color: $text-color;
+      font-size: 60%;
+    }
+  }
+
+  .identity-list .material-icons {
+    margin: $padding-small-vertical $padding-xs-horizontal;
+    margin-left: 0px;
+    vertical-align: middle;
+  }
+
+  .cv-about {
+    p {
+      hyphens: auto;
+    }
+  }
+
+  .cv-skills {
+    ul {
+      columns: 2;
+
+      &.cv-list-lang {
+        columns: initial;
+      }
+    }
+  }
+}

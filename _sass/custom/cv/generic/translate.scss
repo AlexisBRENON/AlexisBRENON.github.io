@@ -1,0 +1,50 @@
+
+//== Translation management
+.translate-wrapper {
+  .translate-french {
+    display: none;
+  }
+  .translate-english {
+    // Show english in JS is disabled
+  }
+}
+
+//** Translation buttons
+.cv-control {
+  @extend main;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  display: flex;
+  flex-direction: column;
+
+  &>* {
+    margin: $padding-base-vertical auto;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: stretch;
+
+    label { width:100%; }
+
+    .btn {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $gray-lighter;
+      background-blend-mode: overlay;
+
+      &.active {
+        background-color: $gray-darker;
+        color: $gray-lighter;
+      }
+    }
+
+    .btn-english {
+      background-image: url('/assets/images/cv/en.svg');
+    }
+    .btn-french {
+      background-image: url('/assets/images/cv/fr.svg');
+    }
+  }
+}

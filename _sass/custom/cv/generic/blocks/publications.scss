@@ -1,0 +1,16 @@
+
+&.cv-publications {
+  .cv-publications-item {
+    margin-bottom: $padding-base-vertical;
+    cursor: pointer;
+
+    & > div {
+      display: inline
+    }
+
+    .cv-publications-item-journal {
+      display: none;
+    }
+  }
+}
+

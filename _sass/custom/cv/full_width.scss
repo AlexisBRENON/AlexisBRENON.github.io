@@ -17,6 +17,13 @@
       }
     }
 
+    .cv-page .cv-main.back {
+      padding-top: (1.5 * $padding-large-vertical);
+      padding-bottom: (1.5 * $padding-large-vertical);
+      padding-left: $padding-large-horizontal;
+      padding-right: $padding-large-horizontal;
+    }
+
     .cv-block.cv-career {
       .cv-career-epoch {
         grid-template-areas: "date items";
@@ -49,6 +56,10 @@
         "ref     ref     ref";
         grid-template-columns: 2em 1fr auto;
         grid-column-gap: $padding-xs-horizontal;
+
+        .cv-achievement-skills {
+          justify-self: end;
+        }
       }
     }
 
