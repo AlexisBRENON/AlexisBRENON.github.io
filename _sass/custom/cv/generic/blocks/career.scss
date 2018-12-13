@@ -25,6 +25,10 @@
     grid-area: place;
     font-size: 70%;
     color: $gray-light;
+
+    a {
+      color: inherit;
+    }
   }
   .cv-career-description {
     grid-area: desc;
