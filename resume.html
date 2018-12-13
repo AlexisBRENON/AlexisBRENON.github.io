@@ -198,9 +198,12 @@ title: "CV - Resumé"
           <div class="cv-publications-item-title">
             {{ publication.title }}.
           </div>
-          {% if publication.booktitle %}
+          {% if publication.booktitle or publication.journal %}
           <div class="cv-publications-item-journal">
-            In <em>{{ publication.booktitle }}</em>
+            In 
+            {% if publication.booktitle %} <em>{{ publication.booktitle }}</em>
+            {% elsif publication.journal %} <em>{{ publication.journal }}</em>
+            {% endif %}
           </div>
           {% endif %}
         </div>
