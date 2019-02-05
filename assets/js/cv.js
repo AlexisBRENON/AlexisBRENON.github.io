@@ -39,24 +39,28 @@ var setToggleAction = function() {
 
 var setExpandJournals = function() {
   jQuery('.cv-publications-item').each(function (idx, item) {
-    jQuery(item).click(function(e) {
-      jQuery(this).children('.cv-publications-item-journal').slideToggle();
-    });
+    if (jQuery(item).children('.cv-publications-item-journal')) {
+      jQuery(item).click(function(e) {
+        jQuery(this).children('.cv-publications-item-journal').slideToggle();
+      });
+    }
   });
 }
 var setExpandCareer = function() {
   jQuery('.cv-career-item').each(function (idx, item) {
-    jQuery(item).click(function(e) {
-      jQuery(this).children('.cv-career-description').slideToggle();
-    });
+    if (jQuery(item).children('.cv-career-description')) {
+      jQuery(item).click(function(e) {
+        jQuery(this).children('.cv-career-description').slideToggle();
+      });
+    }
   });
 }
 
 var moveLastBlockItems = function() {
-  var front_block = jQuery('.cv-main.front .cv-block').last();
-  var back_block = jQuery('.cv-main.back .cv-block').first();
+  var front_items = jQuery('.cv-main.front .cv-block .cv-block-items').last();
+  var back_items = jQuery('.cv-main.back .cv-block .cv-block-items').first();
   
-  var max_height = front_block.height();
+  var max_height = front_items.height();
   var current_height = 0;
   
   var items_to_move_front = [],
@@ -71,24 +75,25 @@ var moveLastBlockItems = function() {
     }
   }
 
-  jQuery(front_block).children().each(arrange_blocks);
-  jQuery(back_block).children().each(arrange_blocks);
+  jQuery(front_items).children().each(arrange_blocks);
+  jQuery(back_items).children().each(arrange_blocks);
 
   jQuery.each(items_to_move_front, function(idx, item) {
-    front_block.append(item);
+    front_items.append(item);
   });
   jQuery.each(items_to_move_back, function(idx, item) {
-    back_block.append(item);
+    back_items.append(item);
   });
 }
 
 var splitLastBlock = function() {
   var last_block = jQuery('.cv-main.front .cv-block').last();
-  var max_height = last_block.height();
 
-  var back = jQuery('.cv-main.back')
-  var back_block = last_block.clone().empty();
-  back.prepend(back_block)
+  var back = jQuery('.cv-main.back');
+  var back_block = last_block.clone();
+  back_block.children('.cv-block-title').remove();
+  back_block.children('.cv-block-items').empty();
+  back.prepend(back_block);
 
   moveLastBlockItems();
 }
@@ -129,12 +134,13 @@ function drop_handler(ev) {
   // Get the id of the target and add the moved element to the target's DOM
   var data = ev.dataTransfer.getData("text/plain");
   var elem = jQuery(document.getElementById(data));
+  if (elem.size() == 0) { return; }
 
-  var target = $(ev.target).parents('.cv-block')[0];
+  var target = $(ev.target).parents('.cv-block-items > li')[0];
   if (target === undefined) {
     target = ev.target;
   }
-  target.appendChild(elem[0]);
+  target.before(elem[0]);
   elem.attr('id', null);
 }
 
