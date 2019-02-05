@@ -159,13 +159,14 @@ title: "CV - Resumé"
           <span class="translate-english" lang="en">Career</span>
         </h2>
 
-        {% include 10-body/cv/career/2018.html %}
-        {% include 10-body/cv/career/2017.html %}
-        {% include 10-body/cv/career/2014.html %}
-        {% include 10-body/cv/career/2013.html %}
-        {% include 10-body/cv/career/2012.html %}
-        {% include 10-body/cv/career/2009.html %}
-
+        <ul class="cv-block-items">
+          {% include 10-body/cv/career/2018.html %}
+          {% include 10-body/cv/career/2017.html %}
+          {% include 10-body/cv/career/2014.html %}
+          {% include 10-body/cv/career/2013.html %}
+          {% include 10-body/cv/career/2012.html %}
+          {% include 10-body/cv/career/2009.html %}
+        </ul>
       </div>
 
       <div class="cv-block cv-publications">
@@ -180,54 +181,58 @@ title: "CV - Resumé"
           </p>
         </div>
 
-        {% for publication in site.data.publications %}
-        <div class="cv-publications-item">
-          <div class="cv-publications-item-authors">
-            {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
-            {% assign numAuthors = publication.author | size %}
-            {% if numAuthors > 1 %}
-            <span class="translate-wrapper">
-              <span class="translate-french" lang="fr">et coll.</span>
-              <span class="translate-english" lang="en">et al.</span>
-            </span>
+        <ul class="cv-block-items">
+          {% for publication in site.data.publications %}
+          <li class="cv-publications-item">
+            <div class="cv-publications-item-authors">
+              {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
+              {% assign numAuthors = publication.author | size %}
+              {% if numAuthors > 1 %}
+              <span class="translate-wrapper">
+                <span class="translate-french" lang="fr">et coll.</span>
+                <span class="translate-english" lang="en">et al.</span>
+              </span>
+              {% endif %}
+            </div>
+            <div class="cv-publications-item-year">
+              ({{ publication.year }}).
+            </div>
+            <div class="cv-publications-item-title">
+              {{ publication.title }}.
+            </div>
+            {% if publication.booktitle or publication.journal %}
+            <div class="cv-publications-item-journal">
+              In 
+              {% if publication.booktitle %} <em>{{ publication.booktitle }}</em>
+              {% elsif publication.journal %} <em>{{ publication.journal }}</em>
+              {% endif %}
+            </div>
             {% endif %}
-          </div>
-          <div class="cv-publications-item-year">
-            ({{ publication.year }}).
-          </div>
-          <div class="cv-publications-item-title">
-            {{ publication.title }}.
-          </div>
-          {% if publication.booktitle or publication.journal %}
-          <div class="cv-publications-item-journal">
-            In 
-            {% if publication.booktitle %} <em>{{ publication.booktitle }}</em>
-            {% elsif publication.journal %} <em>{{ publication.journal }}</em>
-            {% endif %}
-          </div>
-          {% endif %}
-        </div>
-        {% endfor %}
+          </li>
+          {% endfor %}
+        </ul>
       </div> <!-- Publications block -->
 
       <div class="cv-block cv-achievements" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
-        <h2 class="translate-wrapper">
+        <h2 class="cv-block-title translate-wrapper">
           <span class="translate-french" lang="fr">Réalisations</span>
           <span class="translate-english" lang="en">Achievements</span>
         </h2>
 
-        {% include 10-body/cv/achievements/work/keecker.html %}
-        {% include 10-body/cv/achievements/work/arcades.html %}
-        {% include 10-body/cv/achievements/home/streamrecord.html %}
-        {% include 10-body/cv/achievements/work/tracedecoder.html %}
-        {% include 10-body/cv/achievements/work/pipy.html %}
-        {% include 10-body/cv/achievements/home/foss.html %}
-        {% include 10-body/cv/achievements/home/server.html %}
-        {% include 10-body/cv/achievements/work/dipiom.html %}
-        {% include 10-body/cv/achievements/school/lifegame.html %}
-        {% include 10-body/cv/achievements/school/stellody.html %}
-        {% include 10-body/cv/achievements/home/vinyl.html %}
-        {% include 10-body/cv/achievements/home/hyperion2boblight.html %}
+        <ul class="cv-block-items">
+          {% include 10-body/cv/achievements/work/keecker.html %}
+          {% include 10-body/cv/achievements/work/arcades.html %}
+          {% include 10-body/cv/achievements/home/streamrecord.html %}
+          {% include 10-body/cv/achievements/work/tracedecoder.html %}
+          {% include 10-body/cv/achievements/work/pipy.html %}
+          {% include 10-body/cv/achievements/home/foss.html %}
+          {% include 10-body/cv/achievements/home/server.html %}
+          {% include 10-body/cv/achievements/work/dipiom.html %}
+          {% include 10-body/cv/achievements/school/lifegame.html %}
+          {% include 10-body/cv/achievements/school/stellody.html %}
+          {% include 10-body/cv/achievements/home/vinyl.html %}
+          {% include 10-body/cv/achievements/home/hyperion2boblight.html %}
+        </ul>
 
       </div>
     </div>

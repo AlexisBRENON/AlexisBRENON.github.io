@@ -4,6 +4,7 @@
   flex-flow: column nowrap;
   justify-content: space-around;
   flex: 1 0 auto;
+  overflow-y: hidden;
 
   &:first-child, &:last-child {
     justify-content: space-between;
@@ -31,6 +32,16 @@
     h2 {
       background-color: $gray-lighter;
     }
+  }
+
+  .cv-block-items {
+    flex-grow: 1;
+    width: 100%;
+    padding-left: initial;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
   }
 
   @import "blocks/achievement";
