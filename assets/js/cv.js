@@ -59,10 +59,10 @@ var setExpandCareer = function() {
 var moveLastBlockItems = function() {
   var front_items = jQuery('.cv-main.front .cv-block .cv-block-items').last();
   var back_items = jQuery('.cv-main.back .cv-block .cv-block-items').first();
-  
+
   var max_height = front_items.height();
   var current_height = 0;
-  
+
   var items_to_move_front = [],
     items_to_move_back = [];
 
@@ -117,38 +117,20 @@ var prepareResizeEvent = function() {
   jQuery(window).resize(resizeThrottler);
 }
 
-var achievementItem_dragstart_handler = function(ev) {
-  jQuery(ev.target).attr('id', 'tmp_drag');
-  ev.dataTransfer.setData("text/plain", ev.target.id);
-  ev.dataTransfer.dropEffect = "move";
-}
-
-function dragover_handler(ev) {
-  ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
-}
-
-function drop_handler(ev) {
-  ev.preventDefault();
-  // Get the id of the target and add the moved element to the target's DOM
-  var data = ev.dataTransfer.getData("text/plain");
-  var elem = jQuery(document.getElementById(data));
-  if (elem.size() == 0) { return; }
-
-  var target = $(ev.target).parents('.cv-block-items > li')[0];
-  if (target === undefined) {
-    target = ev.target;
-  }
-  target.before(elem[0]);
-  elem.attr('id', null);
-}
-
-jQuery(function() {  
+jQuery(function() {
   prepareTranslateSwitchers();
   setToggleAction();
   setExpandJournals();
   setExpandCareer();
   window.setTimeout(splitLastBlock, 500);
   prepareResizeEvent();
+
+  window.setTimeout(function() {
+    const achievementSwappable = new Swappable.default(jQuery('.cv-block.cv-achievements ul.cv-block-items').toArray(), { draggable: 'li.cv-achievement-item', handle: 'div.cv-achievement-frame' });
+    const hskillSwappable = new Swappable.default(
+      jQuery('ul.cv-list-hskill').toArray(), {
+        draggable: 'li',
+        handle: '.skill-icon'
+      });
+  }, 750);
 })
