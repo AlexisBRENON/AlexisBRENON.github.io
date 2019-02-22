@@ -37,25 +37,6 @@ var setToggleAction = function() {
   });
 }
 
-var setExpandJournals = function() {
-  jQuery('.cv-publications-item').each(function (idx, item) {
-    if (jQuery(item).children('.cv-publications-item-journal')) {
-      jQuery(item).click(function(e) {
-        jQuery(this).children('.cv-publications-item-journal').slideToggle();
-      });
-    }
-  });
-}
-var setExpandCareer = function() {
-  jQuery('.cv-career-item').each(function (idx, item) {
-    if (jQuery(item).children('.cv-career-description')) {
-      jQuery(item).click(function(e) {
-        jQuery(this).children('.cv-career-description').slideToggle();
-      });
-    }
-  });
-}
-
 var moveLastBlockItems = function() {
   var front_items = jQuery('.cv-main.front .cv-block .cv-block-items').last();
   var back_items = jQuery('.cv-main.back .cv-block .cv-block-items').first();
@@ -120,8 +101,6 @@ var prepareResizeEvent = function() {
 jQuery(function() {
   prepareTranslateSwitchers();
   setToggleAction();
-  setExpandJournals();
-  setExpandCareer();
   window.setTimeout(splitLastBlock, 500);
   prepareResizeEvent();
 
