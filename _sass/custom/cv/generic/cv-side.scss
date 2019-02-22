@@ -5,6 +5,7 @@
   padding-bottom: $padding-base-vertical;
   padding-left: $padding-large-horizontal;
   padding-right: $padding-small-horizontal;
+  overflow-y: auto;
 
   &.front {
     grid-area: f-aside;
@@ -22,6 +23,10 @@
       color: $text-color;
       font-size: 60%;
     }
+  }
+
+  h2, h3 {
+    margin-top: $padding-base-vertical;
   }
 
   .identity-list .material-icons {
