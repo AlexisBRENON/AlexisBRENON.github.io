@@ -105,11 +105,25 @@ jQuery(function() {
   prepareResizeEvent();
 
   window.setTimeout(function() {
-    const achievementSwappable = new Swappable.default(jQuery('.cv-block.cv-achievements ul.cv-block-items').toArray(), { draggable: 'li.cv-achievement-item', handle: 'div.cv-achievement-frame' });
-    const hskillSwappable = new Swappable.default(
+    const achievementDroppable = new Droppable.default(
+      jQuery('.cv-block.cv-achievements ul.cv-block-items').toArray(),
+      {
+        draggable: 'li.cv-achievement-item',
+        handle: 'div.cv-achievement-frame',
+        dropzone: '.cv-block.cv-achievements ul.cv-block-items',
+        classes: {
+          "droppable:occupied": "" // Do not set containers as occupied
+        }
+      });
+
+    const hskillDroppable = new Droppable.default(
       jQuery('ul.cv-list-hskill').toArray(), {
         draggable: 'li',
-        handle: '.skill-icon'
+        handle: '.skill-icon',
+        dropzone: 'ul.cv-list-hskill',
+        classes: {
+          "droppable:occupied": "" // Do not set containers as occupied
+        }
       });
   }, 750);
 })

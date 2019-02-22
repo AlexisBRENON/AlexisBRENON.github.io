@@ -19,6 +19,7 @@
   .hskill-#{$icon} {
     background-image: url("/assets/images/cv/logos/#{$icon}.svg");
     background-size: 100%;
+    cursor: move;
   }
 }
 
