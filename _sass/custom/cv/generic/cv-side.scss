@@ -29,10 +29,16 @@
     margin-top: $padding-base-vertical;
   }
 
-  .identity-list .material-icons {
-    margin: $padding-small-vertical $padding-xs-horizontal;
-    margin-left: 0px;
-    vertical-align: middle;
+  .identity-list {
+    .material-icons {
+      margin: $padding-small-vertical $padding-xs-horizontal;
+      margin-left: 0px;
+      vertical-align: middle;
+    }
+
+    a {
+      color: inherit;
+    }
   }
 
   .cv-about {
