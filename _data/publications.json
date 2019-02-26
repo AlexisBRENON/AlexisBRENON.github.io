@@ -96,7 +96,8 @@
     "address": "London, United Kingdom",
     "month": "September",
     "url": "https://www.researchgate.net/publication/308335025_Preliminary_Study_of_Adaptive_Decision-Making_System_for_Vocal_Command_in_Smart_Home",
-    "bibtex": "/assets/bibtex/ie2016.txt"
+    "bibtex": "/assets/bibtex/ie2016.txt",
+    "collapsed": true
   },
   {
     "id": "Brenon2016a",
@@ -124,7 +125,8 @@
     "address": "Clermont-Ferrand, France",
     "month": "Juin",
     "url": "https://www.researchgate.net/publication/304570630_Etude_preliminaire_d%27une_methode_de_prise_de_decision_adaptative_pour_la_commande_vocale_dans_un_habitat_intelligent",
-    "bibtex": "/assets/bibtex/rfia2016.txt"
+    "bibtex": "/assets/bibtex/rfia2016.txt",
+    "collapsed": true
   },
   {
     "id": "Brenon2015",
@@ -172,6 +174,7 @@
     "month": "November",
     "publisher": "CEUR-WS.org",
     "url": "https://www.researchgate.net/publication/283356847_Using_Statistico-Relational_Model_for_Activity_Recognition_in_Smart_Home?utm_content=buffera710f",
-    "bibtex": "/assets/bibtex/ami2015.txt"
+    "bibtex": "/assets/bibtex/ami2015.txt",
+    "collapsed": true
   }
 ]

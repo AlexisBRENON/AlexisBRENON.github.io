@@ -180,7 +180,7 @@ title: "CV - Resumé"
       </div>
 
       <div class="cv-block cv-publications">
-        <h2>Publications</h2>
+        <h2 data-toggle="collapse" data-target="#publications-collapse" aria-expanded="false" aria-controls="publications-collapse">Publications</h2>
 
         <div class="translate-wrapper">
           <p class="translate-french" lang="fr">
@@ -193,36 +193,20 @@ title: "CV - Resumé"
 
         <ul class="cv-block-items">
           {% for publication in site.data.publications %}
-          <li class="cv-publications-item" id="publication-{{ publication.id }}">
-            <div data-toggle="collapse" data-target="#publication-{{ publication.id }} .cv-publications-item-journal" aria-expanded="false" aria-controls="cv-publications-item-journal">
-            <span class="cv-publications-item-authors">
-              {{ publication.author.first.firstname }} {{ publication.author.first.lastname }}
-              {% assign numAuthors = publication.author | size %}
-              {% if numAuthors > 1 %}
-              <span class="translate-wrapper">
-                <span class="translate-french" lang="fr">et coll.</span>
-                <span class="translate-english" lang="en">et al.</span>
-              </span>
-              {% endif %}
-            </span>
-            <span class="cv-publications-item-year">
-              ({{ publication.year }}).
-            </span>
-            <span class="cv-publications-item-title">
-              {{ publication.title }}.
-            </span>
-            </div>
-            {% if publication.booktitle or publication.journal %}
-            <div class="cv-publications-item-journal collapse">
-              In 
-              {% if publication.booktitle %} <em>{{ publication.booktitle }}</em>
-              {% elsif publication.journal %} <em>{{ publication.journal }}</em>
-              {% endif %}
-            </div>
+            {% if publication.collapsed != true %}
+              {% include 10-body/cv/publications/publication.html publication=publication %}
             {% endif %}
-          </li>
           {% endfor %}
         </ul>
+        <div id="publications-collapse" class="collapse">
+        <ul class="cv-block-items">
+          {% for publication in site.data.publications %}
+            {% if publication.collapsed %}
+              {% include 10-body/cv/publications/publication.html publication=publication %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+        </div>
       </div> <!-- Publications block -->
 
       <div class="cv-block cv-achievements">
