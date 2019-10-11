@@ -15,12 +15,19 @@
   latex
   lua
   python
+  scala
+  tensorflow
 ) {
   .hskill-#{$icon} {
     background-image: url("/assets/images/cv/logos/#{$icon}.svg");
     background-size: 100%;
     cursor: move;
   }
+}
+.hskill-gcp {
+  background-image: url("/assets/images/cv/logos/gcp.png");
+  background-size: 100%;
+  cursor: move;
 }
 
 //** Reduce size of icons
