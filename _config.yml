@@ -6,7 +6,7 @@ linkedin: https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit
 twitter: AlexisBRENON
 github: AlexisBRENON
 
-exclude: [readme.md, _config_local.yml]
+exclude: [readme.md, _config_local.yml, docker-compose.yml]
 
 defaults:
   -
