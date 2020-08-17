@@ -98,7 +98,17 @@ var prepareResizeEvent = function() {
   jQuery(window).resize(resizeThrottler);
 }
 
+var computeAge = function() {
+    var now = Date.now();
+    var birthday = Date.parse("1991-12-20");
+    var age_dt = new Date(now - birthday);
+    var age = Math.abs(age_dt.getUTCFullYear() - 1970);
+
+    jQuery('.cv-page .cv-side .identity-list .identity-age').html(age);
+}
+
 jQuery(function() {
+  computeAge();
   prepareTranslateSwitchers();
   setToggleAction();
   window.setTimeout(splitLastBlock, 500);
