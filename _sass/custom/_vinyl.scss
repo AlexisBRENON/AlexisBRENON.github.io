@@ -1,5 +1,5 @@
 body.vinyl {
-  @extend body.one-page;
+  @extend body, .one-page;
 
   header {
     min-height: 33.3vh;
